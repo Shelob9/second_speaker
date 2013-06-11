@@ -20,7 +20,6 @@ add_action('wp_enqueue_scripts', '_sf_child_init');
 
 //child style override style sheet
 function _sf_child_style() {
-	wp_dequeue_script('_sf_init');
 		if ( !is_admin() ) :
 			wp_enqueue_style('child-style', get_stylesheet_directory_uri().'/css/child.css');
 		endif;
