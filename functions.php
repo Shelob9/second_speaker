@@ -32,4 +32,13 @@ add_action('wp_enqueue_scripts', '_sf_child_init');
 */
 
 include('inc/childFunc.php');
+
+/**
+/* Deactivate Parent Scripts, Styles If Needed
+*/
+
+function _sf_deactivator() {
+	remove_action( 'wp_enqueue_scripts', '_sf_scripts' );
+}
+//add_action('init', '_sf_deactivator');
 ?>
