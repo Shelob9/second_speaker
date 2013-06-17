@@ -1,11 +1,11 @@
 /*
-Theme Name:     _Second-Foundation Generic DH Child
-
-Description:    Child theme for the Twenty Twelve theme
-Author:         Josh Pollock
-Author URI:     http://Complexwaveform.com
-Template:       _sf-dh                      
+Theme Name:     _Second-Speaker
+Theme URI:     https://github.com/Shelob9/second_speaker
+Description:   Child theme for _Second-Foundation
+Author:        Josh Pollock
+Author URI:    http://Complexwaveform.com
+Template:      _second_foundation                      
 Version:       1.1
 */
 
-@import url("../_sf-dh/style.css");
+@import url("../_second_foundation/style.css");

@@ -32,14 +32,12 @@ add_action('wp_enqueue_scripts', '_sf_child_init');
 * Include child theme functions
 */
 
-include('inc/childFunc.php');
+require_once('inc/childFunc.php');
 
 /**
-/* Deactivate Parent Scripts, Styles If Needed
+/* Deactivate Parent Scripts or Whole Sets of Functions
 */
 
-function _sf_deactivator() {
-	remove_action( 'wp_enqueue_scripts', '_sf_scripts' );
-}
-//add_action('init', '_sf_deactivator');
+require_once('inc/theGreatDeactivator.php');
+
 ?>
