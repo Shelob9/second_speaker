@@ -1,9 +1,6 @@
 <?php
 /**
 *
-* Dude- don't add project specific functions to this. Use inc/childFunc.php.
-* @ _sf-dh-child since 1.0
-* update 1.1
 */
 
 
