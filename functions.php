@@ -6,15 +6,16 @@
 
 /**
 *Child scripts and styles
+* Use if you want to enqueue jQuery in one script file the simple way.
+* If so, remove comment lines from line 18 before add_action
 */
 //replace init form parent with the child one. Make sure to keep current.
 function _sf_child_init() {
-	wp_dequeue_script('_sf_init');
 	if ( !is_admin() ) :
 			wp_enqueue_script('child-init', get_stylesheet_directory_uri().'/js/_sf_child-init.js', array(), false, true);
 	endif;
 }
-add_action('wp_enqueue_scripts', '_sf_child_init');
+//add_action('wp_enqueue_scripts', '_sf_child_init');
 
 //child style override style sheet
 function _sf_child_style() {
