@@ -28,4 +28,4 @@ function _sf_remove_scripts_styles() {
 	//remove_action( 'wp_enqueue_scripts', '_sf_js_init_ajaxMenus' );
 	
 }
-//add_action('init', '_sf_deactivator');
+//add_action('init', '_sf_remove_scripts_styles');
