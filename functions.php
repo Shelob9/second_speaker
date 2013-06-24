@@ -24,7 +24,7 @@ function _sf_child_style() {
 		endif;
 
 }
-add_action('wp_enqueue_scripts', '_sf_child_init');
+add_action('wp_enqueue_scripts', '_sf_child_style');
 
 /**
 * Include child theme functions
