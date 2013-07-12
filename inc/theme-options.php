@@ -93,7 +93,7 @@ function _custom_theme_options() {
         'choices'     => array(
           array(
             'label'       => 'None',
-            'value'       => 'rigt'
+            'value'       => 'none'
           ),
           array(
             'label'       => 'Left of Tagline',
@@ -101,7 +101,7 @@ function _custom_theme_options() {
           ),
           array(
             'label'       => 'Right of Tagline',
-            'value'       => 'r_t'
+            'value'       => 'right'
           ),
            array(
             'label'       => 'Above Menu',
