@@ -14,7 +14,7 @@ function _sf_child_init() {
 
 		wp_enqueue_script('child-init', get_stylesheet_directory_uri().'/js/child-init.js', array(), false, false);
 }
-add_action('wp_enqueue_scripts', '_sf_child_init');
+//add_action('wp_enqueue_scripts', '_sf_child_init');
 
 //child style override style sheet
 function _sf_child_style() {
