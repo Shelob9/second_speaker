@@ -42,6 +42,7 @@ require_once('inc/theGreatDeactivator.php');
 */
 add_filter( 'ot_theme_mode', '__return_true' );
 add_filter( 'ot_show_pages', '__return_false' );
+add_filter( 'ot_show_new_layout', '__return_false' );
 
 require_once('admin/ot-loader.php');
 require_once('inc/theme-options.php');
