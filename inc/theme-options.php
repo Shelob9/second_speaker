@@ -36,432 +36,139 @@ function _custom_theme_options() {
     ),
     'sections'        => array(
       array(
-        'title'       => 'General',
-        'id'          => 'general_default'
+        'title'       => 'Skins',
+        'id'          => 'skins'
       ),
       array(
-        'title'       => 'Miscellaneous ',
-        'id'          => 'miscellaneous'
-      )
+        'title'       => 'Header Options',
+        'id'          => 'header'
+      ),
+      array(
+        'title'       => 'Footer Options',
+        'id'          => 'footer'
+      ),
     ),
     'settings'        => array(
-      array(
-        'label'       => 'Background',
-        'id'          => 'my_background',
-        'type'        => 'background',
-        'desc'        => 'BlahLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Category Checkbox',
-        'id'          => 'my_category_checkbox',
-        'type'        => 'category-checkbox',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Category Select',
-        'id'          => 'my_category_select',
-        'type'        => 'category-select',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Checkbox',
-        'id'          => 'my_checkbox',
-        'type'        => 'checkbox',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      //skins
+       array(
+        'label'       => 'Skin',
+        'id'          => 'skin',
+        'type'        => 'select',
+        'desc'        => 'Like Luke at Cloud City, you must choose between the dark side and the light side skin for your website.',
         'choices'     => array(
-          array (
-            'label'       => 'Yes',
-            'value'       => 'Yes'
+          array(
+            'label'       => 'Light Side',
+            'value'       => 'light'
+          ),
+          array(
+            'label'       => 'Dark Side',
+            'value'       => 'dark'
           )
         ),
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
+        'std'         => 'Light Side',
+        'section'     => 'skins'
       ),
       array(
-        'label'       => 'Colorpicker',
-        'id'          => 'my_colorpicker',
-        'type'        => 'colorpicker',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
+        'label'       => 'Light Side Background Image',
+        'id'          => 'light_bg_img',
+        'type'        => 'upload',
+        'desc'        => 'Change the background image for the Light Side skin.',
+        'std'         => get_stylesheet_directory_uri().'/images/bg.jpg',
+        'section'     => 'skins'
       ),
       array(
-        'label'       => 'CSS',
-        'id'          => 'my_css',
-        'type'        => 'css',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'label'       => 'Dark Side Background Image',
+        'id'          => 'dark_bg_img',
+        'type'        => 'upload',
+        'desc'        => 'Change the background image for the Dark Side skin.',
+        'std'         => get_stylesheet_directory_uri().'/images/bg-dark.jpg',
+        'section'     => 'skins'
+      ),
+      //header
+       array(
+        'label'       => 'Logo Position',
+        'id'          => 'logo_pos',
+        'type'        => 'select',
+        'desc'        => 'Location for logo.',
+        'choices'     => array(
+          array(
+            'label'       => 'None',
+            'value'       => 'rigt'
+          ),
+          array(
+            'label'       => 'Left of Tagline',
+            'value'       => 'left'
+          ),
+          array(
+            'label'       => 'Right of Tagline',
+            'value'       => 'r_t'
+          ),
+           array(
+            'label'       => 'Above Menu',
+            'value'       => 'above'
+          ),
+        ),
+        'std'         => 'none',
+        'section'     => 'header'
+      ),
+       array(
+        'label'       => 'Logo',
+        'id'          => 'logo_img',
+        'type'        => 'upload',
+        'desc'        => 'Upload a logo.',
+        'std'         => '',
+        'section'     => 'header'
+      ),
+       array(
+        'label'       => 'Header Scripts',
+        'id'          => 'header_scripts',
+        'type'        => 'textarea-simple',
+        'desc'        => 'Add any scripts, such as your analytics code, or CSS you would like added to the header. Be sure to use style or script tags as needed.',
         'std'         => '',
         'rows'        => '20',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
+        'section'     => 'header'
       ),
+      
+      //footer
       array(
-        'label'       => 'Custom Post Type Checkbox',
-        'id'          => 'my_custom_post_type_checkbox',
-        'type'        => 'custom-post-type-checkbox',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => 'post',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Custom Post Type Select',
-        'id'          => 'my_custom_post_type_select',
-        'type'        => 'custom-post-type-select',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => 'post',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'List Item',
-        'id'          => 'my_list_item',
-        'type'        => 'list-item',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'settings'    => array(
-          array(
-            'label'       => 'Upload',
-            'id'          => 'my_list_item_upload',
-            'type'        => 'upload',
-            'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            'std'         => '',
-            'rows'        => '',
-            'post_type'   => '',
-            'taxonomy'    => '',
-            'class'       => ''
-          ),
-          array(
-            'label'       => 'Text',
-            'id'          => 'my_list_item_text',
-            'type'        => 'text',
-            'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            'std'         => '',
-            'rows'        => '',
-            'post_type'   => '',
-            'taxonomy'    => '',
-            'class'       => ''
-          ),
-          array(
-            'label'       => 'Textarea Simple',
-            'id'          => 'my_list_item_textarea_simple',
-            'type'        => 'textarea-simple',
-            'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            'std'         => '',
-            'rows'        => '10',
-            'post_type'   => '',
-            'taxonomy'    => '',
-            'class'       => ''
-          )
-        ),
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Measurement',
-        'id'          => 'my_measurement',
-        'type'        => 'measurement',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Page Checkbox',
-        'id'          => 'my_page_checkbox',
-        'type'        => 'page-checkbox',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Page Select',
-        'id'          => 'my_page_select',
-        'type'        => 'page-select',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Post Checkbox',
-        'id'          => 'my_post_checkbox',
-        'type'        => 'post-checkbox',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Post Select',
-        'id'          => 'my_post_select',
-        'type'        => 'post-select',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'general_default'
-      ),
-      array(
-        'label'       => 'Radio',
-        'id'          => 'my_radio',
-        'type'        => 'radio',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'choices'     => array(
-          array(
-            'label'       => 'Yes',
-            'value'       => 'yes'
-          ),
-          array(
-            'label'       => 'No',
-            'value'       => 'no'
-          ), 
-          array(
-            'label'       => 'Maybe',
-            'value'       => 'maybe'
-          )
-        ),
-        'std'         => 'yes',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Radio Image',
-        'id'          => 'my_radio_image',
-        'type'        => 'radio-image',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => 'right-sidebar',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ), 
-      array(
-        'label'       => 'Select',
-        'id'          => 'my_select',
+        'label'       => 'Remove Theme Credit Link?',
+        'id'          => 'credit',
         'type'        => 'select',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'desc'        => '',
         'choices'     => array(
-          array(
-            'label'       => 'Yes',
-            'value'       => 'yes'
-          ),
           array(
             'label'       => 'No',
             'value'       => 'no'
           ),
           array(
-            'label'       => 'Maybe',
-            'value'       => 'maybe'
+            'label'       => 'Yes',
+            'value'       => 'yes'
           )
         ),
-        'std'         => 'maybe',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
+       'std'         => 'no',
+    	'section'     => 'footer'
       ),
       array(
-        'label'       => 'Slider',
-        'id'          => 'my_slider',
-        'type'        => 'slider',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Tag Checkbox',
-        'id'          => 'my_tag_checkbox',
-        'type'        => 'tag-checkbox',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Tag Select',
-        'id'          => 'my_tag_select',
-        'type'        => 'tag-select',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Taxonomy Checkbox',
-        'id'          => 'my_taxonomy_checkbox',
-        'type'        => 'taxonomy-checkbox',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => 'category,post_tag',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Taxonomy Select',
-        'id'          => 'my_taxonomy_select',
-        'type'        => 'taxonomy-select',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => 'category,post_tag',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Text',
-        'id'          => 'my_text',
-        'type'        => 'text',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Textarea',
-        'id'          => 'my_textarea',
+        'label'       => 'Footer Text',
+        'id'          => 'footer_text',
         'type'        => 'textarea',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'desc'        => 'Enter any custom text you would like to show in the footer area.',
         'std'         => '',
         'rows'        => '15',
         'post_type'   => '',
         'taxonomy'    => '',
         'class'       => '',
-        'section'     => 'miscellaneous'
+        'section'     => 'footer'
       ),
-      array(
-        'label'       => 'Textarea Simple',
-        'id'          => 'my_textarea_simple',
+       array(
+        'label'       => 'Footer Scripts',
+        'id'          => 'footer_scripts',
         'type'        => 'textarea-simple',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        'desc'        => 'Add any scripts you would like added to the footer. Be sure to use script tags as needed.',
         'std'         => '',
-        'rows'        => '10',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
+        'rows'        => '20',
+        'section'     => 'footer'
       ),
-      array(
-        'label'       => 'Textblock',
-        'id'          => 'my_textblock',
-        'type'        => 'textblock',
-        'desc'        => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Textblock Titled',
-        'id'          => 'my_textblock_titled',
-        'type'        => 'textblock-titled',
-        'desc'        => '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Typography',
-        'id'          => 'my_typography',
-        'type'        => 'typography',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      ),
-      array(
-        'label'       => 'Upload',
-        'id'          => 'my_upload',
-        'type'        => 'upload',
-        'desc'        => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        'std'         => '',
-        'rows'        => '',
-        'post_type'   => '',
-        'taxonomy'    => '',
-        'class'       => '',
-        'section'     => 'miscellaneous'
-      )
     )
   );
   
