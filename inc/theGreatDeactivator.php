@@ -22,10 +22,10 @@ function _sf_remove_scripts_styles() {
 	//remove_action( 'wp_footer', '_sf_js_init_masonry' );
 /**Backstretch**/
 	//remove_action( 'wp_enqueue_scripts', '_sf_scripts_backstretch' );
-	//remove_action( 'wp_footer', '_sf_js_init_backstretch' );
+	remove_action( 'wp_footer', '_sf_js_init_backstretch' );
 /**AJAX Page Loads**/
 	//remove_action( 'wp_enqueue_scripts', '_sf_scripts_ajaxMenus' );
 	//remove_action( 'wp_footer', '_sf_js_init_ajaxMenus' );
 	
 }
-//add_action('init', '_sf_remove_scripts_styles');
+add_action('init', '_sf_remove_scripts_styles');

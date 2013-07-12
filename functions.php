@@ -11,21 +11,19 @@
 */
 //replace js init fromm parent with the child one. Make sure to keep current.
 function _sf_child_init() {
-	if ( !is_admin() ) :
-			wp_enqueue_script('child-init', get_stylesheet_directory_uri().'/js/_sf_child-init.js', array(), false, true);
-	endif;
+
+		wp_enqueue_script('child-init', get_stylesheet_directory_uri().'/js/child-init.js', array(), false, false);
 }
-//add_action('wp_enqueue_scripts', '_sf_child_init');
+add_action('wp_enqueue_scripts', '_sf_child_init');
 
 //child style override style sheet
 function _sf_child_style() {
 		if ( !is_admin() ) :
 			wp_enqueue_style('style', get_stylesheet_directory_uri().'/style.css');
-			wp_enqueue_style('child-style', get_stylesheet_directory_uri().'/css/child.css');
 		endif;
 
 }
-add_action('wp_enqueue_scripts', '_sf_child_style');
+add_action('wp_enqueue_scripts', '_sf_child_style', 100);
 
 /**
 * Include child theme functions

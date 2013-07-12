@@ -1,0 +1,140 @@
+@mixin border ($borderColor) {
+	border-width: 1px;
+	border-style: solid;
+	border-color: $borderColor;
+}
+
+@mixin corners ($size) {
+	-moz-border-radius-topleft: $size;
+	-moz-border-radius-topright: $size;
+	-moz-border-radius-bottomleft: $size;
+	-moz-border-radius-bottomright: $size;
+	-webkit-border-top-left-radius: $size;
+	-webkit-border-top-right-radius: $size;
+	-webkit-border-bottom-left-radius: $size;
+	-webkit-border-bottom-right-radius: $size;
+	border-top-left-radius: $size;
+	border-top-right-radius: $size;
+	border-bottom-left-radius: $size;
+	border-bottom-right-radius: $size;
+}
+
+@mixin shadow ($shadowColor) {
+	-moz-box-shadow: 2px 3px 5px $shadowColor;
+	-webkit-box-shadow: 2px 3px 5px $shadowColor;
+	box-shadow: 2px 3px 5px $shadowColor;
+}
+
+@mixin margin ($size) {
+	margin: $size $size $size $size;
+}
+
+
+@mixin aUniform {
+	a { 
+			color: $accent;
+			&:hover { 
+				color: $alt1;
+				border-bottom: 1px dotted $accent;
+			}
+			&:visited {
+				color: $accentShade;
+				&:hover {
+					color: $alt2;
+					border-bottom: 1px dotted $accentShade;
+				}
+			}
+		}
+}
+@mixin gradient ($start, $finish) {
+	background-image: linear-gradient(left top, $start 13%, $finish 69%);
+	background-image: -o-linear-gradient(left top, $start 13%, $finish 69%);
+	background-image: -moz-linear-gradient(left top, $start 13%, $finish 69%);
+	background-image: -webkit-linear-gradient(left top, $start 13%, $finish 69%);
+	background-image: -ms-linear-gradient(left top, $start 13%, $finish 69%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right bottom,
+		color-stop(0.13, $start),
+		color-stop(0.69, $finish)
+	);  
+}
+
+@mixin TheForce {
+	@include border ($accentShade);
+	@include corners (3px);
+	@include aUniform;
+	color: $primary;
+	@include shadow ($accentShade);
+	background-color: $secondary;
+}
+
+
+.widget-title {
+		h1 {
+			color: $accentEr;
+			font-size: 1em;
+			text-align: center;
+		}
+}
+
+.widget {
+	ul {
+			list-style-type: none;
+			font-size: .9em;
+		}	
+	@include aUniform;
+	color: $accentShade;
+	background-color: $secondary;
+	@include border ($accent);
+	@include corners (3px);
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+#secondary, #masthead, #colophon {
+	@include TheForce;
+}
+#masthead {margin-bottom:4px;}
+
+#colphon {margin-top:4px}
+
+.site-description {
+	h2 {
+		color: $accentEr;
+		margin-left: 24px;
+	}
+}
+
+nav #nav-below {
+	@include border ($accentShade);
+	@include corners (3px);
+	@include aUniform;
+	color: $accentShade;
+	@include shadow ($accentShade);
+	background-color: $secondary;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.nav-prev {font-size:10em;}
+
+.top-bar .name h1,  h1.site-title {
+	a {
+		color: $alt1 !important;
+	}
+	a:visited {
+		color: $alt1 !important;
+	}
+	
+}
+
+.masonry-entry {
+	@include TheForce;
+	padding: 0px, 0px, 0px, 0px;	
+}
+.masonry-post-excerpt p.excerpt{
+	@include margin (5px);
+}
