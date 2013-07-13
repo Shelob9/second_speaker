@@ -157,3 +157,9 @@ nav #nav-below {
 		font-size:1.5em;
 	}
 }
+
+.nav-previous, .nav-next {
+	margin-left: 2px;
+	margin-right: 2px;
+	a:hover{ color: $alt2;}
+}

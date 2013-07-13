@@ -11,6 +11,7 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" class="site-footer row" role="contentinfo">
+	<?php _sf_content_nav( 'nav-below' ); ?>
 		<div class="site-info large-12 columns">
 			<?php do_action( '_sf_credits' ); ?>
 			<?php printf( __( 'Theme:', '_sf' )); ?> <a href="http://complexwaveform.com/jp/sf" title="<?php esc_attr_e( 'A _Second Foundation Child Theme', '_sf' ); ?>"><?php printf( __( 'Cloud City', '_sf' )); ?></a>

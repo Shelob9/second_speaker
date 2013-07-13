@@ -24,7 +24,7 @@ _sf_open($options['sidebar']);
 				endwhile;
 		?>
 		</ul>
-			<?php _sf_content_nav( 'nav-below' ); ?>
+			
 		<?php else : ?>
 			<?php get_template_part( 'no-results', 'index' ); ?>
 		<?php endif; ?>

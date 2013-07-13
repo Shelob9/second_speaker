@@ -282,3 +282,13 @@ nav #nav-below a:visited:hover {
   text-align: center;
   font-size: 1.5em;
 }
+
+/* line 161, ../CC-SASS/_cloud-city.scss */
+.nav-previous, .nav-next {
+  margin-left: 2px;
+  margin-right: 2px;
+}
+/* line 164, ../CC-SASS/_cloud-city.scss */
+.nav-previous a:hover, .nav-next a:hover {
+  color: #0099ff;
+}
