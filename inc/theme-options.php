@@ -136,7 +136,7 @@ function _custom_theme_options() {
       //footer
       array(
         'label'       => 'Remove Theme Credit Link?',
-        'id'          => 'credit',
+        'id'          => 'remove_credit',
         'type'        => 'select',
         'desc'        => '',
         'choices'     => array(
