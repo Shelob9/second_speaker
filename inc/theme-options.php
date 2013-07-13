@@ -47,6 +47,10 @@ function _custom_theme_options() {
         'title'       => 'Footer Options',
         'id'          => 'footer'
       ),
+      array(
+        'title'       => 'Other',
+        'id'          => 'other'
+      )
     ),
     'settings'        => array(
       //skins
@@ -169,6 +173,43 @@ function _custom_theme_options() {
         'rows'        => '20',
         'section'     => 'footer'
       ),
+      array(
+        'label'       => 'Stick Menu To Top Of Page?',
+        'id'          => 'stick',
+        'type'        => 'select',
+        'desc'        => '',
+        'choices'     => array(
+          array(
+            'label'       => 'Yes',
+            'value'       => 'stick'
+          ),
+          array(
+            'label'       => 'No',
+            'value'       => 'unstick'
+          )
+        ),
+       'std'         => 'stick',
+    	'section'     => 'other'
+      ),
+      array(
+        'label'       => 'Show Sidebar?',
+        'id'          => 'sidebar',
+        'type'        => 'select',
+        'desc'        => '',
+        'choices'     => array(
+          array(
+            'label'       => 'Yes',
+            'value'       => 'value1'
+          ),
+          array(
+            'label'       => 'No',
+            'value'       => 'value3'
+          )
+        ),
+       'std'         => 'value1',
+    	'section'     => 'other'
+      ),
+		
     )
   );
   
