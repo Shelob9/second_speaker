@@ -16,7 +16,7 @@ _sf_open($options['sidebar']);
 ?>
 		<?php _sf_home_slider(); ?>
 		<?php if ( have_posts() ) : ?>
-		<ul class="block-grid-small-2">
+		<ul class="small-block-grid-2">
 		<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();

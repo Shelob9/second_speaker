@@ -73,8 +73,6 @@
 
 @mixin postPageEtc ($h1) {
 	@include TheForce;
-	padding-left: 4px;
-	padding-right: 4px;
 		h1 {
 			color: $h1;
 		}
@@ -141,6 +139,8 @@ nav #nav-below {
 
 .page-header, .post-header, #comments {
 	@include postPageEtc ($alt2);
+	padding-left: 4px;
+	padding-right: 4px;
 }
 .post, .page {
 	@include postPageEtc ($alt1);
@@ -150,5 +150,10 @@ nav #nav-below {
 	}
 	h2 {color: $alt2}
 	h3,h4,h5,h6,h7 {color:$primary;}
-	
+}
+.preview {
+	h1{
+		text-align:center;
+		font-size:1.5em;
+	}
 }

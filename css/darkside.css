@@ -1,11 +1,11 @@
-/* line 84, ../CC-SASS/_cloud-city.scss */
+/* line 82, ../CC-SASS/_cloud-city.scss */
 .widget-title h5 {
   color: #375245;
   font-size: 1em;
   text-align: center;
 }
 
-/* line 91, ../CC-SASS/_cloud-city.scss */
+/* line 89, ../CC-SASS/_cloud-city.scss */
 .widget {
   color: #3f5e5e;
   background-color: black;
@@ -27,7 +27,7 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
-/* line 92, ../CC-SASS/_cloud-city.scss */
+/* line 90, ../CC-SASS/_cloud-city.scss */
 .widget ul {
   list-style-type: none;
   font-size: .9em;
@@ -51,7 +51,7 @@
   border-bottom: 1px dotted #3f5e5e;
 }
 
-/* line 106, ../CC-SASS/_cloud-city.scss */
+/* line 104, ../CC-SASS/_cloud-city.scss */
 #secondary, #masthead, #colophon {
   border-width: 1px;
   border-style: solid;
@@ -93,23 +93,23 @@
   border-bottom: 1px dotted #3f5e5e;
 }
 
-/* line 109, ../CC-SASS/_cloud-city.scss */
+/* line 107, ../CC-SASS/_cloud-city.scss */
 #masthead {
   margin-bottom: 4px;
 }
 
-/* line 111, ../CC-SASS/_cloud-city.scss */
+/* line 109, ../CC-SASS/_cloud-city.scss */
 #colphon {
   margin-top: 4px;
 }
 
-/* line 114, ../CC-SASS/_cloud-city.scss */
+/* line 112, ../CC-SASS/_cloud-city.scss */
 .site-description h2 {
   color: #375245;
   margin-left: 24px;
 }
 
-/* line 120, ../CC-SASS/_cloud-city.scss */
+/* line 118, ../CC-SASS/_cloud-city.scss */
 nav #nav-below {
   border-width: 1px;
   border-style: solid;
@@ -153,21 +153,21 @@ nav #nav-below a:visited:hover {
   border-bottom: 1px dotted #3f5e5e;
 }
 
-/* line 130, ../CC-SASS/_cloud-city.scss */
+/* line 128, ../CC-SASS/_cloud-city.scss */
 .nav-prev {
   font-size: 10em;
 }
 
-/* line 133, ../CC-SASS/_cloud-city.scss */
+/* line 131, ../CC-SASS/_cloud-city.scss */
 .top-bar .name h1 a, h1.site-title a {
   color: #ff6633 !important;
 }
-/* line 136, ../CC-SASS/_cloud-city.scss */
+/* line 134, ../CC-SASS/_cloud-city.scss */
 .top-bar .name h1 a:visited, h1.site-title a:visited {
   color: #ff6633 !important;
 }
 
-/* line 142, ../CC-SASS/_cloud-city.scss */
+/* line 140, ../CC-SASS/_cloud-city.scss */
 .page-header, .post-header, #comments {
   border-width: 1px;
   border-style: solid;
@@ -210,7 +210,7 @@ nav #nav-below a:visited:hover {
   color: #0099ff;
   border-bottom: 1px dotted #3f5e5e;
 }
-/* line 78, ../CC-SASS/_cloud-city.scss */
+/* line 76, ../CC-SASS/_cloud-city.scss */
 .page-header h1, .post-header h1, #comments h1 {
   color: #0099ff;
 }
@@ -237,8 +237,6 @@ nav #nav-below a:visited:hover {
   -webkit-box-shadow: 2px 3px 5px #3f5e5e;
   box-shadow: 2px 3px 5px #3f5e5e;
   background-color: black;
-  padding-left: 4px;
-  padding-right: 4px;
 }
 /* line 34, ../CC-SASS/_cloud-city.scss */
 .post a, .page a {
@@ -258,7 +256,7 @@ nav #nav-below a:visited:hover {
   color: #0099ff;
   border-bottom: 1px dotted #3f5e5e;
 }
-/* line 78, ../CC-SASS/_cloud-city.scss */
+/* line 76, ../CC-SASS/_cloud-city.scss */
 .post h1, .page h1 {
   color: #ff6633;
 }
@@ -277,4 +275,10 @@ nav #nav-below a:visited:hover {
 /* line 152, ../CC-SASS/_cloud-city.scss */
 .post h3, .post h4, .post h5, .post h6, .post h7, .page h3, .page h4, .page h5, .page h6, .page h7 {
   color: white;
+}
+
+/* line 155, ../CC-SASS/_cloud-city.scss */
+.preview h1 {
+  text-align: center;
+  font-size: 1.5em;
 }
