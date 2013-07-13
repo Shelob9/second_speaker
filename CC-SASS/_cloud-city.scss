@@ -151,6 +151,11 @@ nav #nav-below {
 	h2 {color: $alt2}
 	h3,h4,h5,h6,h7 {color:$primary;}
 }
+
+.entry-meta, .entry-content{
+	padding-left: 4px;
+	padding-right: 4px;
+}
 .preview {
 	h1{
 		text-align:center;
