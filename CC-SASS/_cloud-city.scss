@@ -71,6 +71,14 @@
 	background-color: $secondary;
 }
 
+@mixin postPageEtc ($h1) {
+	@include TheForce;
+	padding-left: 4px;
+	padding-right: 4px;
+		h1 {
+			color: $h1;
+		}
+}
 
 .widget-title {
 		h5 {
@@ -137,4 +145,18 @@ nav #nav-below {
 }
 .masonry-post-excerpt p.excerpt{
 	@include margin (5px);
+}
+
+.page-header, .post-header, #comments {
+	@include postPageEtc ($alt2);
+}
+.post, .page {
+	@include postPageEtc ($alt1);
+	h1	{
+		a {color: $alt2;}
+		a:vistied {color: $alt2;}
+	}
+	h2 {color: $alt2}
+	h3,h4,h5,h6,h7 {color:$primary;}
+	
 }
