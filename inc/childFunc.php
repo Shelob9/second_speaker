@@ -74,4 +74,5 @@ function _scc_option_footerScripts() {
 }
 add_action('wp_footer', '_scc_option_footerScripts');
 
+
 ?>

@@ -1,0 +1,7 @@
+/* 5 columns by default */
+.grid-sizer { width: 20%; }
+
+@media screen and (min-width: 720px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 10%; }
+}

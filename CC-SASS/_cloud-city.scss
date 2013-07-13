@@ -160,3 +160,9 @@ nav #nav-below {
 	h3,h4,h5,h6,h7 {color:$primary;}
 	
 }
+.grid-sizer { width: 20%; }
+
+@media screen and (min-width: 720px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 10%; }
+}

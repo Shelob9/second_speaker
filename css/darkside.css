@@ -326,3 +326,16 @@ nav #nav-below a:visited:hover {
 .post h3, .post h4, .post h5, .post h6, .post h7, .page h3, .page h4, .page h5, .page h6, .page h7 {
   color: white;
 }
+
+/* line 163, ../CC-SASS/_cloud-city.scss */
+.grid-sizer {
+  width: 20%;
+}
+
+@media screen and (min-width: 720px) {
+  /* 10 columns for larger screens */
+  /* line 167, ../CC-SASS/_cloud-city.scss */
+  .grid-sizer {
+    width: 10%;
+  }
+}
