@@ -93,7 +93,7 @@ function _custom_theme_options() {
         'label'       => 'Logo Position',
         'id'          => 'logo_pos',
         'type'        => 'select',
-        'desc'        => 'Location for logo.',
+        'desc'        => 'Location for logo. Above menu is best for banners, to the side of the tagline is best for smaller logos.',
         'choices'     => array(
           array(
             'label'       => 'None',
