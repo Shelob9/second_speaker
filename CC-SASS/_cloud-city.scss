@@ -139,14 +139,6 @@ nav #nav-below {
 	
 }
 
-.masonry-entry {
-	@include TheForce;
-	padding: 0px, 0px, 0px, 0px;	
-}
-.masonry-post-excerpt p.excerpt{
-	@include margin (5px);
-}
-
 .page-header, .post-header, #comments {
 	@include postPageEtc ($alt2);
 }
@@ -159,10 +151,4 @@ nav #nav-below {
 	h2 {color: $alt2}
 	h3,h4,h5,h6,h7 {color:$primary;}
 	
-}
-.grid-sizer { width: 20%; }
-
-@media screen and (min-width: 720px) {
-  /* 10 columns for larger screens */
-  .grid-sizer { width: 10%; }
 }
