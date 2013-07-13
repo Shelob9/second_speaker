@@ -30,7 +30,7 @@ function _scc_theChoice_css($side) {
 		wp_enqueue_style('cloud-city', get_stylesheet_directory_uri().'/css/darkside.css');
 	}
 }
-add_action('wp_enqueue_scripts', '_scc_theChoice_css');
+add_action('wp_enqueue_scripts', '_scc_theChoice_css', 100);
 
 
 function _scc_theChoice_js($side, $use = '' ) {
