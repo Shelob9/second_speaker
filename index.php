@@ -12,7 +12,7 @@
  */
 get_header(); 
 $sidebar = $options['sidebar'];
-_sf_open($sidebar);
+_sf_open($options['sidebar']);
 ?>
 		<?php _sf_home_slider(); ?>
 		<?php if ( have_posts() ) : ?>
@@ -36,4 +36,4 @@ _sf_open($sidebar);
 			<?php get_template_part( 'no-results', 'index' ); ?>
 		<?php endif; ?>
 		
-<?php _sf_close($sidebar); ?>
+<?php _sf_close($options['sidebar']); ?>

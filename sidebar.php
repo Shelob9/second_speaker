@@ -6,8 +6,8 @@
  */
 ?>
 <?php 
-	$sidebar = get_theme_mod('_sf_default_sidebar');
-	_sf_sidebar_starter($sidebar);
+	global $options;
+	_sf_sidebar_starter($options['sidebar']);
 ?>
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-cc' ) ) : ?>
