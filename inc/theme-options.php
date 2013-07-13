@@ -209,28 +209,6 @@ function _custom_theme_options() {
        'std'         => 'value1',
     	'section'     => 'other'
       ),
-      array(
-        'label'       => 'How Many Masonry Bricks?',
-        'id'          => 'masonry_bricks',
-        'type'        => 'select',
-        'desc'        => 'Select how many posts per row on the blog page? Note: on mobile it will never exceed 4.',
-        'choices'     => array(
-          array(
-            'label'       => '3',
-            'value'       => 4
-          ),
-          array(
-            'label'       => '4',
-            'value'       => 4
-          ),
-           array(
-            'label'       => '6',
-            'value'       => 6
-          )
-        ),
-       'std'         => '4',
-    	'section'     => 'other'
-      ),
 		
     )
   );

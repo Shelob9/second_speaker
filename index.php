@@ -16,12 +16,14 @@ _sf_open($options['sidebar']);
 ?>
 		<?php _sf_home_slider(); ?>
 		<?php if ( have_posts() ) : ?>
+		<ul class="block-grid-small-2">
 		<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 				get_template_part( 'content' );
 				endwhile;
 		?>
+		</ul>
 			<?php _sf_content_nav( 'nav-below' ); ?>
 		<?php else : ?>
 			<?php get_template_part( 'no-results', 'index' ); ?>

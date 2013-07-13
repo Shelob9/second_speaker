@@ -3,7 +3,7 @@
  * @package _sf
  */
 ?>
-
+<li>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', '_sf' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
@@ -64,8 +64,6 @@
 
 			<?php edit_post_link( __( 'Edit', '_sf' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
 		</div>
-		<div class="large-3 columns read-more">
-			<a class="read-more-button button small radius alignright" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', '_sf' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">Read More</a>
-		</div>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
+</li>
