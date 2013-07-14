@@ -20,10 +20,10 @@ function _scc_widgets_init() {
 add_action( 'widgets_init', '_scc_widgets_init' );
 endif; //! _scc_widgets_init exists
 
-global $options;
+$options = get_option('option_tree');
 $side = $options['skin'];
 function _scc_theChoice_css($side) {
-	if ($side == 'light') {
+	if ($side = 'light') {
 		wp_enqueue_style('cloud-city', get_stylesheet_directory_uri().'/css/lightside.css');
 	}
 	else {
@@ -33,9 +33,9 @@ function _scc_theChoice_css($side) {
 add_action('wp_enqueue_scripts', '_scc_theChoice_css', 100);
 
 
-function _scc_theChoice_js($side, $use = '' ) {
-global $options;
-	if ($side == 'light') {
+function _scc_theChoice_js($side, $use = '') {
+$options = get_option('option_tree');
+	if ($side = 'light') {
 		$body_img_url = $options['light_bg_img'];
 			
 	}
@@ -57,8 +57,8 @@ add_action('wp_footer', '_scc_theChoice_js');
 /**
 * Header and Footer Scripts From Options
 */
-function _scc_option_headerScripts() {
-	global $options;
+function _scc_option_headerScripts($options) {
+	$options = get_option('option_tree');
 	$out = $options['header_scripts'];
 	if (! $out == '') {
 		echo $out;
@@ -66,7 +66,7 @@ function _scc_option_headerScripts() {
 }
 add_action('wp_head', '_scc_option_headerScripts');
 function _scc_option_footerScripts() {
-	global $options;
+	$options = get_option('option_tree');
 	$out = $options['footer_scripts'];
 	if (! $out == '') {
 		echo $out;
