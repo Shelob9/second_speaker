@@ -78,8 +78,17 @@
 		}
 }
 
+h1 {
+	font-family: 'Lato-Bol', Helvetica neue, sans-serif;
+}
+
+h2, h3, h4, h5, h6, h7 {
+	font-family: 'Lato-Bla', Helvetica neue, sans-serif;
+}
+
 .widget-title {
 		h5 {
+			font-family: 'Lato-Hai', Helvetica neue, sans-serif;
 			color: $accentEr;
 			font-size: 1em;
 			text-align: center;

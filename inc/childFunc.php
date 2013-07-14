@@ -23,7 +23,6 @@ endif; //! _scc_widgets_init exists
 global $options;
 $side = $options['skin'];
 function _scc_theChoice_css($side) {
-	wp_enqueue_style('lato-fonts', get_stylesheet_directory_uri().'fonts/Lato.css');
 	if ($side == 'light') {
 		wp_enqueue_style('cloud-city', get_stylesheet_directory_uri().'/css/lightside.css');
 	}
