@@ -155,10 +155,10 @@ function _custom_theme_options() {
       array(
         'label'       => 'Footer Text',
         'id'          => 'footer_text',
-        'type'        => 'textarea',
-        'desc'        => 'Enter any custom text you would like to show in the footer area.',
+        'type'        => 'textarea_simple',
+        'desc'        => 'Enter any custom text you would like to show in the footer area. You may use html. If you are keeping the credit link, you should avoid wrapping in <p> tags.',
         'std'         => '',
-        'rows'        => '15',
+        'rows'        => '20',
         'post_type'   => '',
         'taxonomy'    => '',
         'class'       => '',
