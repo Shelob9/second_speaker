@@ -1,0 +1,38 @@
+/** http://www.dafont.com/harabara.font **/
+/** (C) Łukasz Dziedzic -> SIL Open Font License, 1.1 **/
+
+@font-face {
+	font-family: 'Conv_Lato-Bla';
+	src: url('fonts/Lato-Bla.eot');
+	src: local('☺'), url('fonts/Lato-Bla.woff') format('woff'), url('fonts/Lato-Bla.ttf') format('truetype'), url('fonts/Lato-Bla.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Lato-Hai';
+	src: url('fonts/Lato-Hai.eot');
+	src: local('☺'), url('fonts/Lato-Hai.woff') format('woff'), url('fonts/Lato-Hai.ttf') format('truetype'), url('fonts/Lato-Hai.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Lato-RegIta';
+	src: url('fonts/Lato-RegIta.eot');
+	src: local('☺'), url('fonts/Lato-RegIta.woff') format('woff'), url('fonts/Lato-RegIta.ttf') format('truetype'), url('fonts/Lato-RegIta.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Lato-Reg';
+	src: url('fonts/Lato-Reg.eot');
+	src: local('☺'), url('fonts/Lato-Reg.woff') format('woff'), url('fonts/Lato-Reg.ttf') format('truetype'), url('fonts/Lato-Reg.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Conv_Lato-Bol';
+	src: url('fonts/Lato-Bol.eot');
+	src: local('☺'), url('fonts/Lato-Bol.woff') format('woff'), url('fonts/Lato-Bol.ttf') format('truetype'), url('fonts/Lato-Bol.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
