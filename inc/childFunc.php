@@ -20,10 +20,11 @@ function _scc_widgets_init() {
 add_action( 'widgets_init', '_scc_widgets_init' );
 endif; //! _scc_widgets_init exists
 
-$options = get_option('option_tree');
-$side = $options['skin'];
+
 function _scc_theChoice_css($side) {
-	if ($side = 'light') {
+	$options = get_option('option_tree');
+	$side = $options['skin'];
+	if ($side == 'light') {
 		wp_enqueue_style('cloud-city', get_stylesheet_directory_uri().'/css/lightside.css');
 	}
 	else {
@@ -33,11 +34,11 @@ function _scc_theChoice_css($side) {
 add_action('wp_enqueue_scripts', '_scc_theChoice_css', 100);
 
 
-function _scc_theChoice_js($side, $use = '') {
-$options = get_option('option_tree');
-	if ($side = 'light') {
+function _scc_theChoice_js($use = '') {
+	$options = get_option('option_tree');
+	$side = $options['skin'];
+	if ($side == 'light') {
 		$body_img_url = $options['light_bg_img'];
-			
 	}
 	else {
 		$body_img_url = $dark_bg_img = $options['dark_bg_img'];
@@ -45,7 +46,7 @@ $options = get_option('option_tree');
 		if (! $use == 'reinit') {
 			echo '<script>';
 		}
-		echo ' jQuery.backstretch("';
+		echo 'jQuery.backstretch("';
 		echo $body_img_url;
 		echo '");     ';
 		if (! $use == 'reinit') {
