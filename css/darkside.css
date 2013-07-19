@@ -356,3 +356,15 @@ nav #nav-below a:visited:hover {
 .nav-previous a:hover, .nav-next a:hover {
   color: #0099ff;
 }
+
+/* line 185, ../CC-SASS/_cloud-city.scss */
+.sidebar-float {
+  float: right;
+  margin-bottom: 20px;
+  width: 31.33333%;
+}
+
+/* line 191, ../CC-SASS/_cloud-city.scss */
+.small-block-grid-3 .hentry {
+  margin-bottom: 0px;
+}

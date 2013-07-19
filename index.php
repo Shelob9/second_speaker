@@ -11,12 +11,14 @@
  * @package _sf
  */
 get_header(); 
-$sidebar = $options['sidebar'];
-_sf_open($options['sidebar']);
+$sidebar = 'value3';
+_sf_open($sidebar);
 ?>
+	<?php get_sidebar('floated'); ?>
+
 		<?php _sf_home_slider(); ?>
 		<?php if ( have_posts() ) : ?>
-		<ul class="small-block-grid-2">
+		<ul class="small-block-grid-3">
 		<?php
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
@@ -29,4 +31,4 @@ _sf_open($options['sidebar']);
 			<?php get_template_part( 'no-results', 'index' ); ?>
 		<?php endif; ?>
 		
-<?php _sf_close($options['sidebar']); ?>
+<?php _sf_close($sidebar); ?>

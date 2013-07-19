@@ -181,3 +181,13 @@ nav #nav-below {
 	margin-right: 2px;
 	a:hover{ color: $alt2;}
 }
+
+.sidebar-float {
+	float:right;
+	margin-bottom:20px;
+	width: percentage(1/3) - 2%;
+}
+
+.small-block-grid-3 .hentry {
+	margin-bottom:0px;
+}
