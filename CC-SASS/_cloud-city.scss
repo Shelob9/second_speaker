@@ -29,6 +29,10 @@
 	margin: $size $size $size $size;
 }
 
+@mixin padding ($size) {
+	padding: $size $size $size $size;
+}
+
 
 @mixin aUniform {
 	a { 
@@ -190,4 +194,7 @@ nav #nav-below {
 
 .small-block-grid-3 .hentry {
 	margin-bottom:0px;
+}
+.small-block-grid-3>li {
+	@include padding(5px);
 }
