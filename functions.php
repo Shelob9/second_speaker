@@ -15,7 +15,9 @@ $options = get_option('option_tree');
 */
 //replace js init fromm parent with the child one. Make sure to keep current.
 function _sf_child_init() {
-		wp_enqueue_script('child-init', get_stylesheet_directory_uri().'/js/child-init.js', array(), false, false);
+	if ( !is_admin() ) :
+			wp_enqueue_script('child-init', get_stylesheet_directory_uri().'/js/child-init.js', array(), false, true);
+	endif;
 }
 //add_action('wp_enqueue_scripts', '_sf_child_init');
 
