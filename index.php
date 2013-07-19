@@ -14,7 +14,12 @@ get_header();
 $sidebar = 'value3';
 _sf_open($sidebar);
 ?>
-	<?php get_sidebar('floated'); ?>
+	<?php 
+	global $options;
+	if ($options['sidebar'] != 'value3' ) {
+		get_sidebar('floated');
+	}
+	?>
 
 		<?php _sf_home_slider(); ?>
 		<?php if ( have_posts() ) : ?>
