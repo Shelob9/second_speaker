@@ -131,7 +131,7 @@ h2, h3, h4, h5, h6, h7 {
 .site-description {
 	h2 {
 		color: $accentEr;
-		margin-left: 24px;
+		margin-left: 15px;
 	}
 }
 
@@ -165,6 +165,7 @@ nav #nav-below {
 .post, .page {
 	@include postPageEtc ($alt1);
 	h1	{
+		padding-left: 15px;
 		a {color: $alt2;}
 		a:vistied {color: $alt2;}
 	}
@@ -173,7 +174,7 @@ nav #nav-below {
 }
 
 .entry-meta, .entry-content{
-	padding-left: 4px;
+	padding-left: 15px;
 	padding-right: 4px;
 }
 .preview {
@@ -195,8 +196,11 @@ nav #nav-below {
 	width: percentage(1/3) - 2%;
 }
 /*Masonry*/
-.masonry-entry{ 
+.masonry-entry { 
 	@include TheForce;
+}
+.masonry-details {
+	@include padding-even (2px);
 }
 
 .masonry-post-title{
@@ -205,4 +209,8 @@ nav #nav-below {
 .masonry-post-excerpt .excerpt{
 	color: $alt2;
 }
+
+.masonry-thumbnail img {
+	width:100%;
+	}
 #content {padding: 0 0 0 0;}
