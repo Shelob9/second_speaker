@@ -15,8 +15,8 @@ function _sf_remove_scripts_styles() {
 	//remove_action( 'wp_enqueue_scripts', '_sf_scripts_foundation' );
 	//remove_action( 'wp_footer', '_sf_js_init_foundation' );
 /**Infinite Scroll**/
-	//remove_action( 'wp_enqueue_scripts', '_sf_scripts_infScroll' );
-	//remove_action( 'wp_footer', '_sf_js_init_infScroll' );
+	remove_action( 'wp_enqueue_scripts', '_sf_scripts_infScroll' );
+	remove_action( 'wp_footer', '_sf_js_init_infScroll' );
 /**Masonry**/
 	//remove_action( 'wp_enqueue_scripts', '_sf_scripts_masonry' );
 	//remove_action( 'wp_footer', '_sf_js_init_masonry' );
