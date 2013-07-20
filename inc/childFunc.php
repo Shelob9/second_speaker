@@ -75,5 +75,33 @@ function _scc_option_footerScripts() {
 }
 add_action('wp_footer', '_scc_option_footerScripts');
 
+/**
+* Set Masonry Brick Width CSS Dynamically
+*
+* @since _scc 0.1
+*/
+if (! function_exists('_scc_dynamic_width') ) :
+function _scc_dynamic_width() {
+	global $options;
+	$howmany = $options['masonry_bricks'];
+	//divide that by 100 to get the percent width
+	$percent = 100/$howmany;
+	//keep it to 4 if it's greater than 4 for mobile
+	if ($howmany = 6) {
+		$Spercent = 25;
+	}
+	echo '<style>';
+	echo '.masonry-entry, #secondary {width:';
+	echo $percent.'%;';
+	echo '} ';
+	echo " @media screen and (min-width: 720px) { .masonry-entry, #secondary { width:";
+  		echo $Spercent.'%;';
+   echo "} ";
+   echo "}</style>";
+}
+add_action('wp_head', '_scc_dynamic_width');
+endif; //! _scc_dynamic_width exists
+
+
 
 ?>

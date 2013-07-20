@@ -209,6 +209,32 @@ function _custom_theme_options() {
        'std'         => 'value1',
     	'section'     => 'other'
       ),
+      array(
+        'label'       => 'How Many Maosnry Bricks Per Row?',
+        'id'          => 'masonry_bricks',
+        'type'        => 'select',
+        'desc'        => '',
+        'choices'     => array(
+          array(
+            'label'       => '2',
+            'value'       => '2'
+          ),
+        array(
+            'label'       => '3',
+            'value'       => '3'
+          ),
+          array(
+            'label'       => '4',
+            'value'       => '4'
+          ),
+          array(
+            'label'       => '6',
+            'value'       => '6'
+          )
+        ),
+       'std'         => '4',
+    	'section'     => 'other'
+      ),
 		
     )
   );
