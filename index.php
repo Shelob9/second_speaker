@@ -19,21 +19,20 @@ _sf_open($sidebar);
 	if ($options['sidebar'] != 'value3' ) {
 		get_sidebar('floated');
 	}
+	var_dump($options);
 	?>
-
-		<?php _sf_home_slider(); ?>
-		<?php if ( have_posts() ) : ?>
-		<ul class="small-block-grid-3">
-		<?php
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
-				get_template_part( 'content' );
-				endwhile;
-		?>
-		</ul>
-			
-		<?php else : ?>
-			<?php get_template_part( 'no-results', 'index' ); ?>
-		<?php endif; ?>
+	<?php _sf_home_slider(); ?>
+	<?php if ( have_posts() ) : 
+		echo '<div id="masonry-loop"><!--start masonry-loop-->';
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
+				get_template_part( 'content', 'masonry' );
+			endwhile;
+		echo '</div><!--end masonry-loop-->';
+	?>
+	
+	<?php else : ?>
+		<?php get_template_part( 'no-results', 'index' ); ?>
+	<?php endif; ?>
 		
 <?php _sf_close($sidebar); ?>
