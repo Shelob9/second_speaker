@@ -25,11 +25,11 @@
 	box-shadow: 1px 2px 3px $shadowColor;
 }
 
-@mixin margin ($size) {
+@mixin margin-even ($size) {
 	margin: $size $size $size $size;
 }
 
-@mixin padding ($size) {
+@mixin padding-even ($size) {
 	padding: $size $size $size $size;
 }
 
@@ -108,17 +108,16 @@ h2, h3, h4, h5, h6, h7 {
 }
 
 .widget {
-	ul {
-			list-style-type: none;
-			font-size: .9em;
-		}	
 	@include aUniform;
 	color: $accentShade;
 	background-color: $secondary;
 	@include border ($accent);
 	@include corners (3px);
-	margin-top: 5px;
-	margin-bottom: 5px;
+	@include margin-even (5px);
+		ul {
+			list-style-type: none;
+			font-size: .9em;
+		}	
 }
 
 
