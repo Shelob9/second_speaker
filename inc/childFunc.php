@@ -91,10 +91,10 @@ function _scc_dynamic_width() {
 		$Spercent = 25;
 	}
 	echo '<style>';
-	echo '.masonry-entry {width:';
+	echo '.masonry-entry, #secondary {width:';
 	echo $percent.'%;';
 	echo '} ';
-	echo " @media screen and (min-width: 720px) {{ .masonry-entry { width:";
+	echo " @media screen and (min-width: 720px) { .masonry-entry, #secondary { width:";
   		echo $Spercent.'%;';
    echo "} ";
    echo "}</style>";

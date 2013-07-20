@@ -14,16 +14,16 @@ get_header();
 $sidebar = 'value3';
 _sf_open($sidebar);
 ?>
-	<?php 
+	
+	<?php _sf_home_slider(); ?>
+	<?php if ( have_posts() ) : 
+		echo '<div id="masonry-loop"><!--start masonry-loop-->';
+
 	global $options;
 	if ($options['sidebar'] != 'value3' ) {
 		get_sidebar('floated');
 	}
-	var_dump($options);
-	?>
-	<?php _sf_home_slider(); ?>
-	<?php if ( have_posts() ) : 
-		echo '<div id="masonry-loop"><!--start masonry-loop-->';
+	
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 				get_template_part( 'content', 'masonry' );
