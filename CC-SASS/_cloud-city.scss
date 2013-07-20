@@ -98,6 +98,7 @@ h2, h3, h4, h5, h6, h7 {
 	font-family: 'Lato-Bla', Helvetica neue, sans-serif;
 }
 
+
 .widget-title {
 		h5 {
 			font-family: 'Lato-Hai', Helvetica neue, sans-serif;
@@ -171,6 +172,10 @@ nav #nav-below {
 	}
 	h2 {color: $alt2}
 	h3,h4,h5,h6,h7 {color:$primary;}
+}
+
+.post-thumbnail img {
+	width:100%;
 }
 
 .entry-meta, .entry-content{

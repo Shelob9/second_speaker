@@ -55,7 +55,7 @@ h2, h3, h4, h5, h6, h7 {
   font-family: 'Lato-Bla', Helvetica neue, sans-serif;
 }
 
-/* line 102, ../CC-SASS/_cloud-city.scss */
+/* line 103, ../CC-SASS/_cloud-city.scss */
 .widget-title h5 {
   font-family: 'Lato-Hai', Helvetica neue, sans-serif;
   color: #375245;
@@ -63,7 +63,7 @@ h2, h3, h4, h5, h6, h7 {
   text-align: center;
 }
 
-/* line 110, ../CC-SASS/_cloud-city.scss */
+/* line 111, ../CC-SASS/_cloud-city.scss */
 .widget {
   color: #3f5e5e;
   background-color: white;
@@ -102,13 +102,13 @@ h2, h3, h4, h5, h6, h7 {
   color: #0099ff;
   border-bottom: 1px dotted #3f5e5e;
 }
-/* line 117, ../CC-SASS/_cloud-city.scss */
+/* line 118, ../CC-SASS/_cloud-city.scss */
 .widget ul {
   list-style-type: none;
   font-size: .9em;
 }
 
-/* line 124, ../CC-SASS/_cloud-city.scss */
+/* line 125, ../CC-SASS/_cloud-city.scss */
 #secondary, #masthead, #colophon {
   -moz-box-shadow: 1px 2px 3px #3f5e5e;
   -webkit-box-shadow: 1px 2px 3px #3f5e5e;
@@ -150,23 +150,23 @@ h2, h3, h4, h5, h6, h7 {
   border-bottom: 1px dotted #3f5e5e;
 }
 
-/* line 127, ../CC-SASS/_cloud-city.scss */
+/* line 128, ../CC-SASS/_cloud-city.scss */
 #masthead {
   margin-bottom: 4px;
 }
 
-/* line 129, ../CC-SASS/_cloud-city.scss */
+/* line 130, ../CC-SASS/_cloud-city.scss */
 #colphon {
   margin-top: 4px;
 }
 
-/* line 132, ../CC-SASS/_cloud-city.scss */
+/* line 133, ../CC-SASS/_cloud-city.scss */
 .site-description h2 {
   color: #375245;
   margin-left: 15px;
 }
 
-/* line 138, ../CC-SASS/_cloud-city.scss */
+/* line 139, ../CC-SASS/_cloud-city.scss */
 nav #nav-below {
   border-width: 1px;
   border-style: solid;
@@ -210,21 +210,21 @@ nav #nav-below a:visited:hover {
   border-bottom: 1px dotted #3f5e5e;
 }
 
-/* line 148, ../CC-SASS/_cloud-city.scss */
+/* line 149, ../CC-SASS/_cloud-city.scss */
 .nav-prev {
   font-size: 10em;
 }
 
-/* line 151, ../CC-SASS/_cloud-city.scss */
+/* line 152, ../CC-SASS/_cloud-city.scss */
 .top-bar .name h1 a, h1.site-title a {
   color: #33cc66 !important;
 }
-/* line 154, ../CC-SASS/_cloud-city.scss */
+/* line 155, ../CC-SASS/_cloud-city.scss */
 .top-bar .name h1 a:visited, h1.site-title a:visited {
   color: #33cc66 !important;
 }
 
-/* line 160, ../CC-SASS/_cloud-city.scss */
+/* line 161, ../CC-SASS/_cloud-city.scss */
 .page-header, .post-header, #comments {
   -moz-box-shadow: 1px 2px 3px #3f5e5e;
   -webkit-box-shadow: 1px 2px 3px #3f5e5e;
@@ -272,7 +272,7 @@ nav #nav-below a:visited:hover {
   color: #0099ff;
 }
 
-/* line 165, ../CC-SASS/_cloud-city.scss */
+/* line 166, ../CC-SASS/_cloud-city.scss */
 .post, .page {
   -moz-box-shadow: 1px 2px 3px #3f5e5e;
   -webkit-box-shadow: 1px 2px 3px #3f5e5e;
@@ -317,50 +317,55 @@ nav #nav-below a:visited:hover {
 .post h1, .page h1 {
   color: #33cc66;
 }
-/* line 167, ../CC-SASS/_cloud-city.scss */
+/* line 168, ../CC-SASS/_cloud-city.scss */
 .post h1, .page h1 {
   padding-left: 15px;
 }
-/* line 169, ../CC-SASS/_cloud-city.scss */
+/* line 170, ../CC-SASS/_cloud-city.scss */
 .post h1 a, .page h1 a {
   color: #0099ff;
 }
-/* line 170, ../CC-SASS/_cloud-city.scss */
+/* line 171, ../CC-SASS/_cloud-city.scss */
 .post h1 a:vistied, .page h1 a:vistied {
   color: #0099ff;
 }
-/* line 172, ../CC-SASS/_cloud-city.scss */
+/* line 173, ../CC-SASS/_cloud-city.scss */
 .post h2, .page h2 {
   color: #0099ff;
 }
-/* line 173, ../CC-SASS/_cloud-city.scss */
+/* line 174, ../CC-SASS/_cloud-city.scss */
 .post h3, .post h4, .post h5, .post h6, .post h7, .page h3, .page h4, .page h5, .page h6, .page h7 {
   color: black;
 }
 
-/* line 176, ../CC-SASS/_cloud-city.scss */
+/* line 177, ../CC-SASS/_cloud-city.scss */
+.post-thumbnail img {
+  width: 100%;
+}
+
+/* line 181, ../CC-SASS/_cloud-city.scss */
 .entry-meta, .entry-content {
   padding-left: 15px;
   padding-right: 4px;
 }
 
-/* line 181, ../CC-SASS/_cloud-city.scss */
+/* line 186, ../CC-SASS/_cloud-city.scss */
 .preview h1 {
   text-align: center;
   font-size: 1.5em;
 }
 
-/* line 187, ../CC-SASS/_cloud-city.scss */
+/* line 192, ../CC-SASS/_cloud-city.scss */
 .nav-previous, .nav-next {
   margin-left: 2px;
   margin-right: 2px;
 }
-/* line 190, ../CC-SASS/_cloud-city.scss */
+/* line 195, ../CC-SASS/_cloud-city.scss */
 .nav-previous a:hover, .nav-next a:hover {
   color: #0099ff;
 }
 
-/* line 193, ../CC-SASS/_cloud-city.scss */
+/* line 198, ../CC-SASS/_cloud-city.scss */
 .sidebar-float {
   float: right;
   margin-bottom: 20px;
@@ -368,7 +373,7 @@ nav #nav-below a:visited:hover {
 }
 
 /*Masonry*/
-/* line 199, ../CC-SASS/_cloud-city.scss */
+/* line 204, ../CC-SASS/_cloud-city.scss */
 .masonry-entry {
   border-width: 1px;
   border-style: solid;
@@ -407,27 +412,27 @@ nav #nav-below a:visited:hover {
   border-bottom: 1px dotted #3f5e5e;
 }
 
-/* line 202, ../CC-SASS/_cloud-city.scss */
+/* line 207, ../CC-SASS/_cloud-city.scss */
 .masonry-details {
   padding: 2px 2px 2px 2px;
 }
 
-/* line 206, ../CC-SASS/_cloud-city.scss */
+/* line 211, ../CC-SASS/_cloud-city.scss */
 .masonry-post-title {
   color: #33cc66;
 }
 
-/* line 209, ../CC-SASS/_cloud-city.scss */
+/* line 214, ../CC-SASS/_cloud-city.scss */
 .masonry-post-excerpt .excerpt {
   color: #0099ff;
 }
 
-/* line 213, ../CC-SASS/_cloud-city.scss */
+/* line 218, ../CC-SASS/_cloud-city.scss */
 .masonry-thumbnail img {
   width: 100%;
 }
 
-/* line 216, ../CC-SASS/_cloud-city.scss */
+/* line 221, ../CC-SASS/_cloud-city.scss */
 #content {
   padding: 0 0 0 0;
 }
