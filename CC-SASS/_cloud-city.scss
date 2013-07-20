@@ -66,17 +66,21 @@
 	);  
 }
 
-@mixin TheForce {
+@mixin TheForce{
 	@include border ($accentShade);
 	@include corners (3px);
 	@include aUniform;
 	color: $primary;
-	@include shadow ($accentShade);
 	background-color: $secondary;
 }
 
-@mixin postPageEtc ($h1) {
+@mixin TheForceShadow {
+	@include shadow ($accentShade);
 	@include TheForce;
+}
+
+@mixin postPageEtc ($h1) {
+	@include TheForceShadow;
 		h1 {
 			color: $h1;
 		}
@@ -119,7 +123,7 @@ h2, h3, h4, h5, h6, h7 {
 
 
 #secondary, #masthead, #colophon {
-	@include TheForce;
+	@include TheForceShadow;
 }
 #masthead {margin-bottom:4px;}
 
