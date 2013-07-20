@@ -62,7 +62,7 @@ function _scc_option_headerScripts($options) {
 	$options = get_option('option_tree');
 	$out = $options['header_scripts'];
 	if (! $out == '') {
-		echo $out;
+		echo "\n" . stripslashes( $out ) . "\n";
 	}
 }
 add_action('wp_head', '_scc_option_headerScripts');
@@ -70,7 +70,7 @@ function _scc_option_footerScripts() {
 	$options = get_option('option_tree');
 	$out = $options['footer_scripts'];
 	if (! $out == '') {
-		echo $out;
+		echo "\n" . stripslashes( $out ) . "\n";
 	}
 }
 add_action('wp_footer', '_scc_option_footerScripts');
