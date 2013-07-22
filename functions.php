@@ -21,7 +21,7 @@ function _sf_child_init() {
 function _sf_child_style() {
 		if ( !is_admin() ) :
 			wp_enqueue_style('style', get_stylesheet_directory_uri().'/style.css');
-			wp_enqueue_style('child-style', get_stylesheet_directory_uri().'/css/child.css');
+			wp_enqueue_style('child-style', get_stylesheet_directory_uri().'/css/gethen.css');
 		endif;
 
 }

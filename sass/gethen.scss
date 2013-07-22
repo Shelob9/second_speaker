@@ -1,0 +1,21 @@
+@import "jp-color-vars";
+@import "jp-standard";
+
+
+#full-slide {background-image:url('http://placekitten.com/1600/600');}
+#main-menu li a { color:rgba(255,255,255,0.3); font-size:1em; }
+.menu-hover {color:rgba(255,255,255,1); font-size:1.1em; }
+#main-menu li {
+	display: inline;
+		list-style-type: none;
+		font-size:2em;
+}
+.site-title, .site-description {
+	text-align:center;
+}
+.site-title h1 {
+	line-height:0em;
+}
+.callout-title h5{
+	text-align:center;
+	}
