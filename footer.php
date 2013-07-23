@@ -2,22 +2,25 @@
 /**
  * The template for displaying the footer.
  *
- * Contains the closing of the id=main div and all content after
- *
- * @package _sf
+ * Contains the closing of the id=main div and all content after.
+ * 
+ * Shows part/footer-full.php, a full-width footer, unless options say to use parts/footer-reg.php, which is a regular width footer.
+ * @package geth
+ * @ since geth 0.1
  */
+
+//get the option for footer-width
+global $options
+$footer = $options['footer-width'];
+//To be safe, set it to full-width unless specifically set to regular-width.
+if ($footer != 'reg' ) {
+	$footer = 'full';
+}
 ?>
 
 	</div><!-- #main -->
-
-	<footer id="colophon" class="site-footer row" role="contentinfo">
-		<div class="site-info large-12 columns">
-			<?php do_action( '_sf_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', '_sf' ); ?>" rel="generator"><?php printf( __( 'Powered by %s', '_s' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$SSecond Foundation by %2$s.', '_sf' ), '_Second Foundation', '<a href="http://ComplexWaveform.com/" rel="designer">Josh Pollock</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<?php get_template_part('footer', $footer);
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
