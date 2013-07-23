@@ -10,19 +10,16 @@
  */
 
 //get the option for footer-width
-global $options
-$footer = $options['footer-width'];
+global $options;
+$footer = $options['footer_width'];
 //To be safe, set it to full-width unless specifically set to regular-width.
 if ($footer != 'reg' ) {
 	$footer = 'full';
 }
 ?>
-
 	</div><!-- #main -->
-	<?php get_template_part('footer', $footer);
-	
+	<?php get_template_part('foot', $footer); ?>
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
 </body>
 </html>
