@@ -48,6 +48,10 @@ function _custom_theme_options() {
         'id'          => 'footer'
       ),
       array(
+        'title'       => 'Front Page',
+        'id'          => 'front_page'
+      ),
+      array(
         'title'       => 'Other',
         'id'          => 'other'
       )
@@ -165,6 +169,44 @@ function _custom_theme_options() {
         'rows'        => '20',
         'section'     => 'footer'
       ),
+//front page (front_page)
+		array(
+			'label'       => 'Show Big Callout On Front Page',
+			'id'          => 'big_callout',
+			'type'        => 'select',
+			'desc'        => '',
+			'choices'     => array(
+			  array(
+				'label'       => 'Yes',
+				'value'       => 'yes'
+			  ),
+			  array(
+				'label'       => 'No',
+				'value'       => 'no'
+			  )
+			),
+		   'std'         => 'yes',
+			'section'     => 'front_page'
+		  ),
+		  array(
+			'label'       => 'Show Three Callout Boxes On Front Page',
+			'id'          => '3_callout',
+			'type'        => 'select',
+			'desc'        => '',
+			'choices'     => array(
+			  array(
+				'label'       => 'Yes',
+				'value'       => 'yes'
+			  ),
+			  array(
+				'label'       => 'No',
+				'value'       => 'no'
+			  )
+			),
+		   'std'         => 'yes',
+			'section'     => 'front_page'
+		  ),
+//other
       array(
         'label'       => 'Stick Menu To Top Of Page?',
         'id'          => 'stick',
@@ -181,6 +223,24 @@ function _custom_theme_options() {
           )
         ),
        'std'         => 'stick',
+    	'section'     => 'other'
+      ),
+        array(
+        'label'       => 'Full Width Footer?',
+        'id'          => 'footer_width',
+        'type'        => 'select',
+        'desc'        => '',
+        'choices'     => array(
+          array(
+            'label'       => 'Yes',
+            'value'       => 'yes'
+          ),
+          array(
+            'label'       => 'No',
+            'value'       => 'no'
+          )
+        ),
+       'std'         => 'yes',
     	'section'     => 'other'
       ),
      
