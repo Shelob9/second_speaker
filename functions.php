@@ -39,4 +39,14 @@ require_once('inc/childFunc.php');
 
 require_once('inc/theGreatDeactivator.php');
 
+/**
+* Options Tree
+*/
+add_filter( 'ot_theme_mode', '__return_true' );
+add_filter( 'ot_show_pages', '__return_false' );
+add_filter( 'ot_show_new_layout', '__return_false' );
+
+require_once('options/ot-loader.php');
+require_once('inc/theme-options.php');
+
 ?>
