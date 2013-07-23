@@ -18,7 +18,7 @@ if ($footer != 'reg' ) {
 }
 ?>
 	</div><!-- #main -->
-	<?php get_template_part('foot', $footer); ?>
+	<?php get_template_part('parts/foot', $footer); ?>
 </div><!-- #page -->
 <?php wp_footer(); ?>
 </body>
