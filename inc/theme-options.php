@@ -94,7 +94,7 @@ function _custom_theme_options() {
       ),
       //header
        array(
-        'label'       => 'Full header on all pages',
+        'label'       => 'Full width header on all pages',
         'id'          => 'full-header',
         'type'        => 'select',
         'desc'        => 'If set to yes, you will see the full header on all pages. Otherwise you will just see a simple topbar.',
@@ -116,7 +116,7 @@ function _custom_theme_options() {
         'id'          => 'header_img',
         'type'        => 'upload',
         'desc'        => 'Upload Header Image',
-        'std'         => '',
+        'std'         => get_stylesheet_directory_uri().'/images/default-header.jpg',
         'section'     => 'header'
       ),
        array(
