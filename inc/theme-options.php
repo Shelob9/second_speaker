@@ -169,6 +169,24 @@ function _custom_theme_options() {
         'rows'        => '20',
         'section'     => 'footer'
       ),
+      array(
+        'label'       => 'Full Width Footer?',
+        'id'          => 'footer_width',
+        'type'        => 'select',
+        'desc'        => '',
+        'choices'     => array(
+          array(
+            'label'       => 'Yes',
+            'value'       => 'yes'
+          ),
+          array(
+            'label'       => 'No',
+            'value'       => 'no'
+          )
+        ),
+       'std'         => 'yes',
+    	'section'     => 'footer'
+      ),
 //front page (front_page)
 		array(
 			'label'       => 'Show Big Callout On Front Page',
@@ -223,24 +241,6 @@ function _custom_theme_options() {
           )
         ),
        'std'         => 'stick',
-    	'section'     => 'other'
-      ),
-        array(
-        'label'       => 'Full Width Footer?',
-        'id'          => 'footer_width',
-        'type'        => 'select',
-        'desc'        => '',
-        'choices'     => array(
-          array(
-            'label'       => 'Yes',
-            'value'       => 'yes'
-          ),
-          array(
-            'label'       => 'No',
-            'value'       => 'no'
-          )
-        ),
-       'std'         => 'yes',
     	'section'     => 'other'
       ),
      
