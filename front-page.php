@@ -10,20 +10,30 @@
  *
  * @package _sf
  */
+global $options;
 get_header(); 
-$sidebar = get_theme_mod('_sf_default_sidebar');
+$sidebar = 'none';
 _sf_open($sidebar);
+
+	 get_template_part('top');
+	 if ($options['big_callout'] != 'no') {
+	 	get_template_part('parts/callout', 'big');
+	 }
+	 if ($options['3_callout'] != 'no') {
+	 	get_template_part('parts/callout', '3');
+	 }
+	 
+	 if ( have_posts() ) : 
+		/* Start the Loop */
+		while ( have_posts() ) : the_post();
+		get_template_part( 'content', get_post_format() );
+		endwhile;
+	
+	 _sf_content_nav( 'nav-below' ); 
+	 else : 
+		 get_template_part( 'no-results', 'index' ); 
+	 endif; 
+	
+_sf_close($sidebar); 
+
 ?>
-		<?php _sf_home_slider(); ?>
-		<?php if ( have_posts() ) : ?>
-		<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-			get_template_part( 'content', get_post_format() );
-			endwhile;
-		<?php _sf_content_nav( 'nav-below' ); ?>
-		<?php else : ?>
-			<?php get_template_part( 'no-results', 'index' ); ?>
-		<?php endif; ?>
-		
-<?php _sf_close($sidebar); ?>
