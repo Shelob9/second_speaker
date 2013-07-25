@@ -4,7 +4,9 @@
 
 
 #main-menu li a { color:rgba(255,255,255,0.3); font-size:1em; }
+
 .menu-hover {color:rgba(255,255,255,1); font-size:1.1em; }
+
 #main-menu li {
 	display: inline;
 		list-style-type: none;
@@ -16,6 +18,14 @@
 .site-title h1 {
 	line-height:0em;
 }
+
 .callout-title h5{
 	text-align:center;
-	}
+}
+
+article {
+	background-color: $primary;
+	@include corners (4px);
+	@include border ($accent, 1px);
+	@include padding-even (5px);
+}
