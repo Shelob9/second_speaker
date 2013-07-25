@@ -1,7 +1,8 @@
 @import "jp-color-vars";
 @import "jp-standard";
-
-
+/*
+@import "gallery";
+*/
 
 #main-menu li a { color:rgba(255,255,255,0.3); font-size:1em; }
 
@@ -29,3 +30,4 @@ article {
 	@include border ($accent, 1px);
 	@include padding-even (5px);
 }
+
