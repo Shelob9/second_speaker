@@ -27,3 +27,6 @@ article {
 	@include border ($accent, 1px);
 	@include padding-even (5px);
 }
+article .row, .hentry {
+	margin-top:8px !important;
+}
