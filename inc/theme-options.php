@@ -77,7 +77,7 @@ function _custom_theme_options() {
             'value'       => 'skin2'
           )
         ),
-        'std'         => 'Skin1',
+        'std'         => 'skin1',
         'section'     => 'skins'
       ),
       array(
