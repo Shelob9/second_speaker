@@ -54,3 +54,30 @@ function gethen_headerBG($use = '') {
 }
 add_action('wp_footer', 'gethen_headerBG');
 endif; //! gethen_headerBG exists
+
+/**
+*
+*/
+function gethen_clearing_gallery(  $number, $orderby = 'menu_order', $order = 'ASC') {
+	echo '<ul class="clearing-thumbs" data-clearing>';
+	if ($images = get_posts(array(
+		'post_parent'    => get_the_ID(),
+		'post_type'      => 'attachment',
+		'numberposts'    => $number,
+		'post_status'    => null,
+		'post_mime_type' => 'image',
+        'orderby'        => $orderby,
+        'order'           => $order,
+		))) 
+	{			
+		foreach($images as $image) {
+			$thumb = wp_get_attachment_image_src( $image->ID, 'small');
+			$large = wp_get_attachment_image_src( $image->ID, 'large');
+			$caption = wp_get_attachment_metadata( $image->ID);
+			$out = '<li><a href="'.$large[0].'"><img data-caption="'.$caption.'" src="'.$thumb[0].'"></a></li>';
+			echo $out;
+		}
+	}
+	echo '</ul>';
+}
+

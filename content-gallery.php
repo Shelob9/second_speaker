@@ -1,7 +1,35 @@
 <?php
 /**
- * @package _sf
+ * @package gethen
+ * @ since gethen 0.1
  */
+ 
+if (! is_single() ) {
+?>
+<article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
+	<?php if ( has_post_thumbnail()) { ?>
+		<div class="large-3 columns">
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail('small'); ?></a>
+		</div>
+	<?php } else { 
+	?>
+		 <div class="large-3 columns">
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php gethen_clearing_gallery( $number = 1); ?></a>
+		</div>
+	<?php } //end the thumbnail or first attached image bit
+	?>
+	<div class="large-9 columns">
+		<header class="entry-header">
+			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', '_sf' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		</header>
+
+		<?php
+		gethen_clearing_gallery($number = 6);
+?>
+	</div>
+</article>
+<?php		
+} else {
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -69,3 +97,4 @@
 		</div>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->
+<?php } ?>
