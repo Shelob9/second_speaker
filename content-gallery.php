@@ -14,8 +14,7 @@ if (! is_single() ) {
 	<?php } else { 
 	?>
 		<div class="large-12 columns">
-	<?php } //end the thumbnail or first attached image bit
-	?>
+	<?php } ?>
 	
 		<header class="entry-header">
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', '_sf' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
