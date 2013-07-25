@@ -14,7 +14,6 @@ global $options;
 get_header(); 
 $sidebar = 'none';
 _sf_open($sidebar);
-var_dump($options);
 
 	 get_template_part('parts/top');
 	 if ($options['big_callout'] != 'no') {
