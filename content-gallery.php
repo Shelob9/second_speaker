@@ -8,7 +8,7 @@ if (! is_single() ) {
 <article id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
 	<?php if ( has_post_thumbnail()) { ?>
 		<div class="large-3 columns">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail('small'); ?></a>
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail('large'); ?></a>
 		</div>
 		<div class="large-9 columns">
 	<?php } else { 
