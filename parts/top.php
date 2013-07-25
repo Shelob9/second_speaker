@@ -6,7 +6,7 @@
  * @since 0.1
  */
 ?>
-<header class="full-row" id="full-slide">
+<header class="full-row" id="full-header">
 		<nav class="large-8 columns large-centered" id="main-menu">
 			<ul>
 				<li><a href="#">Item 1</a></li>
