@@ -1,41 +1,38 @@
-/*
-@import "gallery";
-*/
-/* line 7, ../sass/gethen.scss */
+/* line 4, ../sass/gethen.scss */
 #main-menu li a {
   color: rgba(255, 255, 255, 0.3);
   font-size: 1em;
 }
 
-/* line 9, ../sass/gethen.scss */
+/* line 6, ../sass/gethen.scss */
 .menu-hover {
   color: white;
   font-size: 1.1em;
 }
 
-/* line 11, ../sass/gethen.scss */
+/* line 8, ../sass/gethen.scss */
 #main-menu li {
   display: inline;
   list-style-type: none;
   font-size: 2em;
 }
 
-/* line 16, ../sass/gethen.scss */
+/* line 13, ../sass/gethen.scss */
 .site-title, .site-description {
   text-align: center;
 }
 
-/* line 19, ../sass/gethen.scss */
+/* line 16, ../sass/gethen.scss */
 .site-title h1 {
   line-height: 0em;
 }
 
-/* line 23, ../sass/gethen.scss */
+/* line 20, ../sass/gethen.scss */
 .callout-title h5 {
   text-align: center;
 }
 
-/* line 27, ../sass/gethen.scss */
+/* line 24, ../sass/gethen.scss */
 article {
   background-color: white;
   -moz-border-radius-topleft: 4px;
