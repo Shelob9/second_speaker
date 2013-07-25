@@ -52,6 +52,10 @@ function _custom_theme_options() {
         'id'          => 'front_page'
       ),
       array(
+        'title'       => 'Post Format Styles',
+        'id'          => 'post_formats'
+      ),
+      array(
         'title'       => 'Other',
         'id'          => 'other'
       )
@@ -243,8 +247,6 @@ function _custom_theme_options() {
        'std'         => 'stick',
     	'section'     => 'other'
       ),
-     
-		
     )
   );
   
