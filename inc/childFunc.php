@@ -80,4 +80,8 @@ function gethen_clearing_gallery(  $number, $orderby = 'menu_order', $order = 'A
 	}
 	echo '</ul>';
 }
+/**
+* Don't use default gallery styles
+*/
+add_filter( 'use_default_gallery_style', '__return_false' );
 
