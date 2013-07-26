@@ -48,8 +48,12 @@ function _custom_theme_options() {
         'id'          => 'footer'
       ),
       array(
-        'title'       => 'Front Page',
-        'id'          => 'front_page'
+        'title'       => 'Big Callout Box',
+        'id'          => 'big_callout'
+      ),
+    array(
+        'title'       => 'Three Small Callout Boxs',
+        'id'          => '3_callout'
       ),
       array(
         'title'       => 'Post Format Styles',
@@ -58,6 +62,10 @@ function _custom_theme_options() {
       array(
         'title'       => 'Other',
         'id'          => 'other'
+      ),
+      array(
+        'title'       => 'Front Page',
+        'id'          => 'front_page'
       )
     ),
     'settings'        => array(
@@ -191,43 +199,7 @@ function _custom_theme_options() {
        'std'         => 'yes',
     	'section'     => 'footer'
       ),
-//front page (front_page)
-		array(
-			'label'       => 'Show Big Callout On Front Page',
-			'id'          => 'big_callout',
-			'type'        => 'select',
-			'desc'        => '',
-			'choices'     => array(
-			  array(
-				'label'       => 'Yes',
-				'value'       => 'yes'
-			  ),
-			  array(
-				'label'       => 'No',
-				'value'       => 'no'
-			  )
-			),
-		   'std'         => 'yes',
-			'section'     => 'front_page'
-		  ),
-		  array(
-			'label'       => 'Show Three Callout Boxes On Front Page',
-			'id'          => '3_callout',
-			'type'        => 'select',
-			'desc'        => '',
-			'choices'     => array(
-			  array(
-				'label'       => 'Yes',
-				'value'       => 'yes'
-			  ),
-			  array(
-				'label'       => 'No',
-				'value'       => 'no'
-			  )
-			),
-		   'std'         => 'yes',
-			'section'     => 'front_page'
-		  ),
+
 //other
       array(
         'label'       => 'Stick Menu To Top Of Page?',
@@ -246,6 +218,251 @@ function _custom_theme_options() {
         ),
        'std'         => 'stick',
     	'section'     => 'other'
+      ),
+//big callout
+      array(
+        'label'       => 'Show Big Callout Box On Front Page? ?',
+        'id'          => 'big_callout_use',
+        'type'        => 'select',
+        'desc'        => '',
+        'choices'     => array(
+          array(
+            'label'       => 'Yes',
+            'value'       => 'yes'
+          ),
+          array(
+            'label'       => 'No',
+            'value'       => 'no'
+          )
+        ),
+        'std'         => 'yes',
+    	'section'     => 'big_callout'
+      ),
+        array(
+            'label'       => 'Big Callout Title',
+            'id'          => 'big_callout_title',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Title For the big callout box',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => 'big_callout'
+          ),
+          array(
+            'label'       => 'Big Callout Content',
+            'id'          => 'big_callout_content',
+            'type'        => 'textarea',
+            'desc'        => 'Text for the big callout box.',
+            'std'         => '',
+            'rows'        => '40',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => 'big_callout'
+          ),
+           array(
+            'label'       => 'Big Callout CTA Label',
+            'id'          => 'big_callout_ctaLabel',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Label for big callout\'s call to action button.',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => 'big_callout'
+          ),
+           array(
+            'label'       => 'Big Callout CTA link',
+            'id'          => 'big_callout_ctaLink',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Link for big callout\'s call to action button..',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => 'big_callout'
+          ),
+        array(
+        'label'       => 'Big Callout Box Image',
+        'id'          => 'big_callout_img',
+        'type'        => 'upload',
+        'desc'        => 'Image to display inside of the callout box.',
+        'std'         => '',
+        'rows'        => '10',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'section'     => 'big_callout'
+      ),
+// 3 callout boxes
+          array(
+        'label'       => 'Show Three Small Callout Boxes On Front Page? ?',
+        'id'          => '3_callout_use',
+        'type'        => 'select',
+        'desc'        => '',
+        'choices'     => array(
+          array(
+            'label'       => 'Yes',
+            'value'       => 'yes'
+          ),
+          array(
+            'label'       => 'No',
+            'value'       => 'no'
+          )
+        ),
+       'std'         => 'yes',
+    	'section'     => '3_callout'
+    ),
+    //box 1
+    	array(
+            'label'       => 'Small Callout Box 1 Title',
+            'id'          => '3_callout_title1',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Title For the big callout box',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => '3_callout'
+          ),
+        array(
+            'label'       => 'Small Callout Box 1 Link',
+            'id'          => '3_callout_Link1',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Link for title of the first small callout box.',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => '3_callout'
+          ),
+        array(
+            'label'       => 'Small Callout Box 1 Content',
+            'id'          => '3_callout_content1',
+            'type'        => 'textarea',
+            'desc'        => 'Text for the first callout box.',
+            'std'         => '',
+            'rows'        => '40',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => '3_callout'
+          ),
+        array(
+        'label'       => 'Small Callout Box 1 Background Image',
+        'id'          => '3_callout_img1',
+        'type'        => 'upload',
+        'desc'        => 'Background image for the first small callout box.',
+        'std'         => '',
+        'rows'        => '10',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'section'     => '3_callout'
+      ),
+      //box 2
+    	array(
+            'label'       => 'Small Callout Box 2 Title',
+            'id'          => '3_callout_title2',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Title For the big callout box',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => '3_callout'
+          ),
+        array(
+            'label'       => 'Small Callout Box 2 Link',
+            'id'          => '3_callout_Link2',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Link for title of the second small callout box.',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => '3_callout'
+          ),
+        array(
+            'label'       => 'Small Callout Box 2 Content',
+            'id'          => '3_callout_content2',
+            'type'        => 'textarea',
+            'desc'        => 'Text for the second callout box.',
+            'std'         => '',
+            'rows'        => '40',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => '3_callout'
+          ),
+        array(
+        'label'       => 'Small Callout Box 2 Background Image',
+        'id'          => '3_callout_img2',
+        'type'        => 'upload',
+        'desc'        => 'Background image for the second small callout box.',
+        'std'         => '',
+        'rows'        => '40',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'section'     => '3_callout'
+      ),
+      //box 3
+    	array(
+            'label'       => 'Small Callout Box 3 Title',
+            'id'          => '3_callout_title3',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Title For the big callout box',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => '3_callout'
+          ),
+        array(
+            'label'       => 'Small Callout Box 3 Link',
+            'id'          => '3_callout_Link3',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Link for title of the third small callout box.',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => '3_callout'
+          ),
+        array(
+            'label'       => 'Small Callout Box 3 Content',
+            'id'          => '3_callout_content3',
+            'type'        => 'textarea',
+            'desc'        => 'Text for the third callout box.',
+            'std'         => '',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => '3_callout'
+          ),
+        array(
+        'label'       => 'Small Callout Box 3 Background Image',
+        'id'          => '3_callout_img3',
+        'type'        => 'upload',
+        'desc'        => 'Background image for the third small callout box.',
+        'std'         => '',
+        'rows'        => '10',
+        'post_type'   => '',
+        'taxonomy'    => '',
+        'class'       => '',
+        'section'     => '3_callout'
       ),
     )
   );
