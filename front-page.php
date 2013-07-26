@@ -16,10 +16,10 @@ $sidebar = 'none';
 _sf_open($sidebar);
 
 	 get_template_part('parts/top');
-	 if ($options['big_callout'] != 'no') {
+	 if ($options['big_callout_use'] != 'no') {
 	 	get_template_part('parts/callout', 'big');
 	 }
-	 if ($options['3_callout'] != 'no') {
+	 if ($options['3_callout_use'] != 'no') {
 	 	get_template_part('parts/callout', '3');
 	 }
 	 
