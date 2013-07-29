@@ -56,14 +56,6 @@ function _custom_theme_options() {
         'id'          => '3_callout'
       ),
       array(
-        'title'       => 'Post Format Styles',
-        'id'          => 'post_formats'
-      ),
-      array(
-        'title'       => 'Other',
-        'id'          => 'other'
-      ),
-      array(
         'title'       => 'Front Page',
         'id'          => 'front_page'
       )
@@ -200,25 +192,62 @@ function _custom_theme_options() {
     	'section'     => 'footer'
       ),
 
-//other
+//front-page
       array(
-        'label'       => 'Stick Menu To Top Of Page?',
-        'id'          => 'stick',
+        'label'       => 'Show Big Callout Box On Front Page?',
+        'id'          => 'big_callout_use',
         'type'        => 'select',
         'desc'        => '',
         'choices'     => array(
           array(
             'label'       => 'Yes',
-            'value'       => 'stick'
+            'value'       => 'yes'
           ),
           array(
             'label'       => 'No',
-            'value'       => 'unstick'
+            'value'       => 'no'
           )
         ),
-       'std'         => 'stick',
-    	'section'     => 'other'
+        'std'         => 'yes',
+    	'section'     => 'front_page'
       ),
+           array(
+        'label'       => 'Show Three Small Callout Boxes On Front Page?',
+        'id'          => '3_callout_use',
+        'type'        => 'select',
+        'desc'        => '',
+        'choices'     => array(
+          array(
+            'label'       => 'Yes',
+            'value'       => 'yes'
+          ),
+          array(
+            'label'       => 'No',
+            'value'       => 'no'
+          )
+        ),
+       'std'         => 'yes',
+    	'section'     => 'front_page'
+    ),
+    ),
+           array(
+        'label'       => 'Show Post On Front Page?',
+        'id'          => 'front_posts',
+        'type'        => 'select',
+        'desc'        => '',
+        'choices'     => array(
+          array(
+            'label'       => 'Yes',
+            'value'       => 'yes'
+          ),
+          array(
+            'label'       => 'No',
+            'value'       => 'no'
+          )
+        ),
+       'std'         => 'yes',
+    	'section'     => 'front_page'
+    ),
 //big callout
       array(
         'label'       => 'Show Big Callout Box On Front Page? ?',
@@ -299,24 +328,7 @@ function _custom_theme_options() {
         'section'     => 'big_callout'
       ),
 // 3 callout boxes
-          array(
-        'label'       => 'Show Three Small Callout Boxes On Front Page? ?',
-        'id'          => '3_callout_use',
-        'type'        => 'select',
-        'desc'        => '',
-        'choices'     => array(
-          array(
-            'label'       => 'Yes',
-            'value'       => 'yes'
-          ),
-          array(
-            'label'       => 'No',
-            'value'       => 'no'
-          )
-        ),
-       'std'         => 'yes',
-    	'section'     => '3_callout'
-    ),
+    
     //box 1
     	array(
             'label'       => 'Small Callout Box 1 Title',
