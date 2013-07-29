@@ -124,4 +124,70 @@ function _scc_option_footerScripts() {
 	}
 }
 add_action('wp_footer', '_scc_option_footerScripts');
+
+
+/**
+ * Footer Widgets
+ */
+//initialize them
+if (! function_exists('_sf_widgets_init') ) :
+function gethen_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Footer One', '_sf' ),
+		'id'            => 'footer-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s footer-widget">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Two', '_sf' ),
+		'id'            => 'footer-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s footer-widget">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+	register_sidebar( array(
+		'name'          => __( 'Footer Three', '_sf' ),
+		'id'            => 'footer-3',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s footer-widget">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+}
+add_action( 'widgets_init', 'gethen_widgets_init' );
+endif; //! _sf_widgets_init exists
+
+//make space for them and hook them to tha_footer_bottom
+if (! function_exists('gethen_footer_widget_area') ) :
+function gethen_footer_widget_area() {
+//get the option for footer-width
+	global $options;
+	$footer = $options['footer_width'];
+	//To be safe, set it to full-width unless specifically set to regular-width.
+	if ($footer != 'reg' ) {
+		echo "<div class='row' id='footer-widgets'>";
+	}
+	else {
+		echo "<div class='row full-row' id='footer-widgets'>";
+	}
+	
+
+	echo "<div class='large-4 columns footer-widgets' id='footer-widget-1'> ";
+	dynamic_sidebar( 'footer-1' );
+	echo "</div>";
+	
+	echo "<div class='large-4 columns footer-widgets' id='footer-widget-2'>";
+	dynamic_sidebar( 'footer-2' );
+	echo "</div> ";
+	
+	echo "<div class='large-4 columns footer-widgets' id='footer-widget-3'>";
+	dynamic_sidebar( 'footer-3' );
+	echo "</div>";
+	echo "</div><!--/#footer-widgets-row";
+}
+add_action('tha_footer_bottom', 'gethen_footer_widget_area');
+endif; //! gethen_footer_widget_area exists
 ?>
