@@ -59,7 +59,9 @@ function gethen_headerBG($use = '') {
 	//set backgrounds for the three small callout boxes
 	$x = 1;
 	foreach ($sm_callout as $bg_img) {
-		echo 'jQuery("#callout-box-'.$x.'").backstretch("'.$bg_img.'");';
+		if ($bg_img != '' ) {
+			echo 'jQuery("#callout-box-'.$x.'").backstretch("'.$bg_img.'");';
+		}
 		$x++;
 	}
 	if (! $use == 'reinit') {
