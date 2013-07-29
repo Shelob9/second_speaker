@@ -133,4 +133,21 @@ class CSS_Menu_Maker_Walker extends Walker {
     $output .= "</li>\n";
   }
 }
+
+/**
+* Hook menu to before_sidebar action
+*
+*@since gethen 0.1
 */
+
+if (! function_exists('gethen_vertical_menu') ) :
+function gethen_vertical_menu() {
+	wp_nav_menu(array(
+	  'menu' => 'Main Menu', 
+	  'container_id' => 'cssmenu', 
+	  'walker' => new CSS_Menu_Maker_Walker()
+	)); 
+}
+add_action('before_sidebar', 'gethen_vertical_menu');
+endif; //! gethen_vertical_menu exists
+?>
