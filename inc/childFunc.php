@@ -80,13 +80,48 @@ if (! function_exists('gethen_footer_fun') ) :
 function gethen_footer_fun() {
 ?>
 		<div class="site-info large-12 columns">
+		<?php if (! $options['remove_credit'] = 'no') : ?>
 		<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', '_sf' ); ?>" rel="generator"><?php printf( __( 'Powered by %s', '_s' ), 'WordPress' ); ?></a>
 					<span class="sep"> | </span>
 					<?php printf( __( 'Theme: %1$SGethen by %2$s.', '_sf' ), 'Gethen', '<a href="http://ComplexWaveform.com/" rel="designer">Josh Pollock</a>' ); ?>
+		<?php 
+			endif; //$options['remove_credit'] != 'no';
+			/*
+			if ( $options['footer_text'] != '') {
+				echo $options['footer_text'];
+			}
+			*/
+			$footerText = ot_get_option('footer_text');
+			if ( $footerText != '') {
+				echo $footerText;
+			}
+		?>
 	</div><!-- .site-info -->
 <?php
-remove_action('tha_footer_bottom', '_sf_credit_links');
 }
 add_action('tha_footer_bottom', 'gethen_footer_fun');
 endif; // ! gethen_footer_fun exists
+
+/**
+* Header and Footer Scripts From Options
+*
+* @since _scc 0.1
+* @since gethen 0.1
+*/
+function _scc_option_headerScripts($options) {
+	$options = get_option('option_tree');
+	$out = $options['header_scripts'];
+	if (! $out == '') {
+		echo "\n" . stripslashes( $out ) . "\n";
+	}
+}
+add_action('wp_head', '_scc_option_headerScripts');
+function _scc_option_footerScripts() {
+	$options = get_option('option_tree');
+	$out = $options['footer_scripts'];
+	if (! $out == '') {
+		echo "\n" . stripslashes( $out ) . "\n";
+	}
+}
+add_action('wp_footer', '_scc_option_footerScripts');
 ?>
