@@ -362,6 +362,7 @@ function _custom_theme_options() {
         'std'         => '',
         'rows'        => '10',
         'post_type'   => '',
+       
         'taxonomy'    => '',
         'class'       => '',
         'section'     => '3_callout'
@@ -408,7 +409,7 @@ function _custom_theme_options() {
         'id'          => '3_callout_img_2',
         'type'        => 'upload',
         'desc'        => 'Background image for the second small callout box.',
-        'std'         => 'no',
+        
         'rows'        => '40',
         'post_type'   => '',
         'taxonomy'    => '',
@@ -457,7 +458,7 @@ function _custom_theme_options() {
         'id'          => '3_callout_img_3',
         'type'        => 'upload',
         'desc'        => 'Background image for the third small callout box.',
-        'std'         => '',
+        
         'rows'        => '10',
         'post_type'   => '',
         'taxonomy'    => '',
