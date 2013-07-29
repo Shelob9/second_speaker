@@ -11,19 +11,19 @@ global $options;
 	<div class="large-12 columns" id="big-callout">
 		<div class="row">
 			<div class="large-3 columns large-offset-1" id="big-callout-image">
-				<img src="<?php esc_html($options['big_callout_img']); ?>" />
+				<img src="<?php echo $options['big_callout_img']; ?>" />
 			</div>
 			<div class="large-6 columns">
-				<h5 class="callout-title">
-					<?php esc_textarea($options['big_callout_title']); ?>
-				</h5>
-				<?php esc_html($options['big_callout_content']); ?>
+				<h3 class="callout-title">
+					<?php echo $options['big_callout_title'] ?>
+				</h3>
+				<?php echo $options['big_callout_content']; ?>
 			</div>
 		</div>
 		<div class="row">
 			<div class="large-2 columns" style=float:right;">
-				<a href="<?php esc_html($options['big_callout_ctaLink']); ?>" class="button" id="cta-button">
-					<?php esc_textarea($options['big_callout_ctaLabel']); ?>
+				<a href="<?php $options['big_callout_ctaLink']; ?>" class="button" id="cta-button">
+					<?php echo $options['big_callout_ctaLabel']; ?>
 				</a>
 			</div>
 		</div>
