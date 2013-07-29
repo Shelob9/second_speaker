@@ -28,3 +28,4 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<div id="main" class="site-main">
+	<?php get_template_part('parts/top'); ?>

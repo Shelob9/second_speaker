@@ -12,10 +12,9 @@
  */
 global $options;
 get_header(); 
-$sidebar = 'none';
+$sidebar = 'right';
 _sf_open($sidebar);
 
-	 get_template_part('parts/top');
 	 if ($options['big_callout_use'] != 'no') {
 	 	get_template_part('parts/callout', 'big');
 	 }
