@@ -10,45 +10,4 @@ Version:       0.1
 
 @import url("../_second_foundation/style.css");
 
-.full-row {
-width: 100%;
-margin-left: auto;
-margin-right: auto;
-margin-top: 0;
-margin-bottom: 0;
-
-*zoom: 1; }
-.full-row:before, .full-row:after {
-content: " ";
-display: table; }
-.full-row:after {
-clear: both; }
-.full-row.collapse .column,
-.full-row.collapse .columns {
-position: relative;
-padding-left: 0;
-padding-right: 0;
-float: left; }
-.full-row .full-row {
-width: auto;
-margin-left: -0.9375em;
-margin-right: -0.9375em;
-margin-top: 0;
-margin-bottom: 0;
-max-width: none;
-*zoom: 1; }
-.full-row .full-row:before, .full-row .full-row:after {
-  content: " ";
-  display: table; }
-.full-row .full-row:after {
-  clear: both; }
-.full-row .full-row.collapse {
-  width: auto;
-  margin: 0;
-  max-width: none;
-  *zoom: 1; }
-  .full-row .full-row.collapse:before, .full-row .full-row.collapse:after {
-	content: " ";
-	display: table; }
-  .full-row .full-row.collapse:after {
-	clear: both; }
+.row.full-row {width: 100%;}
