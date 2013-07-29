@@ -1,0 +1,4 @@
+@mixin std-border {
+	@include corners (4px);
+	@include border ($accent, 1px);
+}

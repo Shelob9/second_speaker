@@ -1,35 +1,77 @@
-/* line 5, ../sass/gethen.scss */
+/* line 1, ../sass/_super-menu.scss */
+aside .menu {
+  background-color: #fbfbfb;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d2d2d2;
+  padding: 2px 2px 2px 2px;
+}
+
+/* line 6, ../sass/_super-menu.scss */
+ul#menu-menu, ul.sub-menu {
+  list-style-type: none;
+}
+/* line 8, ../sass/_super-menu.scss */
+ul#menu-menu a, ul.sub-menu a {
+  color: #ff6633;
+}
+/* line 10, ../sass/_super-menu.scss */
+ul#menu-menu a:hover, ul.sub-menu a:hover {
+  color: #0099ff;
+}
+/* line 12, ../sass/_super-menu.scss */
+ul#menu-menu a:visited, ul.sub-menu a:visited {
+  color: alt2;
+}
+/* line 14, ../sass/_super-menu.scss */
+ul#menu-menu a:visited:hover, ul.sub-menu a:visited:hover {
+  color: #0099ff;
+}
+
+/* line 7, ../sass/gethen.scss */
 .site-title, .site-description {
   text-align: center;
 }
 
-/* line 9, ../sass/gethen.scss */
+/* line 11, ../sass/gethen.scss */
 hgroup .site-title {
   color: #ff6633;
 }
-/* line 13, ../sass/gethen.scss */
+/* line 15, ../sass/gethen.scss */
 hgroup .site-description {
   color: #0099ff;
 }
 
-/* line 17, ../sass/gethen.scss */
+/* line 19, ../sass/gethen.scss */
 .callout-box .callout-title {
   text-align: center;
 }
-/* line 19, ../sass/gethen.scss */
+/* line 21, ../sass/gethen.scss */
 .callout-box .callout-title h3 {
   color: #ff6633;
 }
-/* line 20, ../sass/gethen.scss */
+/* line 22, ../sass/gethen.scss */
 .callout-box .callout-title h3 a, .callout-box .callout-title h3 a:visited {
   color: #ff6633;
 }
-/* line 21, ../sass/gethen.scss */
+/* line 23, ../sass/gethen.scss */
 .callout-box .callout-title h3 a:hover {
   color: #0099ff;
 }
 
-/* line 24, ../sass/gethen.scss */
+/* line 26, ../sass/gethen.scss */
 article {
   background-color: #fbfbfb;
   -moz-border-radius-topleft: 4px;
@@ -50,12 +92,12 @@ article {
   padding: 5px 5px 5px 5px;
 }
 
-/* line 30, ../sass/gethen.scss */
+/* line 31, ../sass/gethen.scss */
 article .row, .hentry {
   margin-top: 8px !important;
 }
 
-/* line 34, ../sass/gethen.scss */
+/* line 35, ../sass/gethen.scss */
 .callout-box {
   background-color: #fbfbfb;
   -moz-border-radius-topleft: 4px;

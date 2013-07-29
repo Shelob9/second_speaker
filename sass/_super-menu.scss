@@ -1,0 +1,19 @@
+aside .menu {
+	background-color:$primary;
+	@include std-border;
+	@include padding-even (2px);
+}
+ul#menu-menu, ul.sub-menu{
+	list-style-type: none;
+		a {
+			color: $alt1;
+				&:hover {color: $alt2;}
+		}
+		a:visited {
+			color: alt2;
+				&:hover {color: $alt2;}
+		
+		}
+}
+
+

@@ -1,5 +1,7 @@
 @import "jp-color-vars";
 @import "jp-standard";
+@import "gethen-mixin";
+@import "super-menu";
 
 
 .site-title, .site-description {
@@ -23,8 +25,7 @@ hgroup {
 
 article {
 	background-color: $primary;
-	@include corners (4px);
-	@include border ($accent, 1px);
+	@include std-border;
 	@include padding-even (5px);
 }
 article .row, .hentry {
@@ -33,8 +34,7 @@ article .row, .hentry {
 
 .callout-box {
 	background-color: $primary;
-	@include corners (4px);
-	@include border ($accent, 1px);
+	@include std-border;
 	@include padding-even (5px);
 }
 
