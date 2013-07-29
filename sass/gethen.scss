@@ -24,26 +24,27 @@ hgroup {
 }
 
 article {
-	background-color: $primary;
-	@include std-border;
-	@include padding-even (5px);
+	@include gethen;
 }
 article .row, .hentry {
 	margin-top:8px !important;
 }
 
 .callout-box {
-	background-color: $primary;
-	@include std-border;
-	@include padding-even (5px);
+	@include gethen;
 }
 
-	#menu-toggle {
-		z-index:50;
-		left: 0;
-		margin-left:10px;
-		display: block;
-		height: 0;
-		top: 4px;
-		position: fixed;z-index:50;
-	}
+#menu-toggle {
+	z-index:50;
+	left: 0;
+	margin-left:10px;
+	display: block;
+	height: 0;
+	top: 4px;
+	position: fixed;z-index:50;
+}
+
+footer {
+	@include gethen;
+
+}

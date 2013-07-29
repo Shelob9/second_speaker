@@ -89,15 +89,14 @@ article {
   border-width: 1px;
   border-style: solid;
   border-color: #d2d2d2;
-  padding: 5px 5px 5px 5px;
 }
 
-/* line 31, ../sass/gethen.scss */
+/* line 29, ../sass/gethen.scss */
 article .row, .hentry {
   margin-top: 8px !important;
 }
 
-/* line 35, ../sass/gethen.scss */
+/* line 33, ../sass/gethen.scss */
 .callout-box {
   background-color: #fbfbfb;
   -moz-border-radius-topleft: 4px;
@@ -115,10 +114,9 @@ article .row, .hentry {
   border-width: 1px;
   border-style: solid;
   border-color: #d2d2d2;
-  padding: 5px 5px 5px 5px;
 }
 
-/* line 41, ../sass/gethen.scss */
+/* line 37, ../sass/gethen.scss */
 #menu-toggle {
   z-index: 50;
   left: 0;
@@ -128,4 +126,24 @@ article .row, .hentry {
   top: 4px;
   position: fixed;
   z-index: 50;
+}
+
+/* line 47, ../sass/gethen.scss */
+footer {
+  background-color: #fbfbfb;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d2d2d2;
 }

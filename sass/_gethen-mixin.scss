@@ -2,3 +2,8 @@
 	@include corners (4px);
 	@include border ($accent, 1px);
 }
+
+@mixin gethen {
+background-color: $primary;
+	@include std-border;
+}
