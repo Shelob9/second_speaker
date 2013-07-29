@@ -26,6 +26,7 @@ function _sf_remove_scripts_styles() {
 /**AJAX Page Loads**/
 	//remove_action( 'wp_enqueue_scripts', '_sf_scripts_ajaxMenus' );
 	//remove_action( 'wp_footer', '_sf_js_init_ajaxMenus' );
-	
+//*credit links**/
+	remove_action('tha_footer_bottom', '_sf_credit_links');
 }
 add_action('init', '_sf_remove_scripts_styles');

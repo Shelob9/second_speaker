@@ -71,5 +71,22 @@ function gethen_headerBG($use = '') {
 add_action('wp_footer', 'gethen_headerBG');
 endif; //! gethen_headerBG exists
 
-
+/**
+* Gethen Footer Stuff
+*
+* @since gethen 0.1
+*/
+if (! function_exists('gethen_footer_fun') ) :
+function gethen_footer_fun() {
+?>
+		<div class="site-info large-12 columns">
+		<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', '_sf' ); ?>" rel="generator"><?php printf( __( 'Powered by %s', '_s' ), 'WordPress' ); ?></a>
+					<span class="sep"> | </span>
+					<?php printf( __( 'Theme: %1$SGethen by %2$s.', '_sf' ), 'Gethen', '<a href="http://ComplexWaveform.com/" rel="designer">Josh Pollock</a>' ); ?>
+	</div><!-- .site-info -->
+<?php
+remove_action('tha_footer_bottom', '_sf_credit_links');
+}
+add_action('tha_footer_bottom', 'gethen_footer_fun');
+endif; // ! gethen_footer_fun exists
 ?>

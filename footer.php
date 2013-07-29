@@ -8,19 +8,24 @@
  * @package geth
  * @ since geth 0.1
  */
-
-//get the option for footer-width
-global $options;
-$footer = $options['footer_width'];
-//To be safe, set it to full-width unless specifically set to regular-width.
-if ($footer != 'reg' ) {
-	$footer = 'full';
-}
 ?>
 	</div><!-- #main -->
-	<?php do_action( 'tha_footer_before' ); ?>
-	<?php get_template_part('parts/foot', $footer); ?>
-	<?php do_action( 'tha_footer_after' ); ?>
+	<?php do_action( 'tha_footer_before' ); 
+	//get the option for footer-width
+	global $options;
+	$footer = $options['footer_width'];
+	//To be safe, set it to full-width unless specifically set to regular-width.
+	if ($footer != 'reg' ) {
+		echo '<footer id="colophon" class="site-footer row" role="contentinfo">';
+	}
+	else {
+		echo '<footer id="colophon" class="site-footer row full-row" role="contentinfo">';
+	}
+	do_action('tha_footer_top');
+	_sf_content_nav( 'nav-below' );
+	do_action('tha_footer_bottom');
+	echo '</footer>';
+	do_action( 'tha_footer_after' ); ?>
 </div><!-- #page -->
 <?php wp_footer(); ?>
 <?php do_action( 'tha_body_bottom' ); ?>
