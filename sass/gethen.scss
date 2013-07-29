@@ -1,7 +1,6 @@
 @import "jp-color-vars";
 @import "jp-standard";
-@import "menu";
-@import "perspective";
+
 
 .site-title, .site-description {
 	text-align:center;
@@ -38,3 +37,13 @@ article .row, .hentry {
 	@include border ($accent, 1px);
 	@include padding-even (5px);
 }
+
+	#menu-toggle {
+		z-index:50;
+		left: 0;
+		margin-left:10px;
+		display: block;
+		height: 0;
+		top: 4px;
+		position: fixed;z-index:50;
+	}
