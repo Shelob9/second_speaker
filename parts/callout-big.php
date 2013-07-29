@@ -8,10 +8,10 @@
 global $options;
 ?>
 <div class="row" id="big-callout-row">
-	<div class="large-12 columns" id="big-callout">
+	<div class="large-12 columns callout-box" id="big-callout">
 		<div class="row">
 			<div class="large-4 columns" id="big-callout-image">
-				<h3 class="callout-title" style="text-align:center;">
+				<h3 class="callout-title">
 					<?php echo $options['big_callout_title'] ?>
 				</h3>
 				<img src="<?php echo $options['big_callout_img']; ?>" />
