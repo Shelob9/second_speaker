@@ -49,4 +49,8 @@ add_filter( 'ot_show_new_layout', '__return_false' );
 require_once('options/ot-loader.php');
 require_once('inc/theme-options.php');
 
+/**
+* sliding sidebar
+*/
+locate_template('lib/slideSidebar.php', true);
 ?>
