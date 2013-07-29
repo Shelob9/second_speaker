@@ -1,25 +1,25 @@
 @import "jp-color-vars";
 @import "jp-standard";
 @import "menu";
+@import "perspective";
 
-#main-menu li a { color:rgba(255,255,255,0.3); font-size:1em; }
-
-.menu-hover {color:rgba(255,255,255,1); font-size:1.1em; }
-
-#main-menu li {
-	display: inline;
-		list-style-type: none;
-		font-size:2em;
-}
 .site-title, .site-description {
 	text-align:center;
 }
-.site-title h1 {
-	line-height:0em;
+hgroup {
+	.site-title {
+		
+		color: $alt1;
+	}
+	.site-description  {
+		color: $alt2;
+	}
 }
-
-.callout-title h5{
-	text-align:center;
+.callout-box .callout-title  {
+	text-align: center;
+		h3 {color: $alt1;}
+		h3 a, h3 a:visited {color: $alt1;}
+		h3 a:hover {color: $alt2;}
 }
 
 article {
@@ -30,4 +30,11 @@ article {
 }
 article .row, .hentry {
 	margin-top:8px !important;
+}
+
+.callout-box {
+	background-color: $primary;
+	@include corners (4px);
+	@include border ($accent, 1px);
+	@include padding-even (5px);
 }
