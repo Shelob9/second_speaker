@@ -188,6 +188,6 @@ function gethen_footer_widget_area() {
 	echo "</div>";
 	echo "</div><!--/#footer-widgets-row";
 }
-add_action('tha_footer_bottom', 'gethen_footer_widget_area');
+//add_action('footer-widgets', 'gethen_footer_widget_area');
 endif; //! gethen_footer_widget_area exists
 ?>

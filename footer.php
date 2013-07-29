@@ -22,8 +22,36 @@
 		echo '<footer id="colophon" class="site-footer row full-row" role="contentinfo">';
 	}
 	do_action('tha_footer_top');
+	echo "<div class='row' id='post-nav-row'>";
+	echo "<div class='large-12 columns'>";
 	_sf_content_nav( 'nav-below' );
+	echo "</div></div>";
+	if ($footer != 'reg' ) {
+		echo "<div class='row' id='footer-widgets'>";
+	}
+	else {
+		echo "<div class='row full-row' id='footer-widgets'>";
+	}
+	echo "<div class='large-4 columns footer-widgets' id='footer-widget-1'> ";
+	dynamic_sidebar( 'footer-1' );
+	echo "</div>";
+	
+	echo "<div class='large-4 columns footer-widgets' id='footer-widget-2'>";
+	dynamic_sidebar( 'footer-2' );
+	echo "</div> ";
+	
+	echo "<div class='large-4 columns footer-widgets' id='footer-widget-3'>";
+	dynamic_sidebar( 'footer-3' );
+	echo "</div>";
+	echo "</div><!--/#footer-widgets-row-->";
+	if ($footer != 'reg' ) {
+		echo "<div class='row' id='site-info-row'>";
+	}
+	else {
+		echo "<div class='row full-row' id='site-info-row'>";
+	}
 	do_action('tha_footer_bottom');
+	echo '</div>';
 	echo '</footer>';
 	do_action( 'tha_footer_after' ); ?>
 </div><!-- #page -->

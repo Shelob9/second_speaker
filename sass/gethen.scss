@@ -46,5 +46,19 @@ article .row, .hentry {
 
 footer {
 	@include gethen;
+}
 
+.footer-widgets, #footer-widgets {
+	@include gethen;
+}
+
+#footer-widgets {
+	@include margin-even(4px);
+}
+
+#post-nav-row, #site-info-row {
+	margin: 4px 1px 4px 1px;
+}
+footer.row {
+	margin-top:8px !important;
 }
