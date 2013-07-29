@@ -20,8 +20,9 @@ if ($footer != 'reg' ) {
 	</div><!-- #main -->
 	<?php do_action( 'tha_footer_before' ); ?>
 	<?php get_template_part('parts/foot', $footer); ?>
+	<?php do_action( 'tha_footer_after' ); ?>
 </div><!-- #page -->
 <?php wp_footer(); ?>
-<?php do_action( 'tha_footer_bottom' ); ?>
+<?php do_action( 'tha_body_bottom' ); ?>
 </body>
 </html>

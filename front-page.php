@@ -28,7 +28,7 @@ _sf_open($sidebar);
 		get_template_part( 'content', get_post_format() );
 		endwhile;
 	
-	 _sf_content_nav( 'nav-below' ); 
+	 
 	 else : 
 		 get_template_part( 'no-results', 'index' ); 
 	 endif; 
