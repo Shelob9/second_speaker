@@ -13,7 +13,7 @@
 #cssmenu > ul {
   display: block;
   position: relative;
-  width: 150px;
+  width: 100%;
 }
 
 /* The list elements which contain the links */
@@ -23,7 +23,7 @@
   position: relative;
   margin: 0;
   padding: 0;
-  width: 150px;
+  width: 100%;
 }
 
 /* General link styling */
@@ -36,7 +36,7 @@
   border-top: 1px dotted #3a3a3a;
   border-bottom: 1px dotted #1b1b1b;
   padding: 11px 20px;
-  width: 110px;
+  width: 100%;
   /* Typography */
   font-family: Helvetica, Arial, sans-serif;
   color: #d8d8d8;
@@ -98,7 +98,6 @@
   content: '';
   position: absolute;
   top: 17px;
-  right: 10px;
   width: 0px;
   height: 0px;
   /* Creating the arrow using borders */
@@ -121,9 +120,9 @@
 /* line 116, ../sass/_menu.scss */
 #cssmenu > ul ul {
   position: absolute;
-  left: 150px;
+  left: 90%;
   top: -9999px;
-  padding-left: 5px;
+  width: 100%;
   opacity: 0;
   /* The fade effect, created using an opacity transition */
   -webkit-transition: opacity .3s ease-in;
