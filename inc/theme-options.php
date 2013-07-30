@@ -102,7 +102,7 @@ function _custom_theme_options() {
         'label'       => 'Stick Header Top Of Page?',
         'id'          => 'stick',
         'type'        => 'select',
-        'desc'        => 'Select yes to prevent the header from scrolling with the page.',
+        'desc'        => 'Select no to prevent the header from scrolling with the page.',
         'choices'     => array(
           array(
             'label'       => 'Yes',

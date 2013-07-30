@@ -31,5 +31,19 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
+	
 	<div id="main" class="site-main">
+	<?php do_action( 'tha_header_before' );
+		global $options;
+		if ($options['stick'] != 'unstick') {
+			echo '<div id="header-wrap" class="fixed">';
+		}
+	?>
 	<?php get_template_part('parts/top'); ?>
+	<?php 
+		global $options;
+		if ($options['stick'] != 'unstick') {
+			echo '</div><!--/#header-wrap-->';
+		}
+		do_action( 'tha_header_after' );
+	?>

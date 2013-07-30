@@ -190,4 +190,22 @@ function gethen_footer_widget_area() {
 }
 //add_action('footer-widgets', 'gethen_footer_widget_area');
 endif; //! gethen_footer_widget_area exists
+
+/**
+* Stick header to top of page
+*
+* @since gethen 0.1
+*/
+if (! function_exists('gethen_header_stick') ) :
+function gethen_header_stick() {
+	global $options;
+	if ($options['stick'] != 'unstick') {
+		//echo "<style> #header-wrap{ position :fixed !important;} </style>";
+		if (is_user_logged_in() ) {
+			echo "<style> #header-wrap{ margin-top:19px; z-index:100; 	} </style>";
+		}
+	}
+}
+add_action('wp_head', 'gethen_header_stick');
+endif; // ! gethen_header_stick exists
 ?>
