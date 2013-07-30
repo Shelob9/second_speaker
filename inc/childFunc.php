@@ -218,12 +218,9 @@ global $options;
 if ($options['stick'] != 'unstick') {
 	if (! function_exists('_sf_js_init_fixedHeaderFix_code') ) :
 	function _sf_js_init_fixedHeaderFix_code() {
-		echo '
-				 function AdjustHeight() {
-					var height = document.getElementById("header-wrap").offsetHeight;
-					document.getElementById("primary").style.marginTop = height + "px";
-				}  
-			';
+		echo "
+			$('#primary').css('padding-top', $('#header-wrap').height() + 'px');
+			";
 	}
 	endif; // if ! _sf_js_init_fixedHeaderFix_code exists
 
