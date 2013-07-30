@@ -16,7 +16,7 @@ global $options;
 			</h3>
 				<?php echo $options['3_callout_content_1']; ?>
 		</div>
-		<div class="large-4 columns panel callout-box" id="callout-box-2">
+		<div class="large-4 columns callout-box" id="callout-box-2">
 			<h3 class="callout-title">
 				<a href="<?php  $options['3_callout_link_2'];  ?>">
 					<?php echo $options['3_callout_title_2']; ?>
