@@ -21,17 +21,17 @@ _sf_open($sidebar);
 	 if ($options['3_callout_use'] != 'no') {
 	 	get_template_part('parts/callout', '3');
 	 }
-	 
-	 if ( have_posts() ) : 
-		/* Start the Loop */
-		while ( have_posts() ) : the_post();
-		get_template_part( 'content', get_post_format() );
-		endwhile;
-	
-	 
-	 else : 
-		 get_template_part( 'no-results', 'index' ); 
-	 endif; 
+	 //if ($options['full_posts'] != 'no' ) {
+	 if (ot_get_option('full_posts', 'yes') != 'no' ) {
+		 if ( have_posts() ) : 
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
+			get_template_part( 'content', get_post_format() );
+			endwhile;
+		 else : 
+			 get_template_part( 'no-results', 'index' ); 
+		 endif;
+	}
 	
 _sf_close($sidebar); 
 

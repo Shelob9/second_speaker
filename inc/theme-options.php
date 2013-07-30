@@ -40,6 +40,10 @@ function _custom_theme_options() {
         'id'          => 'skins'
       ),
       array(
+        'title'       => 'Front Page',
+        'id'          => 'front_page'
+      ),
+      array(
         'title'       => 'Header Options',
         'id'          => 'header'
       ),
@@ -52,21 +56,10 @@ function _custom_theme_options() {
         'id'          => 'big_callout'
       ),
     array(
-        'title'       => 'Three Small Callout Boxs',
+        'title'       => 'Three Small Callout Boxes',
         'id'          => '3_callout'
       ),
-      array(
-        'title'       => 'Post Format Styles',
-        'id'          => 'post_formats'
-      ),
-      array(
-        'title'       => 'Other',
-        'id'          => 'other'
-      ),
-      array(
-        'title'       => 'Front Page',
-        'id'          => 'front_page'
-      )
+
     ),
     'settings'        => array(
       //skins
@@ -105,23 +98,23 @@ function _custom_theme_options() {
         'section'     => 'skins'
       ),
       //header
-       array(
-        'label'       => 'Full width header on all pages',
-        'id'          => 'full-header',
+        array(
+        'label'       => 'Stick Header Top Of Page?',
+        'id'          => 'stick',
         'type'        => 'select',
-        'desc'        => 'If set to yes, you will see the full header on all pages. Otherwise you will just see a simple topbar.',
+        'desc'        => 'Select yes to prevent the header from scrolling with the page.',
         'choices'     => array(
           array(
             'label'       => 'Yes',
-            'value'       => 'yes'
+            'value'       => 'stick'
           ),
-           array(
+          array(
             'label'       => 'No',
-            'value'       => 'no'
-          ),
+            'value'       => 'unstick'
+          )
         ),
-        'std'         => 'Yes',
-        'section'     => 'header'
+       'std'         => 'unstick',
+    	'section'     => 'header'
       ),
        array(
         'label'       => 'Header Image',
@@ -200,28 +193,28 @@ function _custom_theme_options() {
     	'section'     => 'footer'
       ),
 
-//other
+//front page 
       array(
-        'label'       => 'Stick Menu To Top Of Page?',
-        'id'          => 'stick',
+        'label'       => 'Show Posts On Front Page?',
+        'id'          => 'front_posts',
         'type'        => 'select',
-        'desc'        => '',
+        'desc'        => 'If set to no, be sure to select an alternate page for posts from the settings menu.',
         'choices'     => array(
           array(
             'label'       => 'Yes',
-            'value'       => 'stick'
+            'value'       => 'yes'
           ),
           array(
             'label'       => 'No',
-            'value'       => 'unstick'
+            'value'       => 'no'
           )
         ),
-       'std'         => 'stick',
-    	'section'     => 'other'
+       'std'         => 'yes',
+    	'section'     => 'front_page'
       ),
 //big callout
       array(
-        'label'       => 'Show Big Callout Box On Front Page? ?',
+        'label'       => 'Show Big Callout Box On Front Page?',
         'id'          => 'big_callout_use',
         'type'        => 'select',
         'desc'        => '',
@@ -236,7 +229,7 @@ function _custom_theme_options() {
           )
         ),
         'std'         => 'yes',
-    	'section'     => 'big_callout'
+    	'section'     => 'front_page'
       ),
         array(
             'label'       => 'Big Callout Title',
@@ -300,7 +293,7 @@ function _custom_theme_options() {
       ),
 // 3 callout boxes
           array(
-        'label'       => 'Show Three Small Callout Boxes On Front Page? ?',
+        'label'       => 'Show Three Small Callout Boxes On Front Page?',
         'id'          => '3_callout_use',
         'type'        => 'select',
         'desc'        => '',
@@ -315,7 +308,7 @@ function _custom_theme_options() {
           )
         ),
        'std'         => 'yes',
-    	'section'     => '3_callout'
+    	'section'     => 'front_page'
     ),
     //box 1
     	array(
