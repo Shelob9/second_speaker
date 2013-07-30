@@ -4,7 +4,7 @@
  *
  * Contains the closing of the id=main div and all content after.
  * 
- * Shows part/footer-full.php, a full-width footer, unless options say to use parts/footer-reg.php, which is a regular width footer.
+ * Shows part/footer-full.php, a full-width footer, unless options say to use parts/footer-no.php, which is a noular width footer.
  * @package geth
  * @ since geth 0.1
  */
@@ -14,19 +14,19 @@
 	//get the option for footer-width
 	global $options;
 	$footer = $options['footer_width'];
-	//To be safe, set it to full-width unless specifically set to regular-width.
-	if ($footer != 'reg' ) {
+	//To be safe, set it to full-width unless specifically set to noular-width.
+	if ($footer != 'yes' ) {
 		echo '<footer id="colophon" class="site-footer row" role="contentinfo">';
 	}
 	else {
-		echo '<footer id="colophon" class="site-footer row full-row" role="contentinfo">';
+		echo '<footer id="colophon" class="site-footer full-row" role="contentinfo">';
 	}
 	do_action('tha_footer_top');
 	echo "<div class='row' id='post-nav-row'>";
 	echo "<div class='large-12 columns'>";
 	_sf_content_nav( 'nav-below' );
 	echo "</div></div>";
-	if ($footer != 'reg' ) {
+	if ($footer != 'yes' ) {
 		echo "<div class='row' id='footer-widgets'>";
 	}
 	else {
@@ -44,7 +44,7 @@
 	dynamic_sidebar( 'footer-3' );
 	echo "</div>";
 	echo "</div><!--/#footer-widgets-row-->";
-	if ($footer != 'reg' ) {
+	if ($footer != 'yes' ) {
 		echo "<div class='row' id='site-info-row'>";
 	}
 	else {
