@@ -21,13 +21,14 @@ _sf_open($sidebar);
 	 if ($options['3_callout_use'] != 'no') {
 	 	get_template_part('parts/callout', '3');
 	 }
-	 if ($options['front_posts'] != 'no')  {
-		 if ( have_posts() ) : 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-			get_template_part( 'content', get_post_format() );
-			endwhile;
-	}
+	 
+	 if ( have_posts() ) : 
+		/* Start the Loop */
+		while ( have_posts() ) : the_post();
+		get_template_part( 'content', get_post_format() );
+		endwhile;
+	
+	 
 	 else : 
 		 get_template_part( 'no-results', 'index' ); 
 	 endif; 
