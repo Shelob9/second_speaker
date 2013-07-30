@@ -208,4 +208,38 @@ function gethen_header_stick() {
 }
 add_action('wp_head', 'gethen_header_stick');
 endif; // ! gethen_header_stick exists
+
+/**
+* Get #primary out from under the fixed header
+*
+* @since gethen 0.1
+*/
+global $options;
+if ($options['stick'] != 'unstick') {
+	if (! function_exists('_sf_js_init_fixedHeaderFix_code') ) :
+	function _sf_js_init_fixedHeaderFix_code() {
+		echo '
+				 function AdjustHeight() {
+					var height = document.getElementById("header-wrap").offsetHeight;
+					document.getElementById("primary").style.marginTop = height + "px";
+				}  
+			';
+	}
+	endif; // if ! _sf_js_init_fixedHeaderFix_code exists
+
+	if (! function_exists('_sf_js_init_fixedHeaderFix') ) :
+	function _sf_js_init_fixedHeaderFix() { 
+		echo "
+			<script>
+				jQuery(document).ready(function($) {
+		";
+		_sf_js_init_fixedHeaderFix_code();
+		echo "
+				}); //end no conflict wrapper
+			</script>
+		";
+	}
+	add_action('wp_footer', '_sf_js_init_fixedHeaderFix');
+	endif; //! _sf_js_init_fixedHeaderFix
+}
 ?>
