@@ -27,8 +27,10 @@
 article {
 	@include gethen;
 }
-article .row, .hentry, #callout-3-row, footer {
+article .row, .hentry, #callout-3-row, footer, #comments {
 	margin-top:8px !important;
+}
+.entry-content, #respond, .entry-title, .entry-meta{
 	padding-left: 4px;
 }
 
