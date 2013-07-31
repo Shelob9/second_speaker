@@ -47,9 +47,14 @@ article .row, .hentry, #callout-3-row, footer {
 	background-color: $accentTint;
 }
 
-#comments, footer, #footer-widgets {
+.page-header, #comments, #colphon, #footer-widgets {
 	@include gethen;
 }
+
+.page-header {
+	padding: 0 4px 0 4px;
+}
+
 .footer-widgets {
 	@include aUniform;
 }
@@ -63,7 +68,7 @@ article .row, .hentry, #callout-3-row, footer {
 #post-nav-row, #site-info-row {
 	margin: 4px 1px 4px 1px;
 }
-footer.row {
+#colphon {
 	margin-top:8px !important;
 }
 
@@ -74,4 +79,9 @@ footer.row {
 }
 .read-more .read-more-button {
 	margin-top:2px;
+}
+
+#entry-meta {
+	padding: 0 4px;
+	@include gethen;
 }
