@@ -236,7 +236,7 @@ function _custom_theme_options() {
             'id'          => 'big_callout_title',
             'type'        => 'textarea-simple',
             'desc'        => 'Title For the big callout box',
-            'std'         => '',
+            'std'         => 'Big Callout Box Title',
             'rows'        => '10',
             'post_type'   => '',
             'taxonomy'    => '',
@@ -248,25 +248,38 @@ function _custom_theme_options() {
             'id'          => 'big_callout_content',
             'type'        => 'textarea',
             'desc'        => 'Text for the big callout box.',
-            'std'         => '',
+            'std'         => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis arcu ut tortor ullamcorper, vel sodales lacus tristique. Pellentesque gravida rutrum lectus, a lacinia leo. Etiam lobortis, sapien nec imperdiet pulvinar, nisl nisl volutpat ante, in aliquam augue eros a nibh. Nulla sollicitudin suscipit malesuada. Suspendisse vel egestas urna, in tempor dolor. Phasellus tincidunt tempor lectus. Ut adipiscing, risus ac sodales cursus, diam justo rutrum dolor, in tincidunt mauris tortor quis tellus. Aliquam erat volutpat. Ut et lectus ut arcu bibendum interdum eu sit amet ipsum. Aliquam libero eros, vulputate fermentum felis vitae, pellentesque vulputate velit. Fusce dictum condimentum fringilla. Phasellus aliquet ultricies purus, id tincidunt nibh varius et. Aliquam pulvinar turpis at ipsum lobortis sodales. Pellentesque fermentum ligula ut arcu adipiscing cursus. Nam bibendum at massa sit amet venenatis. Duis aliquet gravida justo, egestas mollis nulla.',
             'rows'        => '40',
             'post_type'   => '',
             'taxonomy'    => '',
             'class'       => '',
             'section'     => 'big_callout'
           ),
-           array(
-            'label'       => 'Big Callout CTA Label',
-            'id'          => 'big_callout_ctaLabel',
+            array(
+            'label'       => 'Big Callout Call To Action',
+            'id'          => 'big_callout_cta',
             'type'        => 'textarea-simple',
-            'desc'        => 'Label for big callout\'s call to action button.',
-            'std'         => '',
+            'desc'        => 'Call to action in the big callout box.',
+            'std'         => 'Call To Action',
             'rows'        => '10',
             'post_type'   => '',
             'taxonomy'    => '',
             'class'       => '',
             'section'     => 'big_callout'
           ),
+           array(
+            'label'       => 'Big Callout CTA Button Label',
+            'id'          => 'big_callout_ctaLabel',
+            'type'        => 'textarea-simple',
+            'desc'        => 'Label for big callout\'s call to action button.',
+            'std'         => 'CTA Button',
+            'rows'        => '10',
+            'post_type'   => '',
+            'taxonomy'    => '',
+            'class'       => '',
+            'section'     => 'big_callout'
+          ),
+        
            array(
             'label'       => 'Big Callout CTA link',
             'id'          => 'big_callout_ctaLink',

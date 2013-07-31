@@ -15,6 +15,18 @@ global $options;
 					<?php echo $options['big_callout_title'] ?>
 				</h3>
 				<img src="<?php echo $options['big_callout_img']; ?>" />
+			</div>
+			<div class="large-6 columns">
+				<div class="row">
+					<div class="large-12 columns">
+						<?php echo $options['big_callout_content']; ?>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-12 columns">
+						<h3 class="cta"><?php echo $options['big_callout_cta']; ?></h3>
+					</div>
+				</div>
 				<div class="row">
 					<div id="cta-button-container" class="large-8 small-centered large-centered columns" >
 						<a href="<?php $options['big_callout_ctaLink']; ?>" class="button radius" id="cta-button">
@@ -22,9 +34,6 @@ global $options;
 						</a>
 					</div>
 				</div>
-			</div>
-			<div class="large-6 columns">
-				<?php echo $options['big_callout_content']; ?>
 			</div>
 		</div>	
 	</div>
