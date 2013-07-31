@@ -1,7 +1,8 @@
 aside .menu {
-	background-color:$primary;
+	@include gethen;
 	@include std-border;
 	@include padding-even (2px);
+	@include aUniform;
 }
 ul#menu-menu, ul.sub-menu{
 	list-style-type: none;
