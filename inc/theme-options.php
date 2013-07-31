@@ -86,7 +86,7 @@ function _custom_theme_options() {
         'id'          => 'sk1_bg_img',
         'type'        => 'upload',
         'desc'        => 'Change the background image for skin one.',
-        'std'         => get_stylesheet_directory_uri().'/images/bg.jpg',
+        'std'         => get_stylesheet_directory_uri().'/images/bg.png',
         'section'     => 'skins'
       ),
       array(
@@ -94,7 +94,7 @@ function _custom_theme_options() {
         'id'          => 'sk2_bg_img',
         'type'        => 'upload',
         'desc'        => 'Change the background image for skin one.',
-        'std'         => get_stylesheet_directory_uri().'/images/bg-dark.jpg',
+        'std'         => get_stylesheet_directory_uri().'/images/bg.jpg',
         'section'     => 'skins'
       ),
       //header
@@ -402,7 +402,7 @@ function _custom_theme_options() {
         'id'          => '3_callout_img_2',
         'type'        => 'upload',
         'desc'        => 'Background image for the second small callout box.',
-        
+        'std'		=> '',
         'rows'        => '40',
         'post_type'   => '',
         'taxonomy'    => '',
@@ -451,7 +451,7 @@ function _custom_theme_options() {
         'id'          => '3_callout_img_3',
         'type'        => 'upload',
         'desc'        => 'Background image for the third small callout box.',
-        
+        'std'		=> '',
         'rows'        => '10',
         'post_type'   => '',
         'taxonomy'    => '',

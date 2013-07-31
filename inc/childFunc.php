@@ -39,7 +39,7 @@ function gethen_headerBG($use = '') {
 		$body_img_url = $options['sk2_bg_img'];
 	}
 	if ($body_img_url == '' ) {
-		$body_img_url = get_stylesheet_directory_uri().'/images/bg.jpg';
+		$body_img_url = get_stylesheet_directory_uri().'/images/bg.png';
 	}
 	//get background image src for the 3 small callout boxes and put in arrary $sm_callout
 	$sm_callout = array(
