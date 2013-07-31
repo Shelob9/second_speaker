@@ -1,6 +1,6 @@
 /* line 1, ../sass/_super-menu.scss */
 aside .menu {
-  background-color: #fbfbfb;
+  background-color: #b49f8c;
   -moz-border-radius-topleft: 4px;
   -moz-border-radius-topright: 4px;
   -moz-border-radius-bottomleft: 4px;
@@ -15,7 +15,7 @@ aside .menu {
   border-bottom-right-radius: 4px;
   border-width: 1px;
   border-style: solid;
-  border-color: #d2d2d2;
+  border-color: #b49f8c;
   padding: 2px 2px 2px 2px;
 }
 
@@ -25,11 +25,11 @@ ul#menu-menu, ul.sub-menu {
 }
 /* line 8, ../sass/_super-menu.scss */
 ul#menu-menu a, ul.sub-menu a {
-  color: #ff6633;
+  color: #6c7b84;
 }
 /* line 10, ../sass/_super-menu.scss */
 ul#menu-menu a:hover, ul.sub-menu a:hover {
-  color: #0099ff;
+  color: #976f49;
 }
 /* line 12, ../sass/_super-menu.scss */
 ul#menu-menu a:visited, ul.sub-menu a:visited {
@@ -37,7 +37,7 @@ ul#menu-menu a:visited, ul.sub-menu a:visited {
 }
 /* line 14, ../sass/_super-menu.scss */
 ul#menu-menu a:visited:hover, ul.sub-menu a:visited:hover {
-  color: #0099ff;
+  color: #976f49;
 }
 
 /* line 7, ../sass/gethen.scss */
@@ -45,35 +45,40 @@ ul#menu-menu a:visited:hover, ul.sub-menu a:visited:hover {
   text-align: center;
 }
 
-/* line 11, ../sass/gethen.scss */
-hgroup .site-title {
-  color: #ff6633;
+/* line 12, ../sass/gethen.scss */
+#site-meta h1.site-title a, #site-meta h1.site-title a:visited {
+  color: #201f1a;
+}
+/* line 13, ../sass/gethen.scss */
+#site-meta h1.site-title a:hover {
+  color: #6c7b84;
 }
 /* line 15, ../sass/gethen.scss */
-hgroup .site-description {
-  color: #0099ff;
+#site-meta h2.site-description {
+  color: #976f49;
 }
 
 /* line 19, ../sass/gethen.scss */
-.callout-box .callout-title {
+.callout-title {
+  margin-top: 0px;
   text-align: center;
 }
-/* line 21, ../sass/gethen.scss */
-.callout-box .callout-title h3 {
-  color: #ff6633;
-}
 /* line 22, ../sass/gethen.scss */
-.callout-box .callout-title h3 a, .callout-box .callout-title h3 a:visited {
-  color: #ff6633;
+.callout-title h3 {
+  color: #6c7b84;
 }
 /* line 23, ../sass/gethen.scss */
-.callout-box .callout-title h3 a:hover {
-  color: #0099ff;
+.callout-title h3 a, .callout-title h3 a:visited {
+  color: #6c7b84;
+}
+/* line 24, ../sass/gethen.scss */
+.callout-title h3 a:hover {
+  color: #976f49;
 }
 
-/* line 26, ../sass/gethen.scss */
+/* line 27, ../sass/gethen.scss */
 article {
-  background-color: #fbfbfb;
+  background-color: #dee2e3;
   -moz-border-radius-topleft: 4px;
   -moz-border-radius-topright: 4px;
   -moz-border-radius-bottomleft: 4px;
@@ -88,17 +93,36 @@ article {
   border-bottom-right-radius: 4px;
   border-width: 1px;
   border-style: solid;
-  border-color: #d2d2d2;
+  border-color: #b49f8c;
+}
+/* line 9, ../sass/_gethen-mixin.scss */
+article a {
+  color: #b49f8c;
+}
+/* line 11, ../sass/_gethen-mixin.scss */
+article a:hover {
+  color: #6c7b84;
+  border-bottom: 1px dotted #3e4849;
+}
+/* line 15, ../sass/_gethen-mixin.scss */
+article a:visited {
+  color: #2c3334;
+}
+/* line 17, ../sass/_gethen-mixin.scss */
+article a:visited:hover {
+  color: #976f49;
+  border-bottom: 1px dotted #2c3334;
 }
 
-/* line 29, ../sass/gethen.scss */
-article .row, .hentry {
+/* line 30, ../sass/gethen.scss */
+article .row, .hentry, #callout-3-row, footer {
   margin-top: 8px !important;
+  padding-left: 4px;
 }
 
-/* line 33, ../sass/gethen.scss */
+/* line 35, ../sass/gethen.scss */
 .callout-box {
-  background-color: #fbfbfb;
+  background-color: #dee2e3;
   -moz-border-radius-topleft: 4px;
   -moz-border-radius-topright: 4px;
   -moz-border-radius-bottomleft: 4px;
@@ -113,10 +137,28 @@ article .row, .hentry {
   border-bottom-right-radius: 4px;
   border-width: 1px;
   border-style: solid;
-  border-color: #d2d2d2;
+  border-color: #b49f8c;
+}
+/* line 9, ../sass/_gethen-mixin.scss */
+.callout-box a {
+  color: #b49f8c;
+}
+/* line 11, ../sass/_gethen-mixin.scss */
+.callout-box a:hover {
+  color: #6c7b84;
+  border-bottom: 1px dotted #3e4849;
+}
+/* line 15, ../sass/_gethen-mixin.scss */
+.callout-box a:visited {
+  color: #2c3334;
+}
+/* line 17, ../sass/_gethen-mixin.scss */
+.callout-box a:visited:hover {
+  color: #976f49;
+  border-bottom: 1px dotted #2c3334;
 }
 
-/* line 37, ../sass/gethen.scss */
+/* line 39, ../sass/gethen.scss */
 #menu-toggle {
   z-index: 50;
   left: 0;
@@ -126,11 +168,12 @@ article .row, .hentry {
   top: 4px;
   position: fixed;
   z-index: 50;
+  background-color: #dee2e3;
 }
 
-/* line 47, ../sass/gethen.scss */
-footer {
-  background-color: #fbfbfb;
+/* line 50, ../sass/gethen.scss */
+#comments, footer, #footer-widgets {
+  background-color: #dee2e3;
   -moz-border-radius-topleft: 4px;
   -moz-border-radius-topright: 4px;
   -moz-border-radius-bottomleft: 4px;
@@ -145,40 +188,76 @@ footer {
   border-bottom-right-radius: 4px;
   border-width: 1px;
   border-style: solid;
-  border-color: #d2d2d2;
+  border-color: #b49f8c;
+}
+/* line 9, ../sass/_gethen-mixin.scss */
+#comments a, footer a, #footer-widgets a {
+  color: #b49f8c;
+}
+/* line 11, ../sass/_gethen-mixin.scss */
+#comments a:hover, footer a:hover, #footer-widgets a:hover {
+  color: #6c7b84;
+  border-bottom: 1px dotted #3e4849;
+}
+/* line 15, ../sass/_gethen-mixin.scss */
+#comments a:visited, footer a:visited, #footer-widgets a:visited {
+  color: #2c3334;
+}
+/* line 17, ../sass/_gethen-mixin.scss */
+#comments a:visited:hover, footer a:visited:hover, #footer-widgets a:visited:hover {
+  color: #976f49;
+  border-bottom: 1px dotted #2c3334;
 }
 
-/* line 51, ../sass/gethen.scss */
-.footer-widgets, #footer-widgets {
-  background-color: #fbfbfb;
-  -moz-border-radius-topleft: 4px;
-  -moz-border-radius-topright: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -webkit-border-top-left-radius: 4px;
-  -webkit-border-top-right-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  -webkit-border-bottom-right-radius: 4px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d2d2d2;
+/* line 9, ../sass/_gethen-mixin.scss */
+.footer-widgets a {
+  color: #b49f8c;
+}
+/* line 11, ../sass/_gethen-mixin.scss */
+.footer-widgets a:hover {
+  color: #6c7b84;
+  border-bottom: 1px dotted #3e4849;
+}
+/* line 15, ../sass/_gethen-mixin.scss */
+.footer-widgets a:visited {
+  color: #2c3334;
+}
+/* line 17, ../sass/_gethen-mixin.scss */
+.footer-widgets a:visited:hover {
+  color: #976f49;
+  border-bottom: 1px dotted #2c3334;
 }
 
-/* line 55, ../sass/gethen.scss */
+/* line 57, ../sass/gethen.scss */
 #footer-widgets {
   margin: 4px 4px 4px 4px;
+  padding: 4px 4px 4px 4px;
 }
 
-/* line 59, ../sass/gethen.scss */
+/* line 63, ../sass/gethen.scss */
 #post-nav-row, #site-info-row {
   margin: 4px 1px 4px 1px;
 }
 
-/* line 62, ../sass/gethen.scss */
+/* line 66, ../sass/gethen.scss */
 footer.row {
   margin-top: 8px !important;
+}
+
+/* line 70, ../sass/gethen.scss */
+.button {
+  background-color: #6c7b84;
+}
+/* line 72, ../sass/gethen.scss */
+.button:hover {
+  background-color: #3e4849;
+}
+/* line 73, ../sass/gethen.scss */
+.button a:hover {
+  color: #201f1a;
+}
+
+/* line 75, ../sass/gethen.scss */
+.read-more .read-more-button {
+  margin-top: 2px;
 }

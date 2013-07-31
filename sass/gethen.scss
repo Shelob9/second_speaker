@@ -1,4 +1,4 @@
-@import "jp-color-vars";
+@import "skin1-colors";
 @import "jp-standard";
 @import "gethen-mixin";
 @import "super-menu";
@@ -7,16 +7,17 @@
 .site-title, .site-description {
 	text-align:center;
 }
-hgroup {
-	.site-title {
-		
-		color: $alt1;
+#site-meta {
+	h1.site-title {
+		a, a:visited, {color: $secondary;}
+		a:hover, {color: $alt1;}
 	}
-	.site-description  {
+	h2.site-description  {
 		color: $alt2;
 	}
 }
-.callout-box .callout-title  {
+.callout-title  {
+	margin-top:0px;
 	text-align: center;
 		h3 {color: $alt1;}
 		h3 a, h3 a:visited {color: $alt1;}
@@ -26,8 +27,9 @@ hgroup {
 article {
 	@include gethen;
 }
-article .row, .hentry {
+article .row, .hentry, #callout-3-row, footer {
 	margin-top:8px !important;
+	padding-left: 4px;
 }
 
 .callout-box {
@@ -42,23 +44,34 @@ article .row, .hentry {
 	height: 0;
 	top: 4px;
 	position: fixed;z-index:50;
+	background-color: $accentTint;
 }
 
-footer {
+#comments, footer, #footer-widgets {
 	@include gethen;
 }
-
-.footer-widgets, #footer-widgets {
-	@include gethen;
+.footer-widgets {
+	@include aUniform;
 }
 
 #footer-widgets {
 	@include margin-even(4px);
+	@include padding-even(4px);
 }
+
 
 #post-nav-row, #site-info-row {
 	margin: 4px 1px 4px 1px;
 }
 footer.row {
 	margin-top:8px !important;
+}
+
+.button {
+	background-color: $alt1;
+	&:hover {background-color: $accent;}
+	a:hover {color: $secondary;}
+}
+.read-more .read-more-button {
+	margin-top:2px;
 }

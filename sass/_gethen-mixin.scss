@@ -1,9 +1,29 @@
 @mixin std-border {
 	@include corners (4px);
-	@include border ($accent, 1px);
+	@include border ($primary, 1px);
+}
+
+
+
+@mixin aUniform {
+	a { 
+			color: $primary;
+			&:hover { 
+				color: $alt1;
+				border-bottom: 1px dotted $accent;
+			}
+			&:visited {
+				color: $accentShade;
+				&:hover {
+					color: $alt2;
+					border-bottom: 1px dotted $accentShade;
+				}
+			}
+		}
 }
 
 @mixin gethen {
-background-color: $primary;
+background-color: $accentTint;
 	@include std-border;
+	@include aUniform;
 }
