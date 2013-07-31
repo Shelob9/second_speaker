@@ -45,8 +45,8 @@ if (! is_single() ) {
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php if ( has_post_thumbnail() && ! has_post_format('gallery')  && ! has_post_format('image') ) : ?>
-			<div class="large-3 columns post-thumbnail">
+		<?php if ( has_post_thumbnail() && ! has_post_format('gallery')  ) : ?>
+			<div class="large-12 columns post-thumbnail">
 			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><?php the_post_thumbnail('medium'); ?></a>
 			</div>
 		<?php endif; ?>
