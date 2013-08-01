@@ -9,6 +9,7 @@ id: 14.
 get_header(); 
 $sidebar = get_theme_mod('_sf_default_sidebar');
 _sf_open($sidebar);
+global $themes;
 ?>
 
 		<?php if ( have_posts() ) : ?>
@@ -17,7 +18,9 @@ _sf_open($sidebar);
 			while ( have_posts() ) : the_post();
 			get_template_part( 'content', get_post_format() );
 			endwhile;
-		} ?>
+		?>
+		<hr />
+		<?php _sfSite_prevDownload_table($themes); ?>
 			
 		<?php else : ?>
 			<?php get_template_part( 'no-results', 'index' ); ?>

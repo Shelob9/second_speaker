@@ -18,7 +18,7 @@ h5.widget-title {text-align:center; font-size: .8em;}
 
 p.why {font-size:.7em; margin-left:12px;}
 
-#secondary, article, #comments, #colophon{
+#secondary, article, #comments, #colophon, .download-table table{
 	background-color:white;
 	border-width: 1px;
   border-style: solid;
@@ -75,3 +75,4 @@ h2.site-description {
 .masonry-post-excerpt {
 	padding: 0 1px 0 1px;
 }
+
