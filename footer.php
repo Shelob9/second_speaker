@@ -50,6 +50,7 @@
 	else {
 		echo "<div class='row full-row' id='site-info-row'>";
 	}
+	do_action('_sf_credit_links');
 	do_action('tha_footer_bottom');
 	echo '</div>';
 	echo '</footer>';
