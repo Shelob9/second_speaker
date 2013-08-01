@@ -1,4 +1,4 @@
-_Second Foundation is copyright 2013 Josh Pollock and licensed under the terms of the GPL v3. It is based on Underscores  (_s) by Automattic and Foundation by ZURB.
+Cloud City is copyright 2013 by Josh Pollock (http://ComplexWaveform.com) and licensed under the terms of the GPL v3. It is based on Underscores  (_s) by Automattic and Foundation by ZURB.
 
 Underscores (http://underscores.me/), (C) 2012-2013 Automattic, Inc.
 Underscores, like WordPress, is licensed under the GPL.
@@ -20,13 +20,21 @@ Browser States is licensed under the terms of the New BSD License (BSD-3).
 Backstretch (http://srobbin.com/jquery-plugins/backstretch/), by Scott Robin (http://srobbin.com/), (c) 2012 Robbin & Co.
 Backstretch is licensed under the terms of the MIT Open Source License.
 
+This theme also makes use of OptionTree, which is Copyright (c) 2012, Derek Herman (http://valendesigns.com).
+OptionTree is licensed under the terms of the GPL v3.
+
+This theme enjoys using the font Lato, which is copyright Łukasz Dziedzic  (http://www.latofonts.com/).
+Lato is licensed under the terms of the SIL Open Font License v1.1
+
 
 1. GNU General Public License v3 (http://www.gnu.org/licenses/gpl-3.0.html)
 2. GNU General Public License v2 (http://www.gnu.org/licenses/gpl-2.0.html)
 3. MIT Open Source Software License (http://opensource.org/licenses/MIT)
 4. New BSD License (BSD-3) (http://opensource.org/licenses/BSD-3-Clause)
+5. SIL Open Font License (http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL)
 
-Default fullscreen background image is in the public domain. It was  retrieved from:
+Default fullscreen background images are in the public domain.
+The image was retrieved from:
 http://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Cirrocumulus_to_Altocumulus.JPG/1024px-Cirrocumulus_to_Altocumulus.JPG
 
 
