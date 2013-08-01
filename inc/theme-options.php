@@ -72,11 +72,11 @@ function _custom_theme_options() {
           array(
             'label'       => 'Skin One',
             'value'       => 'skin1'
-          ),
+          )/*,
           array(
             'label'       => 'Skin Two',
             'value'       => 'skin2'
-          )
+          )*/
         ),
         'std'         => 'skin1',
         'section'     => 'skins'
@@ -88,7 +88,7 @@ function _custom_theme_options() {
         'desc'        => 'Change the background image for skin one.',
         'std'         => get_stylesheet_directory_uri().'/images/bg.png',
         'section'     => 'skins'
-      ),
+      ),/*
       array(
         'label'       => 'Skin Two Background Image',
         'id'          => 'sk2_bg_img',
@@ -97,6 +97,7 @@ function _custom_theme_options() {
         'std'         => get_stylesheet_directory_uri().'/images/bg.jpg',
         'section'     => 'skins'
       ),
+      */
       //header
         array(
         'label'       => 'Stick Header Top Of Page?',
