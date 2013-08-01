@@ -37,9 +37,7 @@ p.why {font-size:.7em; margin-left:12px;}
   border-bottom-right-radius: 4px;
 }
 
-.entry-title, .entry-content, .entry-meta #comments, {
-	padding-left: 2px;
-}
+
 h2.site-description {
 	padding-left:4px;
 }
@@ -76,3 +74,5 @@ h2.site-description {
 	padding: 0 1px 0 1px;
 }
 
+.entry-header, .entry-content, .entry-meta, #comments, .entry-summary {
+	margin: 0 4px 0 4px;}
