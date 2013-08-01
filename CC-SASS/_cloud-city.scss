@@ -148,15 +148,20 @@ nav #nav-below {
 }
 .nav-prev {font-size:10em;}
 
-.top-bar .name h1,  h1.site-title {
+.top-bar .name h1,  h1.site-title, .top-bar-section li a:not(.button), .top-bar-section ul, #masthead, #site-navigation, .sticky-topbar {
 	a {
 		color: $alt1 !important;
 	}
 	a:visited {
 		color: $alt1 !important;
 	}
-	
+	background-color:$secondary;
 }
+
+.top-bar-section li a:not(.button) {
+	&:hover { background-color:$primary;}
+}
+
 
 .page-header, .post-header, #comments {
 	@include postPageEtc ($alt2);
@@ -217,5 +222,6 @@ nav #nav-below {
 
 .masonry-thumbnail img {
 	width:100%;
-	}
+}
+	
 #content {padding: 0 0 0 0;}

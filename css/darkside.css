@@ -215,16 +215,25 @@ nav #nav-below a:visited:hover {
   font-size: 10em;
 }
 
+/* line 151, ../CC-SASS/_cloud-city.scss */
+.top-bar .name h1, h1.site-title, .top-bar-section li a:not(.button), .top-bar-section ul, #masthead, #site-navigation, .sticky-topbar {
+  background-color: black;
+}
 /* line 152, ../CC-SASS/_cloud-city.scss */
-.top-bar .name h1 a, h1.site-title a {
+.top-bar .name h1 a, h1.site-title a, .top-bar-section li a:not(.button) a, .top-bar-section ul a, #masthead a, #site-navigation a, .sticky-topbar a {
   color: #ff6633 !important;
 }
 /* line 155, ../CC-SASS/_cloud-city.scss */
-.top-bar .name h1 a:visited, h1.site-title a:visited {
+.top-bar .name h1 a:visited, h1.site-title a:visited, .top-bar-section li a:not(.button) a:visited, .top-bar-section ul a:visited, #masthead a:visited, #site-navigation a:visited, .sticky-topbar a:visited {
   color: #ff6633 !important;
 }
 
-/* line 161, ../CC-SASS/_cloud-city.scss */
+/* line 162, ../CC-SASS/_cloud-city.scss */
+.top-bar-section li a:not(.button):hover {
+  background-color: white;
+}
+
+/* line 166, ../CC-SASS/_cloud-city.scss */
 .page-header, .post-header, #comments {
   -moz-box-shadow: 1px 2px 3px #3f5e5e;
   -webkit-box-shadow: 1px 2px 3px #3f5e5e;
@@ -272,7 +281,7 @@ nav #nav-below a:visited:hover {
   color: #0099ff;
 }
 
-/* line 166, ../CC-SASS/_cloud-city.scss */
+/* line 171, ../CC-SASS/_cloud-city.scss */
 .post, .page {
   -moz-box-shadow: 1px 2px 3px #3f5e5e;
   -webkit-box-shadow: 1px 2px 3px #3f5e5e;
@@ -317,55 +326,55 @@ nav #nav-below a:visited:hover {
 .post h1, .page h1 {
   color: #ff6633;
 }
-/* line 168, ../CC-SASS/_cloud-city.scss */
+/* line 173, ../CC-SASS/_cloud-city.scss */
 .post h1, .page h1 {
   padding-left: 15px;
 }
-/* line 170, ../CC-SASS/_cloud-city.scss */
+/* line 175, ../CC-SASS/_cloud-city.scss */
 .post h1 a, .page h1 a {
   color: #0099ff;
 }
-/* line 171, ../CC-SASS/_cloud-city.scss */
+/* line 176, ../CC-SASS/_cloud-city.scss */
 .post h1 a:vistied, .page h1 a:vistied {
   color: #0099ff;
 }
-/* line 173, ../CC-SASS/_cloud-city.scss */
+/* line 178, ../CC-SASS/_cloud-city.scss */
 .post h2, .page h2 {
   color: #0099ff;
 }
-/* line 174, ../CC-SASS/_cloud-city.scss */
+/* line 179, ../CC-SASS/_cloud-city.scss */
 .post h3, .post h4, .post h5, .post h6, .post h7, .page h3, .page h4, .page h5, .page h6, .page h7 {
   color: white;
 }
 
-/* line 177, ../CC-SASS/_cloud-city.scss */
+/* line 182, ../CC-SASS/_cloud-city.scss */
 .post-thumbnail img {
   width: 100%;
 }
 
-/* line 181, ../CC-SASS/_cloud-city.scss */
+/* line 186, ../CC-SASS/_cloud-city.scss */
 .entry-meta, .entry-content {
   padding-left: 15px;
   padding-right: 4px;
 }
 
-/* line 186, ../CC-SASS/_cloud-city.scss */
+/* line 191, ../CC-SASS/_cloud-city.scss */
 .preview h1 {
   text-align: center;
   font-size: 1.5em;
 }
 
-/* line 192, ../CC-SASS/_cloud-city.scss */
+/* line 197, ../CC-SASS/_cloud-city.scss */
 .nav-previous, .nav-next {
   margin-left: 2px;
   margin-right: 2px;
 }
-/* line 195, ../CC-SASS/_cloud-city.scss */
+/* line 200, ../CC-SASS/_cloud-city.scss */
 .nav-previous a:hover, .nav-next a:hover {
   color: #0099ff;
 }
 
-/* line 198, ../CC-SASS/_cloud-city.scss */
+/* line 203, ../CC-SASS/_cloud-city.scss */
 .sidebar-float {
   float: right;
   margin-bottom: 20px;
@@ -373,7 +382,7 @@ nav #nav-below a:visited:hover {
 }
 
 /*Masonry*/
-/* line 204, ../CC-SASS/_cloud-city.scss */
+/* line 209, ../CC-SASS/_cloud-city.scss */
 .masonry-entry {
   border-width: 1px;
   border-style: solid;
@@ -412,27 +421,27 @@ nav #nav-below a:visited:hover {
   border-bottom: 1px dotted #3f5e5e;
 }
 
-/* line 207, ../CC-SASS/_cloud-city.scss */
+/* line 212, ../CC-SASS/_cloud-city.scss */
 .masonry-details {
   padding: 2px 2px 2px 2px;
 }
 
-/* line 211, ../CC-SASS/_cloud-city.scss */
+/* line 216, ../CC-SASS/_cloud-city.scss */
 .masonry-post-title {
   color: #ff6633;
 }
 
-/* line 214, ../CC-SASS/_cloud-city.scss */
+/* line 219, ../CC-SASS/_cloud-city.scss */
 .masonry-post-excerpt .excerpt {
   color: #0099ff;
 }
 
-/* line 218, ../CC-SASS/_cloud-city.scss */
+/* line 223, ../CC-SASS/_cloud-city.scss */
 .masonry-thumbnail img {
   width: 100%;
 }
 
-/* line 221, ../CC-SASS/_cloud-city.scss */
+/* line 227, ../CC-SASS/_cloud-city.scss */
 #content {
   padding: 0 0 0 0;
 }
