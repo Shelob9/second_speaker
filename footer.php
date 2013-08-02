@@ -33,7 +33,7 @@
 		echo "<div class='row full-row' id='footer-widgets'>";
 	}
 	echo "<div class='large-4 columns footer-widgets' id='footer-widget-1'> ";
-	if ( ( ! dynamic_sidebar 'footer-1' ) ) : ?>
+	if (  ! dynamic_sidebar ('footer-1' ) ) : ?>
 		<aside id="archives" class="widget">
 				<h1 class="widget-title"><?php _e( 'Archives', '_sf' ); ?></h1>
 				<ul>
@@ -45,7 +45,7 @@
 	echo "</div>";
 	
 	echo "<div class='large-4 columns footer-widgets' id='footer-widget-2'>";
-	if ( ( ! dynamic_sidebar 'footer-2' ) ) : ?>
+	if (  ! dynamic_sidebar ('footer-2' ) ) : ?>
 		<aside id="archives" class="widget">
 				<h1 class="widget-title"><?php _e( 'Archives', '_sf' ); ?></h1>
 				<ul>
@@ -57,7 +57,7 @@
 	echo "</div> ";
 	
 	echo "<div class='large-4 columns footer-widgets' id='footer-widget-3'>";
-	if ( ( ! dynamic_sidebar 'footer-2' ) ) : ?>
+	if (  ! dynamic_sidebar ('footer-3' ) ) : ?>
 		<aside id="archives" class="widget">
 				<h1 class="widget-title"><?php _e( 'Footer Widget 3', '_sf' ); ?></h1>
 				<ul>
