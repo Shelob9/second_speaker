@@ -18,7 +18,7 @@
 			'skin2slug' => 'lightside',
 			'skin1' => 'Dark Side',
 			'skin1slug' => 'darkside',
-			
+			'ver' => '1.0',
 		);
 	$themes[] = 
 		array(
@@ -26,15 +26,8 @@
 			'folder' => 'gethen',
 			'download' => 'gethen.zip',
 			'github' => 'https://github.com/Shelob9/second_speaker/tree/gethen',
-			'skins' => false
-		);
-	$themes[] = 
-		array(
-			'name' => '_Second Foundation',
-			'folder' => '_second_foundation',
-			'download' => '_second-foundation.zip',
-			'github' => 'https://github.com/Shelob9/_second_foundation',
-			'skins' => false
+			'skins' => false,
+			'ver' => '1.0',
 		);
 
 //preview thing for sidebar		
@@ -46,18 +39,19 @@ function _sfSite_previews() {
 	foreach ($themes as $theme) {
 		echo '<li>';
 		if ($theme['skins'] != false ) {
-			echo '<a href="'.$url.'?theme='.$theme['folder'].'-'.$theme[
+			echo '<a class="fancybox fancybox.iframe" href="'.$url.'/'.$theme['folder'].'-'.$theme[
 			'skin1slug'].'" title="Preview '.$theme['name'].' With '.$theme['skin1'].' Skin">'.$theme['name'].' - '.$theme['skin1'].'</a>';
 			echo '</li><li>';
-			echo '<a href="'.$url.'?theme='.$theme['folder'].'-'.$theme[
+			echo '<a class="fancybox fancybox.iframe" href="'.$url.'/'.$theme['folder'].'-'.$theme[
 			'skin2slug'].'" title="Preview '.$theme['name'].' With '.$theme['skin2'].' Skin">'.$theme['name'].' - '.$theme['skin2'].' Skin</a>';
 		}
 		else {
-			echo '<a href="'.$url.'?theme='.$theme['folder'].'" title="Preview '.$theme['name'].'">'.$theme['name'].'</a>';
+			echo '<a class="fancybox fancybox.iframe" href="'.$url.'/'.$theme['folder'].'" title="Preview '.$theme['name'].'">'.$theme['name'].'</a>';
 		}
 		echo '</li>';
 	}
 	echo '</ul>';
+	
 }
 add_action('tha_sidebar_top', '_sfSite_previews');
 
@@ -75,10 +69,11 @@ function _sfSite_prevDownload_table($themes) {
 					</tr>
 		';
 	//contents
+	$url = get_bloginfo('url');
 	foreach ($themes as $theme) {
 		$name = $theme['name'];
-		$prev = '<a href="?themedemo='.$theme['folder'].'" title="Preview '.$theme['name'].'">Preview</a>';
-		$download = '<a href="/downloads/'.$theme['download'].'" title="Preview '.$theme['name'].'">Download</a>';
+		$prev = '<a class="fancybox fancybox.iframe" href="/secondfoundation/'.$theme['folder'].'" title="Preview '.$theme['name'].'">Preview</a>';
+		$download = '<a href="'.$url.'/download/'.$theme['folder'].'-v'.$theme['ver'].'.zip" title="Download '.$theme['name'].'">Download</a>';
 		$github = '<a target="_blank" href="'.$theme['github'].'" title="'.$theme['name'].' Github Repository">Github</a>';
 		//$github = $theme['github'];
 		echo "<tr>";
@@ -87,6 +82,27 @@ function _sfSite_prevDownload_table($themes) {
 		echo "<td>".$download."</td>";
 		echo "<td>".$github."</td>";
 	}
+	$theme = 
+		array(
+			'name' => '_Second Foundation',
+			'folder' => '_second_foundation',
+			'download' => '_second-foundation.zip',
+			'github' => 'https://github.com/Shelob9/_second_foundation',
+			'skins' => false,
+			'ver' => '1.1.1',
+		);
+	
+		$name = $theme['name'];
+		$prev = 'You Are';
+		$download = '<a target="_blank" href="http://wordpress.org/themes/_second-foundation">Download</a>';
+		$github = '<a target="_blank" href="'.$theme['github'].'" title="'.$theme['name'].' Github Repository">Github</a>';
+		//$github = $theme['github'];
+		echo "<tr>";
+		echo "<td>".$name."</td>";
+		echo "<td>".$prev."</td>";
+		echo "<td>".$download."</td>";
+		echo "<td>".$github."</td>";
+	
 	//end table
 		echo '				</thead>
 						<tbody>
@@ -117,4 +133,12 @@ function _sfSite_headerWidget() {
 	dynamic_sidebar( 'sidebar-header' );
 }
 //add_action('tha_footer_bottom', '_sfSite_headerWidget');
+
+
+function _sfSite_fancypants() {
+	wp_enqueue_script('fancybox', get_stylesheet_directory_uri().'/js/jquery.fancybox.pack.js', array('jquery'));
+	wp_enqueue_script('fancybox-init', get_stylesheet_directory_uri().'/js/fancypants.js', array('jquery'), null, true);
+	wp_enqueue_style('fancybox-css', get_stylesheet_directory_uri().'/css/fancybox.css');
+}
+add_action('wp_enqueue_scripts', '_sfSite_fancypants'); 
 ?>
