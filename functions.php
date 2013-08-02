@@ -2,11 +2,6 @@
 /**
 *
 */
-/**
-* Set $options as a global and fill it with our options
-*/
-global $options;
-$options = get_option('option_tree');
 
 /**
 *Child scripts and styles

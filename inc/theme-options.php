@@ -217,20 +217,16 @@ function _custom_theme_options() {
         'choices'     => array(
           array(
             'label'       => '2',
-            'value'       => '2'
+            'value'       => 50
           ),
         array(
             'label'       => '3',
-            'value'       => '3'
+            'value'       => 33.333
           ),
           array(
             'label'       => '4',
-            'value'       => '4'
+            'value'       => 25
           ),
-          array(
-            'label'       => '6',
-            'value'       => '6'
-          )
         ),
        'std'         => '4',
     	'section'     => 'other'

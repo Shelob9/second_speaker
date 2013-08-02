@@ -3,6 +3,20 @@
 * I am a good place to put new functions for the child theme.
 */
 
+
+/**
+* Declare a global variable for option tree options as $options
+*
+* @since _scc 0.1
+*/
+if (! function_exists('_scc_global_options') ) :
+function _scc_global_options() {
+	global $options;
+	$options = get_option('option_tree');
+}
+add_action('init', '_scc_global_options');
+endif; // ! _scc_global_options exists
+
 /**
  * Register widgetized area and update sidebar with default widgets
  */
@@ -83,23 +97,12 @@ add_action('wp_footer', '_scc_option_footerScripts');
 if (! function_exists('_scc_dynamic_width') ) :
 function _scc_dynamic_width() {
 	global $options;
-	$howmany = $options['masonry_bricks'];
-	if ($howmany = 0) {
-		$howmany = 4;
-	}
-	//divide that by 100 to get the percent width
-	$percent = 100/$howmany;
-	//keep it to 4 if it's greater than 4 for mobile
-	if ($howmany = 6) {
-		$Spercent = 25;
-	}
+	$p = $options['masonry_bricks'];
+	
 	echo '<style>';
 	echo '.masonry-entry, #secondary {width:';
-	echo $percent.'%;';
+	echo $p.'%;';
 	echo '} ';
-	echo " @media screen and (min-width: 720px) { .masonry-entry, #secondary { width:";
-  		echo $Spercent.'%;';
-   echo "} ";
    echo "}</style>";
 }
 add_action('wp_head', '_scc_dynamic_width');
