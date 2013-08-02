@@ -84,6 +84,9 @@ if (! function_exists('_scc_dynamic_width') ) :
 function _scc_dynamic_width() {
 	global $options;
 	$howmany = $options['masonry_bricks'];
+	if $howmany = 0 {
+		$howmany = 4;
+	}
 	//divide that by 100 to get the percent width
 	$percent = 100/$howmany;
 	//keep it to 4 if it's greater than 4 for mobile
