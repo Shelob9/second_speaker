@@ -76,25 +76,25 @@ endif; //! gethen_headerBG exists
 /**
 * Header and Footer Scripts From Options
 *
-* @since _scc 0.1
+* @since gethen 0.1
 * @since gethen 0.1
 */
-function _scc_option_headerScripts($options) {
-	$options = get_option('option_tree');
+function gethen_option_headerScripts() {
+	global $options;
 	$out = $options['header_scripts'];
 	if (! $out == '') {
 		echo "\n" . stripslashes( $out ) . "\n";
 	}
 }
-add_action('wp_head', '_scc_option_headerScripts');
-function _scc_option_footerScripts() {
-	$options = get_option('option_tree');
+add_action('wp_head', 'gethen_option_headerScripts');
+function gethen_option_footerScripts() {
+	global $options;
 	$out = $options['footer_scripts'];
 	if (! $out == '') {
 		echo "\n" . stripslashes( $out ) . "\n";
 	}
 }
-add_action('wp_footer', '_scc_option_footerScripts');
+add_action('wp_footer', 'gethen_option_footerScripts');
 
 
 /**
@@ -211,17 +211,23 @@ if ($options['stick'] != 'unstick') {
 	endif; //! _sf_js_init_fixedHeaderFix
 }
 /**
-* Set default Options on Init If global $options is empty
+* If no options are set for option tree, try and get them from 'gethen' entry, if not write this array of defaults.
 *
-* @since _scc 1.0
+* @since gethen 1.0
 */
-if (! function_exists('_scc_reset') ) :
-function _scc_reset() {
-	global $options;
+if (! function_exists('gethen_restore') ) :
+function gethen_restore() {
 	$preexistence = get_option('gethen', 'nothing');
 	if ($preexistence != 'nothing' ) {
 		$options = $preexistence;
 	}
+}
+add_action('after_switch_theme', 'gethen_restore');
+endif; //! gethen_restore exists
+
+if (! function_exists('gethen_reset') ) :
+function gethen_reset() {
+	global $options;
 	if ( empty($options) ) {
 		$options = array(
 			'skin' => 'skin1',
@@ -258,9 +264,14 @@ function _scc_reset() {
 	update_option('option_tree', $options);
 	}
 }
-add_action('init', '_scc_reset');
-endif; // !_scc_reset exists
+add_action('init', 'gethen_reset');
+endif; // !gethen_reset exists
 
+/**
+* On theme deactivation: save all options set in option tree to database as 'gethen' and empty out optiontree options.
+*
+* @since _gethen 1.0
+*/
 
 if (! function_exists('gethen_theme_deactivation') ) :
 function gethen_theme_deactivation() {
