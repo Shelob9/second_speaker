@@ -9,10 +9,15 @@
 	global $themes;
 	$themes[] = 
 		array(
-			'name' => 'Cloud City- Dark Side',
+			'name' => 'Cloud City',
 			'folder' => 'cloud-city',
 			'download' => 'cloud-city.zip',
-			'github' => 'Coming Soon'
+			'github' => 'https://github.com/Shelob9/second_speaker/tree/cloud-city',
+			'skins' => true,
+			'skin2' => 'Light Side',
+			'skin2slug' => 'lightside',
+			'skin1' => 'Dark Side',
+			'skin1slug' => 'darkside',
 			
 		);
 	$themes[] = 
@@ -20,14 +25,16 @@
 			'name' => 'Gethen',
 			'folder' => 'gethen',
 			'download' => 'gethen.zip',
-			'github' => 'Coming Soon'
+			'github' => 'https://github.com/Shelob9/second_speaker/tree/gethen',
+			'skins' => false
 		);
 	$themes[] = 
 		array(
 			'name' => '_Second Foundation',
 			'folder' => '_second_foundation',
 			'download' => '_second-foundation.zip',
-			'github' => '<a href="https://github.com/Shelob9/_second_foundation">Github</a>'
+			'github' => 'https://github.com/Shelob9/_second_foundation',
+			'skins' => false
 		);
 
 //preview thing for sidebar		
@@ -38,7 +45,16 @@ function _sfSite_previews() {
 	echo '<ul id="prev-drop" class="f-dropdown">';
 	foreach ($themes as $theme) {
 		echo '<li>';
-		echo '<a href="?themedemo='.$theme['folder'].'" title="Preview '.$theme['name'].'">'.$theme['name'].'</a>';
+		if ($theme['skins'] != false ) {
+			echo '<a href="'.$url.'?theme='.$theme['folder'].'-'.$theme[
+			'skin1slug'].'" title="Preview '.$theme['name'].' With '.$theme['skin1'].' Skin">'.$theme['name'].' - '.$theme['skin1'].'</a>';
+			echo '</li><li>';
+			echo '<a href="'.$url.'?theme='.$theme['folder'].'-'.$theme[
+			'skin2slug'].'" title="Preview '.$theme['name'].' With '.$theme['skin2'].' Skin">'.$theme['name'].' - '.$theme['skin2'].' Skin</a>';
+		}
+		else {
+			echo '<a href="'.$url.'?theme='.$theme['folder'].'" title="Preview '.$theme['name'].'">'.$theme['name'].'</a>';
+		}
 		echo '</li>';
 	}
 	echo '</ul>';
@@ -63,8 +79,8 @@ function _sfSite_prevDownload_table($themes) {
 		$name = $theme['name'];
 		$prev = '<a href="?themedemo='.$theme['folder'].'" title="Preview '.$theme['name'].'">Preview</a>';
 		$download = '<a href="/downloads/'.$theme['download'].'" title="Preview '.$theme['name'].'">Download</a>';
-		//$git = '<a href="'.$theme['git'].'" title="Preview '.$theme['name'].'">Github</a>';
-		$github = $theme['github'];
+		$github = '<a target="_blank" href="'.$theme['github'].'" title="'.$theme['name'].' Github Repository">Github</a>';
+		//$github = $theme['github'];
 		echo "<tr>";
 		echo "<td>".$name."</td>";
 		echo "<td>".$prev."</td>";
