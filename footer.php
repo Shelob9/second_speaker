@@ -33,15 +33,39 @@
 		echo "<div class='row full-row' id='footer-widgets'>";
 	}
 	echo "<div class='large-4 columns footer-widgets' id='footer-widget-1'> ";
-	dynamic_sidebar( 'footer-1' );
+	if ( ( ! dynamic_sidebar 'footer-1' ) ) : ?>
+		<aside id="archives" class="widget">
+				<h1 class="widget-title"><?php _e( 'Archives', '_sf' ); ?></h1>
+				<ul>
+					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+				</ul>
+			</aside>
+	<?php
+	endif;
 	echo "</div>";
 	
 	echo "<div class='large-4 columns footer-widgets' id='footer-widget-2'>";
-	dynamic_sidebar( 'footer-2' );
+	if ( ( ! dynamic_sidebar 'footer-2' ) ) : ?>
+		<aside id="archives" class="widget">
+				<h1 class="widget-title"><?php _e( 'Archives', '_sf' ); ?></h1>
+				<ul>
+					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+				</ul>
+		</aside>
+	<?php
+	endif;
 	echo "</div> ";
 	
 	echo "<div class='large-4 columns footer-widgets' id='footer-widget-3'>";
-	dynamic_sidebar( 'footer-3' );
+	if ( ( ! dynamic_sidebar 'footer-2' ) ) : ?>
+		<aside id="archives" class="widget">
+				<h1 class="widget-title"><?php _e( 'Footer Widget 3', '_sf' ); ?></h1>
+				<ul>
+					<?php _e( 'In addition to the hidden sidebar, this theme has three footer widget areas.', '_sf' ); ?>
+				</ul>
+		</aside>
+	<?php
+	endif;
 	echo "</div>";
 	echo "</div><!--/#footer-widgets-row-->";
 	if ($footer != 'yes' ) {
