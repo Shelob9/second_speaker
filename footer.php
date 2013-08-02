@@ -35,7 +35,7 @@
 	echo "<div class='large-4 columns footer-widgets' id='footer-widget-1'> ";
 	if (  ! dynamic_sidebar ('footer-1' ) ) : ?>
 		<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', '_sf' ); ?></h1>
+				<h5 class="widget-title"><?php _e( 'Archives', '_sf' ); ?></h5>
 				<ul>
 					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 				</ul>
@@ -47,11 +47,13 @@
 	echo "<div class='large-4 columns footer-widgets' id='footer-widget-2'>";
 	if (  ! dynamic_sidebar ('footer-2' ) ) : ?>
 		<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', '_sf' ); ?></h1>
+				<h5 class="widget-title"><?php _e( 'Meta', '_sf' ); ?></h5>
 				<ul>
-					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
+					<?php wp_register(); ?>
+					<li><?php wp_loginout(); ?></li>
+					<?php wp_meta(); ?>
 				</ul>
-		</aside>
+			</aside>
 	<?php
 	endif;
 	echo "</div> ";
@@ -59,7 +61,7 @@
 	echo "<div class='large-4 columns footer-widgets' id='footer-widget-3'>";
 	if (  ! dynamic_sidebar ('footer-3' ) ) : ?>
 		<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Footer Widget 3', '_sf' ); ?></h1>
+				<h5 class="widget-title"><?php _e( 'Footer Widget 3', '_sf' ); ?></h5>
 				<ul>
 					<?php _e( 'In addition to the hidden sidebar, this theme has three footer widget areas.', '_sf' ); ?>
 				</ul>
