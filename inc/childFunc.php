@@ -210,4 +210,60 @@ if ($options['stick'] != 'unstick') {
 	add_action('wp_footer', '_sf_js_init_fixedHeaderFix');
 	endif; //! _sf_js_init_fixedHeaderFix
 }
+/**
+* Set default Options on Init If global $options is empty
+*
+* @since _scc 1.0
+*/
+if (! function_exists('_scc_reset') ) :
+function _scc_reset() {
+	global $options;
+	if ( empty($options) ) {
+		$options = array(
+			'skin' => 'skin1',
+			'sk1_bg_img' => 'http://2f2.dev/wp-content/themes/gethen/images/bg.png',
+			'stick' =>  'unstick',
+			'header_img' =>  'http://2f2.dev/wp-content/themes/gethen/images/default-header.jpg', 
+			'header_scripts' =>  '', 
+			'remove_credit' =>  'no',
+			'footer_text' =>  '',
+			'footer_scripts' =>  '',
+			'footer_width' =>  'yes',
+			'front_posts' =>  'yes',
+			'big_callout_use' => 'yes',
+			'big_callout_title' =>  'Big Callout Box Title',
+			'big_callout_content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lobortis arcu ut tortor ullamcorper, vel sodales lacus tristique. Pellentesque gravida rutrum lectus, a lacinia leo. Etiam lobortis, sapien nec imperdiet pulvinar, nisl nisl volutpat ante, in aliquam augue eros a nibh. Nulla sollicitudin suscipit malesuada. Suspendisse vel egestas urna, in tempor dolor. Phasellus tincidunt tempor lectus. Ut adipiscing, risus ac sodales cursus, diam justo rutrum dolor, in tincidunt mauris tortor quis tellus.',
+			'big_callout_cta' => 'Call To Action',
+			'big_callout_ctaLabel' =>  'CTA Button',
+			'big_callout_ctaLink' =>  '',
+			'big_callout_img' =>  'http://placekitten.com/600/800',
+			'3_callout_use' =>  'yes',
+			'3_callout_title_1' =>  'Small Callout 1 Title',
+			'3_callout_link_1' =>  '#',
+			'3_callout_content_1' =>  'Small Callout Box 1 Content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mi justo, bibendum non consectetur quis, adipiscing sit amet nulla. Praesent nibh libero, consequat eget sodales nec, varius ut tellus.',
+			'3_callout_img_1' =>  '',
+			'3_callout_title_2' =>  'Small Callout 2 Title',
+			'3_callout_link_2' =>  '#',
+			'3_callout_content_2' =>  'Small Callout Box 2 Content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mi justo, bibendum non consectetur quis, adipiscing sit amet nulla. Praesent nibh libero, consequat eget sodales nec, varius ut tellus.',
+			'3_callout_img_2' =>  '',
+			'3_callout_title_3' =>  'Small Callout 3 Title',
+			'3_callout_link_3' =>  '#',
+			'3_callout_content_3' => 'Small Callout Box 3 Content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mi justo, bibendum non consectetur quis, adipiscing sit amet nulla. Praesent nibh libero, consequat eget sodales nec, varius ut tellus.',
+			'3_callout_img_3' =>  '',
+		);
+	update_option('option_tree', $options);
+	}
+}
+add_action('init', '_scc_reset');
+endif; // !_scc_reset exists
+
+
+if (! function_exists('gethen_theme_deactivation') ) :
+function gethen_theme_deactivation() {
+	$nothing = array();
+	update_option( 'option_tree', $nothing ); 
+	update_option( 'option_tree_settings', $nothing ); 
+}
+add_action('switch_theme', 'gethen_theme_deactivation');
+endif; // ! gethen_theme_deactivation exists
 ?>
