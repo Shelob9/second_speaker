@@ -72,8 +72,7 @@ function _sfSite_prevDownload_table($themes) {
 		echo "<td>".$github."</td>";
 	}
 	//end table
-	echo '
-							</thead>
+		echo '				</thead>
 						<tbody>
 					 </tbody>
 				</table>
