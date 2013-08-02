@@ -103,10 +103,22 @@ add_action('wp_head', '_scc_dynamic_width');
 endif; //! _scc_dynamic_width exists
 
 /**
-* Set default Options on Init If global $options is empty
+* On init, if no options are set for option tree, try and get them from 'cloud-city' entry, if not write this array of defaults.
+*
 *
 * @since _scc 1.0
 */
+
+if (! function_exists('_scc_restore') ) :
+function _scc_restore() {
+	$preexistence = get_option('_scc', 'nothing');
+	if ($preexistence != 'nothing' ) {
+		$options = $preexistence;
+	}
+}
+add_action('after_switch_theme', '_scc_restore');
+endif; //! _scc_restore exists
+
 if (! function_exists('_scc_reset') ) :
 function _scc_reset() {
 	global $options;
@@ -128,11 +140,19 @@ function _scc_reset() {
 	update_option('option_tree', $options);
 	}
 }
-add_action('init', '_scc_reset');
+add_action('after_switch_theme', '_scc_reset');
 endif; // !_scc_reset exists
+
+/**
+* On theme deactivation: save all options set in option tree to database as 'cloud-city and empty out optiontree options.
+*
+* @since _scc 1.0
+*/
 
 if (! function_exists('_scc_theme_deactivation') ) :
 function _scc_theme_deactivation() {
+	global $options;
+	update_option('cloud-city', $options);
 	$nothing = array();
 	update_option( 'option_tree', $nothing ); 
 	update_option( 'option_tree_settings', $nothing ); 
