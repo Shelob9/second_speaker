@@ -102,6 +102,41 @@ function _scc_dynamic_width() {
 add_action('wp_head', '_scc_dynamic_width');
 endif; //! _scc_dynamic_width exists
 
+/**
+* Set default Options on Init If global $options is empty
+*
+* @since _scc 1.0
+*/
+if (! function_exists('_scc_reset') ) :
+function _scc_reset() {
+	global $options;
+	if ( empty($options) ) {
+		$options = array(
+			'skin' => 'Light Side',
+		  'light_bg_img' => get_stylesheet_directory_uri().'/images/bg.jpg',
+		  'dark_bg_img' => get_stylesheet_directory_uri().'/images/bg-dark.jpg',
+		  'logo_pos' => 'none',
+		  'logo_img' => '',
+		  'header_scripts' => '',
+		  'remove_credit' => 'no',
+		  'footer_text' => '',
+		  'footer_scripts' => '',
+		  'stick' => 'stick',
+		  'sidebar' => 'value1',
+		  'masonry_bricks' => '4',
+		);
+	update_option('option_tree', $options);
+	}
+}
+add_action('init', '_scc_reset');
+endif; // !_scc_reset exists
 
-
+if (! function_exists('_scc_theme_deactivation') ) :
+function _scc_theme_deactivation() {
+	$nothing = array();
+	update_option( 'option_tree', $nothing ); 
+	update_option( 'option_tree_settings', $nothing ); 
+}
+add_action('switch_theme', '_scc_theme_deactivation');
+endif; // ! _scc_theme_deactivation exists
 ?>
