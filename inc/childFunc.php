@@ -39,14 +39,15 @@ function _sfSite_previews() {
 	foreach ($themes as $theme) {
 		echo '<li>';
 		if ($theme['skins'] != false ) {
-			echo '<a class="fancybox fancybox.iframe" href="'.$url.'/'.$theme['folder'].'-'.$theme[
-			'skin1slug'].'" title="Preview '.$theme['name'].' With '.$theme['skin1'].' Skin">'.$theme['name'].' - '.$theme['skin1'].'</a>';
+			echo '<a target="_blank" href="'.$url.'/'.$theme['folder'].'-'.$theme[
+			'skin1slug'].'" title="Preview '.$theme['name'].' With '.$theme['skin1'].' Skin" >'.$theme['name'].' - '.$theme['skin1'].'</a>';
 			echo '</li><li>';
-			echo '<a class="fancybox fancybox.iframe" href="'.$url.'/'.$theme['folder'].'-'.$theme[
-			'skin2slug'].'" title="Preview '.$theme['name'].' With '.$theme['skin2'].' Skin">'.$theme['name'].' - '.$theme['skin2'].' Skin</a>';
+			echo '<a target="_blank" href="'.$url.'/'.$theme['folder'].'-'.$theme[
+			'skin2slug'].'" title="Preview '.$theme['name'].' With '.$theme['skin2'].' Skin" >'.$theme['name'].' - '.$theme['skin2'].' Skin</a>';
 		}
 		else {
-			echo '<a class="fancybox fancybox.iframe" href="'.$url.'/'.$theme['folder'].'" title="Preview '.$theme['name'].'">'.$theme['name'].'</a>';
+			//echo '<a  href="'.$url.'/'.$theme['folder'].'" title="Preview '.$theme['name'].'" data-reveal-id="myModal" data-reveal-ajax="true">'.$theme['name'].'</a>';
+			echo '<a target="_blank" href="'.$url.'/'.$theme['folder'].'" title="Preview '.$theme['name'].'" >'.$theme['name'].'</a>';
 		}
 		echo '</li>';
 	}
@@ -72,7 +73,7 @@ function _sfSite_prevDownload_table($themes) {
 	$url = get_bloginfo('url');
 	foreach ($themes as $theme) {
 		$name = $theme['name'];
-		$prev = '<a class="fancybox fancybox.iframe" href="/secondfoundation/'.$theme['folder'].'" title="Preview '.$theme['name'].'">Preview</a>';
+		$prev = '<a target="_blank" href="/secondfoundation/'.$theme['folder'].'" title="Preview '.$theme['name'].'">Preview</a>';
 		$download = '<a href="'.$url.'/download/'.$theme['folder'].'-v'.$theme['ver'].'.zip" title="Download '.$theme['name'].'">Download</a>';
 		$github = '<a target="_blank" href="'.$theme['github'].'" title="'.$theme['name'].' Github Repository">Github</a>';
 		//$github = $theme['github'];
@@ -136,9 +137,10 @@ function _sfSite_headerWidget() {
 
 
 function _sfSite_fancypants() {
+
 	wp_enqueue_script('fancybox', get_stylesheet_directory_uri().'/js/jquery.fancybox.pack.js', array('jquery'));
 	wp_enqueue_script('fancybox-init', get_stylesheet_directory_uri().'/js/fancypants.js', array('jquery'), null, true);
 	wp_enqueue_style('fancybox-css', get_stylesheet_directory_uri().'/css/fancybox.css');
 }
-add_action('wp_enqueue_scripts', '_sfSite_fancypants'); 
+//add_action('wp_enqueue_scripts', '_sfSite_fancypants'); 
 ?>
