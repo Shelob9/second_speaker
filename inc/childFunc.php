@@ -218,6 +218,10 @@ if ($options['stick'] != 'unstick') {
 if (! function_exists('_scc_reset') ) :
 function _scc_reset() {
 	global $options;
+	$preexistence = get_option('gethen', 'nothing');
+	if ($preexistence != 'nothing' ) {
+		$options = $preexistence;
+	}
 	if ( empty($options) ) {
 		$options = array(
 			'skin' => 'skin1',
@@ -260,6 +264,8 @@ endif; // !_scc_reset exists
 
 if (! function_exists('gethen_theme_deactivation') ) :
 function gethen_theme_deactivation() {
+	global $options;
+	update_option('gethen', $options);
 	$nothing = array();
 	update_option( 'option_tree', $nothing ); 
 	update_option( 'option_tree_settings', $nothing ); 
