@@ -18,7 +18,7 @@ h5.widget-title {text-align:center; font-size: .8em;}
 
 p.why {font-size:.7em; margin-left:12px;}
 
-#secondary, article, #comments, #colophon, .download-table table{
+#secondary, article, #comments, #colophon, .download-table table, .page-header{
 	background-color:white;
 	border-width: 1px;
   border-style: solid;
@@ -38,7 +38,7 @@ p.why {font-size:.7em; margin-left:12px;}
 }
 
 
-h2.site-description {
+h2.site-description, h1.page-title {
 	padding-left:4px;
 }
 
@@ -76,4 +76,34 @@ h2.site-description {
 }
 
 .entry-header, .entry-content, .entry-meta, #comments, .entry-summary {
-	margin: 0 4px 0 4px;}
+	margin: 0 4px 0 4px;
+}
+
+h1.entry-title {
+	font-size: 2em;
+}
+
+.masonry-nav {
+	margin-top: 100px;
+}
+
+@media only screen and (max-device-width: 480px) {
+	h1.entry-title {font-size: 1.2em;}
+}
+
+#content a.read-more-button.button {
+	margin-right: 4px;
+}
+
+.inline-code-example, inline-code {
+	background-color: #d2d2d2;
+ 	color: black;
+ 	font-family: "Courier New", Courier, monospace;
+ }
+ 
+blockquote {
+ 	color: #2ba6cb;
+ 	font-size: 18px;
+ }
+ 
+.entry-meta { margin-bottom: 8px}
