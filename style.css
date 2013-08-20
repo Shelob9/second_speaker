@@ -5,8 +5,10 @@ Description:   Child theme for _Second-Foundation
 Author:        Josh Pollock
 Author URI:    http://Complexwaveform.com
 Template:      _second_foundation                     
-Version:       1.2
+Version:       1.3
 */
+
+@import url("../_second_foundation/style.css");
 
 .preview-links {
 	
