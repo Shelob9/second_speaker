@@ -3,7 +3,7 @@
 * I am a good place to put new functions for the child theme.
 */
 
-/**theme previe/download shits**/
+/**theme preview/download shits**/
 
 //first setup array of themes.
 	global $themes;
@@ -135,12 +135,4 @@ function _sfSite_headerWidget() {
 }
 //add_action('tha_footer_bottom', '_sfSite_headerWidget');
 
-
-function _sfSite_fancypants() {
-
-	wp_enqueue_script('fancybox', get_stylesheet_directory_uri().'/js/jquery.fancybox.pack.js', array('jquery'));
-	wp_enqueue_script('fancybox-init', get_stylesheet_directory_uri().'/js/fancypants.js', array('jquery'), null, true);
-	wp_enqueue_style('fancybox-css', get_stylesheet_directory_uri().'/css/fancybox.css');
-}
-//add_action('wp_enqueue_scripts', '_sfSite_fancypants'); 
 ?>
