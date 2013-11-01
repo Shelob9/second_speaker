@@ -3,4 +3,4 @@
 	url = https://shelob9@github.com/Shelob9/_sf_lib.git
 [submodule "options"]
 	path = options
-	url = /Users/josh/option-tree
+url=https://github.com/valendesigns/option-tree.git
