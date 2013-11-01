@@ -230,10 +230,10 @@ function gethen_reset() {
 	global $options;
 	if ( empty($options) ) {
 		$options = array(
-			'skin' => 'skin1',
-			'sk1_bg_img' => 'http://2f2.dev/wp-content/themes/gethen/images/bg.png',
-			'stick' =>  'unstick',
-			'header_img' =>  'http://2f2.dev/wp-content/themes/gethen/images/default-header.jpg', 
+            'skin' => 'skin1',
+            'sk1_bg_img' => get_stylesheet_directory_uri().'/images/bg.png',
+            'stick' =>  'unstick',
+            'header_img' =>  get_stylesheet_directory_uri().'/images/default-header.jpg',
 			'header_scripts' =>  '', 
 			'remove_credit' =>  'no',
 			'footer_text' =>  '',
