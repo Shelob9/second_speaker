@@ -31,26 +31,21 @@ add_action('wp_enqueue_scripts', '_sf_child_style', 10001);
 * Include child theme functions
 */
 
-require_once('inc/childFunc.php');
+require_once(trailingslashit( get_stylesheet_directory() ) .'inc/childFunc.php');
 
 /**
 /* Deactivate Parent Scripts or Whole Sets of Functions
 */
 
-require_once('inc/theGreatDeactivator.php');
-
-/**
-* Options Tree
-*/
-add_filter( 'ot_theme_mode', '__return_true' );
-add_filter( 'ot_show_pages', '__return_false' );
-add_filter( 'ot_show_new_layout', '__return_false' );
-
-require_once('options/ot-loader.php');
-require_once('inc/theme-options.php');
+require_once(trailingslashit( get_stylesheet_directory() ) .'inc/theGreatDeactivator.php');
 
 /**
 * sliding sidebar
 */
-locate_template('lib/slideSidebar.php', true);
+require_once(trailingslashit( get_stylesheet_directory() ) .'lib/slideSidebar.php', true);
+
+/**
+ * Theme options
+ */
+    require_once(trailingslashit( get_stylesheet_directory() ) .'inc/gethen-options.php');
 ?>
