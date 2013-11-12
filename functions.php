@@ -42,7 +42,7 @@ require_once(trailingslashit( get_stylesheet_directory() ) .'inc/theGreatDeactiv
 /**
 * sliding sidebar
 */
-require_once(trailingslashit( get_stylesheet_directory() ) .'lib/slideSidebar.php', true);
+require_once(trailingslashit( get_stylesheet_directory() ) .'lib/slideSidebar.php');
 
 /**
  * Theme options
