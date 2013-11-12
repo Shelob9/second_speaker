@@ -5,7 +5,7 @@
  * @package geth
  * @since 0.1
  */
-global $options;
+$options = get_option('gethen');
 ?>
 <div class="row" id="callout-3-row">
 		<div class="large-4 columns callout-box" id="callout-box-1">

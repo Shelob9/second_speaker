@@ -12,7 +12,7 @@
 */
 if (! function_exists('gethen_headerBG') ) :
 function gethen_headerBG($use = '') {
-	global $options;
+    $options = get_option('gethen');
 	//set the value for the header image.
 	if ($options['header_img'] != '' ) {
 		$header_img = $options['header_img'];
@@ -69,7 +69,7 @@ endif; //! gethen_headerBG exists
 * @since gethen 0.1
 */
 function gethen_option_headerScripts() {
-	global $options;
+    $options = get_option('gethen');
 	$out = $options['header_scripts'];
 	if (! $out == '') {
 		echo "\n" . stripslashes( $out ) . "\n";
@@ -77,7 +77,7 @@ function gethen_option_headerScripts() {
 }
 add_action('wp_head', 'gethen_option_headerScripts');
 function gethen_option_footerScripts() {
-	global $options;
+    $options = get_option('gethen');
 	$out = $options['footer_scripts'];
 	if (! $out == '') {
 		echo "\n" . stripslashes( $out ) . "\n";
@@ -124,7 +124,7 @@ endif; //! _sf_widgets_init exists
 if (! function_exists('gethen_footer_widget_area') ) :
 function gethen_footer_widget_area() {
 //get the option for footer-width
-	global $options;
+    $options = get_option('gethen');
 	$footer = $options['footer_width'];
 	//To be safe, set it to full-width unless specifically set to regular-width.
 	if ($footer != 'reg' ) {
@@ -158,7 +158,7 @@ endif; //! gethen_footer_widget_area exists
 */
 if (! function_exists('gethen_header_stick') ) :
 function gethen_header_stick() {
-	global $options;
+    $options = get_option('gethen');
 	if ($options['stick'] != 'unstick') {
 		//echo "<style> #header-wrap{ position :fixed !important;} </style>";
 		if (is_user_logged_in() ) {
@@ -174,7 +174,7 @@ endif; // ! gethen_header_stick exists
 *
 * @since gethen 0.1
 */
-global $options;
+$options = get_option('gethen');
 if ($options['stick'] != 'unstick') {
 	if (! function_exists('_sf_js_init_fixedHeaderFix_code') ) :
 	function _sf_js_init_fixedHeaderFix_code() {
@@ -267,4 +267,5 @@ function gethen_set_options() {
 }
 add_action('after_switch_theme', 'gethen_set_options');
 endif;
+
 ?>

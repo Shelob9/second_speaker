@@ -10,7 +10,7 @@
  *
  * @package _sf
  */
-global $options;
+$options = get_option('gethen');
 get_header(); 
 $sidebar = 'right';
 _sf_open($sidebar);
@@ -22,7 +22,7 @@ _sf_open($sidebar);
 	 	get_template_part('parts/callout', '3');
 	 }
 	 //if ($options['full_posts'] != 'no' ) {
-	 if (ot_get_option('full_posts', 'yes') != 'no' ) {
+	 if ( $options['full_posts']  != 'no' ) {
 		 if ( have_posts() ) : 
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();

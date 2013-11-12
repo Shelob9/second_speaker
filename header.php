@@ -34,7 +34,7 @@
 	
 	<div id="main" class="site-main">
 	<?php do_action( 'tha_header_before' );
-		global $options;
+        $options = get_option('gethen');
 		if ($options['stick'] != 'unstick') {
 			echo '<div id="header-wrap" class="fixed">';
 		}

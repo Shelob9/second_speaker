@@ -12,7 +12,7 @@
 	</div><!-- #main -->
 	<?php do_action( 'tha_footer_before' ); 
 	//get the option for footer-width
-	global $options;
+	$options = get_option('gethen');
 	$footer = $options['footer_width'];
 	//To be safe, set it to full-width unless specifically set to noular-width.
 	if ($footer != 'yes' ) {
