@@ -10,27 +10,43 @@ $options = get_option('gethen');
 <div class="row" id="callout-3-row">
 		<div class="large-4 columns callout-box" id="callout-box-1">
 			<h3 class="callout-title">
-				<a href="<?php $options['3_callout_link_1'];  ?>">
+				<a href="<?php echo $options['3_callout_link_1'];  ?>">
 					<?php echo $options['3_callout_title_1']; ?>
 				</a>
 			</h3>
 				<?php echo $options['3_callout_content_1']; ?>
+            <p style="display:block; text-align:center;">
+                <a class="button primary radius" href="<?php echo $options['3_callout_link_1'];  ?>">
+                    Learn More
+                </a>
+            </p>
 		</div>
 		<div class="large-4 columns callout-box" id="callout-box-2">
 			<h3 class="callout-title">
-				<a href="<?php  $options['3_callout_link_2'];  ?>">
+				<a href="<?php echo $options['3_callout_link_2'];  ?>">
 					<?php echo $options['3_callout_title_2']; ?>
 				</a>
 			</h3>
 				<?php echo $options['3_callout_content_2']; ?>
+            <p style="display:block; text-align:center;">
+                <a class="button primary radius" href="<?php echo $options['3_callout_link_2'];  ?>">
+                    Learn More
+                </a>
+            </p>
 		</div>
 		<div class="large-4 columns callout-box" id="callout-box-3">
 			<h3 class="callout-title">
-				<a href="<?php $options['3_callout_link_3'];  ?>">
+				<a href="<?php echo $options['3_callout_link_3'];  ?>">
 					<?php echo $options['3_callout_title_3']; ?>
 				</a>
 			</h3>
 				<?php echo $options['3_callout_content_3']; ?>
-		</div>
+            <p style="display:block; text-align:center;">
+                <a class="button primary radius" href="<?php echo $options['3_callout_link_3'];  ?>">
+                   Learn More
+                </a>
+            </p>
+
+        </div>
 </div>
 				
