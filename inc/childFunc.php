@@ -199,26 +199,11 @@ if ($options['stick'] != 'unstick') {
 	add_action('wp_footer', '_sf_js_init_fixedHeaderFix');
 	endif; //! _sf_js_init_fixedHeaderFix
 }
-/**
-* If no options are set for option tree, try and get them from 'gethen' entry, if not write this array of defaults.
-*
-* @since gethen 1.0
-*/
-if (! function_exists('gethen_restore') ) :
-function gethen_restore() {
-	$preexistence = get_option('gethen', 'nothing');
-	if ($preexistence != 'nothing' ) {
-		$options = $preexistence;
-	}
-}
-add_action('after_switch_theme', 'gethen_restore');
-endif; //! gethen_restore exists
 
-if (! function_exists('gethen_reset') ) :
-function gethen_reset() {
-	global $options;
-	if ( empty($options) ) {
-		$options = array(
+
+if (! function_exists('gethen_get_option_defaults') ) :
+function gethen_get_option_defaults() {
+	$gethen = array(
             'skin' => 'skin1',
             'sk1_bg_img' => get_stylesheet_directory_uri().'/images/bg.png',
             'stick' =>  'unstick',
@@ -249,27 +234,37 @@ function gethen_reset() {
 			'3_callout_link_3' =>  '#',
 			'3_callout_content_3' => 'Small Callout Box 3 Content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mi justo, bibendum non consectetur quis, adipiscing sit amet nulla. Praesent nibh libero, consequat eget sodales nec, varius ut tellus.',
 			'3_callout_img_3' =>  '',
+            'full_posts'    => 'no',
 		);
-	update_option('option_tree', $options);
+        return $gethen;
 	}
-}
-add_action('init', 'gethen_reset');
-endif; // !gethen_reset exists
+endif; // !gethen_get_option_defaults exists
 
-/**
-* On theme deactivation: save all options set in option tree to database as 'gethen' and empty out optiontree options.
-*
-* @since _gethen 1.0
-*/
+    /**
+     * On activation, set default options, for options that were not already set.
+     *
+     * With thanks to Chip Bennett
+     *
+     * @since 0.4
+     * @returns the options
+     */
 
-if (! function_exists('gethen_theme_deactivation') ) :
-function gethen_theme_deactivation() {
-	global $options;
-	update_option('gethen', $options);
-	$nothing = array();
-	update_option( 'option_tree', $nothing ); 
-	update_option( 'option_tree_settings', $nothing ); 
+if ( function_exists('gethen_set_options')) :
+function gethen_set_options() {
+
+        // Get the option defaults
+        $option_defaults = gethen_get_option_defaults();
+
+        // Globalize the variable that holds the Theme options
+        global $gethen_options;
+        // Parse the stored options with the defaults
+
+        $gethen_options = wp_parse_args( get_option( 'gethen', array() ), $option_defaults );
+
+        // Return the parsed array
+        return $gethen_options;
+
 }
-add_action('switch_theme', 'gethen_theme_deactivation');
-endif; // ! gethen_theme_deactivation exists
+add_action('after_switch_theme', 'gethen_set_options');
+endif;
 ?>
