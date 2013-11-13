@@ -208,7 +208,7 @@ function gethen_get_option_defaults() {
             'sk1_bg_img' => get_stylesheet_directory_uri().'/images/bg.png',
             'stick' =>  'unstick',
             'header_img' =>  get_stylesheet_directory_uri().'/images/default-header.jpg',
-			'header_scripts' =>  '', 
+			'header_scripts' =>  '',
 			'remove_credit' =>  'no',
 			'footer_text' =>  '',
 			'footer_scripts' =>  '',
@@ -262,7 +262,21 @@ function gethen_set_options() {
         $gethen_options = wp_parse_args( get_option( 'gethen', array() ), $option_defaults );
 
         // Return the parsed array
-        return $gethen_options;
+       // return $gethen_options;
+
+        if ( get_option( $gethen ) !== false ) {
+
+            // The option already exists, so we just update it.
+            update_option( $gethen, $gethen_options );
+
+        } else {
+
+            // The option hasn't been added yet. We'll add it with $autoload set to 'no'.
+            $deprecated = null;
+            $autoload = 'no';
+            add_option( $gethen, $gethen_options, $deprecated, $autoload );
+        }
+
 
 }
 add_action('after_switch_theme', 'gethen_set_options');

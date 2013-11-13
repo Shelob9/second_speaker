@@ -11,7 +11,7 @@
  * @package _sf
  */
 get_header(); 
-$sidebar = get_theme_mod('_sf_default_sidebar');
+$sidebar = 'none');
 _sf_open($sidebar);
 ?>
 		<?php _sf_home_slider(); ?>

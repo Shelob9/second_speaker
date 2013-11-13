@@ -53,3 +53,21 @@ Version:       0.4
         display: table; }
       .full-row .full-row.collapse:after {
         clear: both; }
+
+/**CALLOUT/CTA TWEAKS**/
+.wide-cta{
+    display:inline-block;
+    text-align: center;
+}
+.wide-cta a {
+    color:white;
+}
+.wide-cta a:hover, .wide-cta a:visited:hover{
+    color:#b49f8c;
+}
+.wide-cta a:visited{
+    color:white;
+}
+.cta {
+    text-align:center;
+}
