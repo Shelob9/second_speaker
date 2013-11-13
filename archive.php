@@ -10,7 +10,7 @@ get_header();
 $sidebar = get_theme_mod('_sf_default_sidebar');
 _sf_open($sidebar);
 ?>
-			<header class="page-header">
+			<header class="page-header row">
 				<h1 class="page-title">
 					<?php
 						if ( is_category() ) :
@@ -91,7 +91,7 @@ _sf_open($sidebar);
 							 */
 							get_template_part( 'content', get_post_format() );
 						endwhile;
-					
+
 				}
 			 	else {
 					get_template_part( 'no-results', 'archive' );
