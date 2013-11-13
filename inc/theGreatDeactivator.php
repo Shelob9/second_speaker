@@ -67,7 +67,7 @@
             'foundation'	=> false,
             'infScroll'		=> true,
             'masonry'		=> true,
-            'backstretch' 	=> false,
+            'backstretch' 	=> true,
             'ajaxMenu'		=> true,
             'imagesLoaded'	=> true,
         );

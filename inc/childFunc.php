@@ -60,7 +60,18 @@ function gethen_headerBG($use = '') {
 add_action('wp_footer', 'gethen_headerBG');
 endif; //! gethen_headerBG exists
 
+    /**
+     * add backstretch
+     *
+     * @since 0.4
+     */
 
+    if (! function_exists('gethen_scripts_backstretch') ) :
+        function gethen_scripts_backstretch() {
+            wp_enqueue_script('backstretch', get_template_directory_uri().'/lib/js/jquery.backstretch.min.js');
+        }
+        add_action( 'wp_enqueue_scripts', 'gethen_scripts_backstretch' );
+    endif; //! gethen_scripts exists
 
 /**
 * Header and Footer Scripts From Options
