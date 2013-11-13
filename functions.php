@@ -48,4 +48,10 @@ require_once(trailingslashit( get_stylesheet_directory() ) .'lib/slideSidebar.ph
  * Theme options
  */
     require_once(trailingslashit( get_stylesheet_directory() ) .'inc/gethen-options.php');
+
+    /**
+     * gethen open-close
+     * Replaces lib/open-close.php
+     */
+    require_once(trailingslashit(get_stylesheet_directory()).'inc/gethen-open-close.php');
 ?>

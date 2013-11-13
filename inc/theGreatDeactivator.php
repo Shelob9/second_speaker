@@ -25,7 +25,7 @@
          * @since 1.4
          */
         public $removes = array (
-
+            '/lib/open-close.php',
         );
 
         /**
