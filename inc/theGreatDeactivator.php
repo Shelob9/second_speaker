@@ -54,7 +54,8 @@
         public function uncustom() {
             remove_action('customize_register', '_sf_customize_register');
             remove_action( 'wp_before_admin_bar_render', '_sf_add_admin_bar_options_menu' );
-            remove_action ('admin_menu', '_sf_add_options_menu');
+            remove_action('admin_menu', '_sf_add_options_menu');
+            remove_action('tha_header_top', '_sf_header');
         }
 
         /**
